@@ -1,2 +1,60 @@
-# mataro-ciutat-escoles
-Directori cartogràfic de centres i espais educatius de Mataró.
+# Mataró, ciutat d’escoles
+
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V55** recull **164 fitxes al directori**, amb una capa addicional de lleure i casals.
+
+**[Obre el mapa (previsualització privada)](https://mataro-ciutat-escoles.toastymarmalade16.chatgpt.site)** · **[Descarrega la V55](Mataro_ciutat_escoles_V55_directori_ampliat.zip)**
+
+## Com fer servir el mapa
+
+- **Cerca:** escriu el nom del centre o una adreça. També pots cercar activitats descrites a les fitxes, com ceràmica o castanyoles.
+- **Filtres:** activa l’educació obligatòria, altres centres i universitats, acadèmies de reforç o lleure i casals. El filtre de titularitat s’aplica a l’educació obligatòria.
+- **Fitxes:** selecciona un marcador o un centre de la llista. El panell mostra les dades disponibles i ordena els altres centres per proximitat.
+- **Cronologia:** mou el control inferior per explorar els orígens documentats o prem **Reprodueix**. Les fitxes sense un any d’origen documentat es consulten a **Actualitat**. L’any que apareix al control temporal correspon a la primera evidència incorporada al visor i pot diferir de la fundació o de l’obertura de la seu actual.
+
+## El projecte
+
+El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
+
+Les fitxes del directori compten unitats documentades. Diverses fitxes poden compartir emplaçament, com passa amb dues escoles d’atletisme a l’Estadi Municipal. Les dades històriques són un inventari en curs. Hi ha dates, seus anteriors i períodes d’activitat que encara s’han de documentar.
+
+## Fonts i metodologia
+
+- El cens de partida conserva els codis oficials i es pot contrastar amb la sèrie de registres de 2020 a 2026 inclosa al paquet.
+- Per ampliar el directori es comprova què s’hi pot aprendre i on s’imparteix. Les 50 incorporacions de la V54 i la V55 tenen una justificació individual i enllaços a l’oferta i a la referència geogràfica.
+- Les adreces s’han contrastat amb fonts dels centres, directoris públics i el [geocodificador de l’ICGC](https://eines.icgc.cat/geocodificador/). Una adreça geocodificada pot correspondre al portal de referència. Quan només es pot situar el carrer, la precisió és aproximada. A Hwarang Mataró, per exemple, l’adreça documentada és el número 2 i el marcador orientatiu es basa en el número 1 del mateix passatge.
+- Els esdeveniments històrics i les fonts es conserven en taules documentals separades. Els canvis de codi, les dates d’obertura i els trasllats s’han de contrastar cas per cas.
+
+### Fonts per començar
+
+- [Directori d’entitats de l’Ajuntament de Mataró](https://entitatsmataro.cat/que-oferim/entitats/directori-entitats)
+- [Casals municipals de gent gran](https://www.mataro.cat/sites/casals-municipals-de-gent-gran)
+- [Projectes educatius de Cultura Mataró](https://www.culturamataro.cat/cultura-mataro/projectes-educatius)
+- [Oferta de formació del Servei d’Ocupació de Mataró](https://www.mataro.cat/ca/ocupacio/persones/formacio)
+
+## Dades i fitxers
+
+Els fitxers d’aquesta taula són dins del [ZIP de la V55](Mataro_ciutat_escoles_V55_directori_ampliat.zip).
+
+| Fitxer | Contingut |
+| --- | --- |
+| `index.html` | Visor principal |
+| `mataro_centres_2026_2027.csv` i `mataro_centres_2026_2027.geojson` | Cens de partida en taula i en format cartogràfic |
+| `mataro_seus_observades.csv` i `mataro_seus_v2.geojson` | Registre de seus observades i punts associats |
+| `oferta_educativa_complementaria.csv` | Fitxes incorporades fora del cens de partida |
+| `incorporacions_V55_fonts.csv` | Fonts sobre l’oferta i la ubicació de les 50 fitxes afegides des de la V53 |
+| `esdeveniments_historics_v24.csv` i `fonts_historiques_v24.csv` | Fites històriques i referències documentals |
+| `Mataro_lleure_educatiu.csv`, `Mataro_casals_estiu_2026.csv` i `mataro_lleure_i_casals.geojson` | Dades de la capa de lleure i casals |
+| `LLEGEIX_ME_V55.md` i `SHA256.json` | Nota de versió i sumes de verificació dels fitxers |
+
+Les coordenades del GeoJSON són en EPSG:4326, en ordre longitud i latitud. Per executar el visor en local, descomprimeix tot el paquet i obre `index.html` mantenint les carpetes d’imatges i logotips al seu lloc. Cal connexió per carregar Leaflet i el mapa de fons.
+
+## Propostes i correccions
+
+Si tens accés al repositori, pots [obrir una incidència](https://github.com/JeanCabot/mataro-ciutat-escoles/issues) amb el nom del centre, la dada que cal afegir o corregir i la font. Per a fotografies, indica també l’autoria, l’enllaç original i la llicència.
+
+## Crèdits
+
+- **Visor:** [Leaflet](https://leafletjs.com/).
+- **Mapa de fons:** [col·laboradors d’OpenStreetMap](https://www.openstreetmap.org/copyright).
+- **Geocodificació:** [Institut Cartogràfic i Geològic de Catalunya](https://eines.icgc.cat/geocodificador/).
+- **Imatges:** les fitxes amb fotografia n’indiquen la procedència i, quan consta, la llicència.
