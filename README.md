@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V73** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V74** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V73](Mataro_ciutat_escoles_V73_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V74](Mataro_ciutat_escoles_V74_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -44,6 +44,8 @@ La V71 mostra els enllaços de les fitxes com a icones. El globus obre el web i 
 La V72 consolida la fitxa de GiEscola, situa la seu central de l’Escola Municipal de Música a la Nau Minguell i identifica les plantes de la Biblioteca Popular i les Aules Sènior. Queden 71 coordenades pendents de contrast.
 
 La V73 contrasta set portals amb l’ICGC, identifica les seus compartides i documenta el GEM Petit. Queden 64 punts pendents de contrast i tres casos de prioritat 1 (Balmes i els dos dispositius hospitalaris).
+
+La V74 contrasta deu ubicacions amb l’ICGC. La fitxa de Balmes mostra l’adreça de contacte publicada per l’escola (plaça dels Bous, 1). Els dos dispositius hospitalaris es mostren a l’adreça de referència del recinte. Queden 54 punts del cens per contrastar i dos accessos interiors per confirmar.
 
 ## El projecte
 
