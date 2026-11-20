@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V72** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V73** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V72](Mataro_ciutat_escoles_V72_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V73](Mataro_ciutat_escoles_V73_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -43,6 +43,8 @@ La V71 mostra els enllaços de les fitxes com a icones. El globus obre el web i 
 
 La V72 consolida la fitxa de GiEscola, situa la seu central de l’Escola Municipal de Música a la Nau Minguell i identifica les plantes de la Biblioteca Popular i les Aules Sènior. Queden 71 coordenades pendents de contrast.
 
+La V73 contrasta set portals amb l’ICGC, identifica les seus compartides i documenta el GEM Petit. Queden 64 punts pendents de contrast i tres casos de prioritat 1 (Balmes i els dos dispositius hospitalaris).
+
 ## El projecte
 
 El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
@@ -65,7 +67,7 @@ Les fitxes del directori compten unitats documentades. Diverses fitxes poden com
 
 ## Dades i fitxers
 
-Els fitxers d’aquesta taula són dins del [ZIP de la V72](Mataro_ciutat_escoles_V72_directori_ampliat.zip).
+Els fitxers d’aquesta taula són dins del [ZIP de la V73](Mataro_ciutat_escoles_V73_directori_ampliat.zip).
 
 | Fitxer | Contingut |
 | --- | --- |
