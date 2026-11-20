@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V88** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V89** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V88](Mataro_ciutat_escoles_V88_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V89](Mataro_ciutat_escoles_V89_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -75,6 +75,8 @@ La V87 amplia la cronologia a 193 fites. Documenta les dates d’obertura i d’
 
 La V88 arriba a 201 fites. Afegeix un filtre amb sis fites de la xarxa municipal d’escoles bressol, documenta l’activitat del Tabalet abans del trasllat de 2004 i recull La Gralla a l’apartat de llars d’infants històriques.
 
+La V89 arriba a 208 fites. Afegeix les autoritzacions, els cessaments d’El Jardí i Mimus i la referència a una fotografia d’El Jardí de 1993. A la cronologia s’identifiquen pels codis històrics de les resolucions. Es poden filtrar per nom i queden fora del cens actual del mapa.
+
 ## El projecte
 
 El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
@@ -97,7 +99,7 @@ Les fitxes del directori compten unitats documentades. Diverses fitxes poden com
 
 ## Dades i fitxers
 
-Els fitxers d’aquesta taula són dins del [ZIP de la V86](Mataro_ciutat_escoles_V88_directori_ampliat.zip).
+Els fitxers d’aquesta taula són dins del [ZIP de la V86](Mataro_ciutat_escoles_V89_directori_ampliat.zip).
 
 | Fitxer | Contingut |
 | --- | --- |
@@ -106,7 +108,7 @@ Els fitxers d’aquesta taula són dins del [ZIP de la V86](Mataro_ciutat_escole
 | `mataro_seus_observades.csv` i `mataro_seus_v2.geojson` | Registre de seus observades i punts associats |
 | `oferta_educativa_complementaria.csv` | Fitxes incorporades fora del cens de partida |
 | `incorporacions_V55_fonts.csv` | Fonts sobre l’oferta i la ubicació de les 50 fitxes afegides des de la V53 |
-| `esdeveniments_historics_v88.csv` i `fonts_historiques_v88.csv` | Fites històriques i referències documentals |
+| `esdeveniments_historics_v89.csv` i `fonts_historiques_v89.csv` | Fites històriques i referències documentals |
 | `Mataro_lleure_educatiu.csv`, `Mataro_casals_estiu_2026.csv` i `mataro_lleure_i_casals.geojson` | Dades de la capa de lleure i casals |
 | `revisio-instagram.md` i `SHA256.json` | Nota de versió i sumes de verificació dels fitxers |
 
