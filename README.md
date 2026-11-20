@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V78** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V79** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V78](Mataro_ciutat_escoles_V78_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V79](Mataro_ciutat_escoles_V79_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -54,6 +54,8 @@ La V76 contrasta l’adreça i el punt de 14 centres amb els webs dels centres, 
 La V77 contrasta 25 ubicacions, sis de les quals corresponen a escoles bressol municipals. Queden 15 punts del cens per contrastar i dos accessos interiors de l’Hospital de Mataró per confirmar.
 
 La V78 contrasta 14 ubicacions més i documenta les tres seus de l’Escola Pia. Queda pendent un punt del cens (Cenafe Mataró) i dos accessos interiors de l’Hospital.
+
+La V79 diferencia la titularitat dels centres d’educació obligatòria. Els públics es mostren en verd i els privats i concertats, en granat.
 
 ## El projecte
 
