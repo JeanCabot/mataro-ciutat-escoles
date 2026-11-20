@@ -94,3 +94,9 @@ Prioritat 1 per a seus múltiples, coincidències de punts o accessos que cal ac
 ## Correccions incorporades a la V72
 
 GiEscola consta una sola vegada. El punt de l’Escola Municipal de Música identifica la seu central a la Nau Minguell i el registre conserva l’observació d’Antonio Machado. Les dues fitxes del carrer d’en Palau, 18, indiquen la planta. Queden 71 dels 72 punts pendents de contrast cartogràfic.
+
+## Contrast incorporat a la V73
+
+La V73 contrasta set portals amb l’ICGC, identifica les seus compartides i documenta el GEM Petit. Queden 64 punts pendents de contrast i tres casos de prioritat 1 (Balmes i els dos dispositius hospitalaris).
+
+Codis revisats: 08060253, 08021302, 08067661, 08021168, 08065123, 08021089 i 08057126. El codi 08057126 correspon a l’antiga seu del Centre Catòlic. Per a Balmes, l’ICGC ha retornat el portal 5 i la fitxa indica el 6.
