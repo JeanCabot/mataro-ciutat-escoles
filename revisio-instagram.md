@@ -52,3 +52,9 @@ Consulta del 20 de novembre de 2026. «No localitzat» indica que la cerca i les
 | Cosmos · Grup d’Astronomia de Mataró | [@cosmosmataro_](https://www.instagram.com/cosmosmataro_/), enllaçat al web de l’entitat | [Font](https://www.cosmosmataro.org/contacta) |
 | Escola d’Arts Marcials Tonbal | No localitzat | [Font](https://entitatsmataro.cat/que-oferim/entitats/directori-entitats?b_start%3Aint=570) |
 | Live English Mataró | No localitzat | [Font](https://livenglishmataro.com/contacto) |
+
+## Segona comprovació dels casos dubtosos
+
+- **Freta Mataró.** El menú de xarxes queda dins l’apartat «Freta Calella» i la política de privacitat identifica el compte `Freta_Calella`. Les fonts consultades no acrediten que aquest sigui el compte de la seu de Mataró. [Web d’Escoles Freta](https://www.freta.cat/) · [Política de privacitat](https://www.freta.cat/politica-de-privacitat-web/)
+- **Acadèmia Casanova.** El directori comercial mostra «Instagram: Visitar», però no s’ha pogut confirmar l’adreça concreta del perfil. La pàgina oficial acredita la seu de Mataró. [Fitxa oficial](https://www.academiacasanova.com/nuestros-centros/cc-academia-casanova-mataro/) · [Directori comercial](https://www.todosbiz.es/casanova-barber-school-academia-de-602-25-31-69)
+- **CEE Les Aigües.** El directori municipal identifica el web del centre d’educació especial de Mataró. Una cerca pel nom retorna també una escola homònima amb un altre telèfon i un perfil que no s’ha pogut vincular al CEE de Mataró. [Fitxa municipal](https://www.mataro.cat/sites/mataro-ciutat-educadora/portes-obertes/centres-publics) · [Centre homònim](https://agora.xtec.cat/lesaigues/lescola/contacta-amb-nosaltres/)
