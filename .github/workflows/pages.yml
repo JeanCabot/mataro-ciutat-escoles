@@ -2,7 +2,7 @@ name: Publica el mapa a GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['Mataro_ciutat_escoles_V*.zip', 'v92_archive_parts/**', '.github/workflows/pages.yml']
+    paths: ['Mataro_ciutat_escoles_V*.zip', 'v*_archive_parts/**', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,13 +20,15 @@ jobs:
       - name: Prepara els fitxers del visor
         run: |
           archive=$(find . -maxdepth 1 -name 'Mataro_ciutat_escoles_V*.zip' | sort -V | tail -1)
-          if [ -d v92_archive_parts ]; then
-            cat v92_archive_parts/part-*.bin > /tmp/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip
-            archive=/tmp/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip
+          parts_dir=$(find . -maxdepth 1 -type d -name 'v*_archive_parts' | sort -V | tail -1)
+          if [ -n "$parts_dir" ]; then
+            archive_name=$(cat "$parts_dir/ARCHIVE_NAME.txt")
+            cat "$parts_dir"/part-*.bin > "/tmp/$archive_name"
+            archive="/tmp/$archive_name"
           fi
           test -n "$archive"
           unzip -q "$archive" -d _site
-          cp "$archive" _site/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip
+          cp "$archive" "_site/$(basename "$archive")"
           test -s _site/index.html
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v4
