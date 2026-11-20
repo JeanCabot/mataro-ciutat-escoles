@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V93** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V94** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V93](https://jeancabot.github.io/mataro-ciutat-escoles/Mataro_ciutat_escoles_V93_cronologia_inici_classes_Cami_Rocafonda.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V94](https://jeancabot.github.io/mataro-ciutat-escoles/Mataro_ciutat_escoles_V94_edificis_Cami_del_Mig_Rocafonda.zip)**
 
 ## Com fer servir el mapa
 
@@ -85,6 +85,8 @@ La V92 arriba a 220 fites. Identifica Tabalet I amb Sant Cugat, 120, i Tabalet I
 
 La V93 arriba a 222 fites. La publicació municipal *25 anys d’escola pública (1978–2003)* documenta l’inici de les classes de Camí del Mig al setembre de 1978 i les de Rocafonda a mitjan octubre. El visor separa aquestes dates d’activitat lectiva de la constitució administrativa dels centres, ordenada el gener de 1979. La [nota documental](recerca/inici_classes_cami_del_mig_rocafonda_1978.md) conserva la transcripció i el criteri de datació.
 
+La V94 arriba a 224 fites. Afegeix l’entrada en ús de l’edifici d’EGB de Camí del Mig l’octubre de 1981 i la inauguració de l’edifici central de Rocafonda el novembre. Manté pendent de contrast una data de març de 1978 per a un parvulari prefabricat esmentat a la mateixa retrospectiva. La [nota documental](recerca/edificis_cami_del_mig_rocafonda_1981.md) explica el criteri.
+
 ## El projecte
 
 El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
@@ -107,7 +109,7 @@ Les fitxes del directori compten unitats documentades. Diverses fitxes poden com
 
 ## Dades i fitxers
 
-Els fitxers d’aquesta taula són dins del [ZIP de la V93](https://jeancabot.github.io/mataro-ciutat-escoles/Mataro_ciutat_escoles_V93_cronologia_inici_classes_Cami_Rocafonda.zip).
+Els fitxers d’aquesta taula són dins del [ZIP de la V94](https://jeancabot.github.io/mataro-ciutat-escoles/Mataro_ciutat_escoles_V94_edificis_Cami_del_Mig_Rocafonda.zip).
 
 | Fitxer | Contingut |
 | --- | --- |
@@ -116,7 +118,7 @@ Els fitxers d’aquesta taula són dins del [ZIP de la V93](https://jeancabot.gi
 | `mataro_seus_observades.csv` i `mataro_seus_v2.geojson` | Registre de seus observades i punts associats |
 | `oferta_educativa_complementaria.csv` | Fitxes incorporades fora del cens de partida |
 | `incorporacions_V55_fonts.csv` | Fonts sobre l’oferta i la ubicació de les 50 fitxes afegides des de la V53 |
-| `esdeveniments_historics_v93.csv` i `fonts_historiques_v93.csv` | Fites històriques i referències documentals |
+| `esdeveniments_historics_v94.csv` i `fonts_historiques_v94.csv` | Fites històriques i referències documentals |
 | `mataro_seus_historics_tabalet_v92.csv` i `.geojson` | Adreces, períodes documentats i punts aproximats de les dues seus antigues del Tabalet |
 | `Mataro_lleure_educatiu.csv`, `Mataro_casals_estiu_2026.csv` i `mataro_lleure_i_casals.geojson` | Dades de la capa de lleure i casals |
 | `revisio-instagram.md` i `SHA256.json` | Nota de versió i sumes de verificació dels fitxers |
