@@ -100,3 +100,11 @@ GiEscola consta una sola vegada. El punt de l’Escola Municipal de Música iden
 La V73 contrasta set portals amb l’ICGC, identifica les seus compartides i documenta el GEM Petit. Queden 64 punts pendents de contrast i tres casos de prioritat 1 (Balmes i els dos dispositius hospitalaris).
 
 Codis revisats: 08060253, 08021302, 08067661, 08021168, 08065123, 08021089 i 08057126. El codi 08057126 correspon a l’antiga seu del Centre Catòlic. Per a Balmes, l’ICGC ha retornat el portal 5 i la fitxa indica el 6.
+
+## Contrast incorporat a la V74
+
+La V74 contrasta deu ubicacions amb l’ICGC. La fitxa de Balmes mostra l’adreça de contacte publicada per l’escola (plaça dels Bous, 1). Els dos dispositius hospitalaris es mostren a l’adreça de referència del recinte. Queden 54 punts del cens per contrastar i dos accessos interiors per confirmar.
+
+- **Balmes (08021016).** El cens de la Generalitat indica la plaça dels Bous, 6. El visor mostra el número 1, publicat pel centre i geocodificat amb l’ICGC. Es conserva l’adreça original al registre.
+- **HDA (08062407) i URPIJ-UCA (08077277).** El punt compartit correspon a la carretera de Cirera, 230 (41.55630188, 2.42894669). Les fitxes indiquen edifici ambulatori, planta 0, i distingeixen el punt del recinte de l’accés interior pendent.
+- **Educació infantil.** S’han contrastat El Xumet, Peques, La Caseta, Anca, Petit Somni, Snoopy i Nemomarlin. En els intervals de Peques i Petit Somni, el punt correspon al primer portal. Nemomarlin es manté com a centre tancat.
