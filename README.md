@@ -81,6 +81,8 @@ La V90 arriba a 213 fites. Incorpora dues addendes del Tabalet, documenta l’of
 
 La V91 arriba a 218 fites. Incorpora el cessament del Patufet, l’acte informatiu sobre el nou Tabalet i dues referències als usos comunitaris d’un antic local. Queda documentada la referència del monogràfic d’El Punt Maresme per continuar la cerca de les adreces.
 
+La recerca ha identificat els dos antics locals del Tabalet i ha contrastat les adreces amb documents municipals. La [nota documental](recerca/antics_locals_tabalet.md) explica també una discrepància d’assignació entre les fonts.
+
 ## El projecte
 
 El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
