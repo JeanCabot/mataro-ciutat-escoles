@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V64** recull **164 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V65** recull **164 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V64](Mataro_ciutat_escoles_V64_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V65](Mataro_ciutat_escoles_V65_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -27,6 +27,8 @@ La V63 enllaça el compte de Fundesplai des de vuit escoles bressol municipals o
 
 La V64 afegeix el perfil del Grup Atletisme Lluïsos Mataró. El directori té 116 de 164 fitxes amb un enllaç confirmat.
 
+La V65 afegeix tres enllaços i eleva el total a 119 de 164 fitxes amb enllaç confirmat. La [revisió dels 48 casos pendents](revisio-instagram.md) recull els resultats per fitxa.
+
 ## El projecte
 
 El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
@@ -49,7 +51,7 @@ Les fitxes del directori compten unitats documentades. Diverses fitxes poden com
 
 ## Dades i fitxers
 
-Els fitxers d’aquesta taula són dins del [ZIP de la V64](Mataro_ciutat_escoles_V64_directori_ampliat.zip).
+Els fitxers d’aquesta taula són dins del [ZIP de la V65](Mataro_ciutat_escoles_V65_directori_ampliat.zip).
 
 | Fitxer | Contingut |
 | --- | --- |
@@ -60,7 +62,7 @@ Els fitxers d’aquesta taula són dins del [ZIP de la V64](Mataro_ciutat_escole
 | `incorporacions_V55_fonts.csv` | Fonts sobre l’oferta i la ubicació de les 50 fitxes afegides des de la V53 |
 | `esdeveniments_historics_v24.csv` i `fonts_historiques_v24.csv` | Fites històriques i referències documentals |
 | `Mataro_lleure_educatiu.csv`, `Mataro_casals_estiu_2026.csv` i `mataro_lleure_i_casals.geojson` | Dades de la capa de lleure i casals |
-| `LLEGEIX_ME_V64.md` i `SHA256.json` | Nota de versió i sumes de verificació dels fitxers |
+| `revisio-instagram.md` i `SHA256.json` | Nota de versió i sumes de verificació dels fitxers |
 
 Les coordenades del GeoJSON són en EPSG:4326, en ordre longitud i latitud. Per executar el visor en local, descomprimeix tot el paquet i obre `index.html` mantenint les carpetes d’imatges i logotips al seu lloc. Cal connexió per carregar Leaflet i el mapa de fons.
 
