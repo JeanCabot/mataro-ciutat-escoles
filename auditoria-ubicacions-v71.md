@@ -196,3 +196,11 @@ La fitxa de l’Escola Pia indica les seves tres seus i localitza la de primàri
 | [Meritxell](https://www.fundaciomeritxell.cat/faqs/) | c. Passet, 16 | [Carrer d'en Passet, 16](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+d%27en+Passet+16%2C+Matar%C3%B3&layers=address&size=4) | 41.55597648, 2.46435942 |
 | [Sant Josep](https://colegiosanjosemataro.com/contacte/) | rda. Cerdanya, 39 | [Ronda de la Cerdanya, 39](https://eines.icgc.cat/geocodificador/cerca?text=Ronda+de+la+Cerdanya+39%2C+Matar%C3%B3&layers=address&size=4) | 41.54290845, 2.42222156 |
 | [Sol-Ixent](https://www.escolasol-ixent.cat/contacte/) | av. Gatassa, 68-86 | [Avinguda de la Gatassa, 68](https://eines.icgc.cat/geocodificador/cerca?text=Avinguda+de+la+Gatassa+68%2C+Matar%C3%B3&layers=address&size=4) | 41.53808304, 2.42759139 |
+
+## Seus incorporades a la V80
+
+La V80 situa tres seus docents amb marcador propi. El Torrent i Mar formen part de l’Escola Pia de Mataró. Roques Albes és una seu de l’Institut Josep Puig i Cadafalch i el seu punt és orientatiu. Els dos centres es compten una sola vegada i les seves seus es poden triar des de la fitxa en la vista Actualitat.
+
+- **El Torrent** · El Torrent, 62 · 41.53911369, 2.44167749.
+- **Mar** · Carrer de Sant Agustí, 59 · 41.53542481, 2.44624707. [Instal·lacions de l’Escola Pia](https://mataro.escolapia.cat/lescola/installacions/)
+- **Roques Albes** · Carrer de Galícia · 41.54604091, 2.42715768. El web de l’institut indica el carrer sense número i el punt de referència correspon al número 1 documentat per l’Ajuntament. [Contacte de l’institut](https://inspuig.org/wp/centre/contacte-i-situacio/)
