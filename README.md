@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V81** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V82** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V81](Mataro_ciutat_escoles_V81_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V82](Mataro_ciutat_escoles_V82_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -60,6 +60,8 @@ La V79 diferencia la titularitat dels centres d’educació obligatòria. Els p�
 La V80 situa tres seus docents amb marcador propi. El Torrent i Mar formen part de l’Escola Pia de Mataró. Roques Albes és una seu de l’Institut Josep Puig i Cadafalch i el seu punt és orientatiu. Els dos centres es compten una sola vegada i les seves seus es poden triar des de la fitxa en la vista Actualitat.
 
 La V81 diferencia l’Edifici Ambulatori (240) de l’Hospital Universitari (230) i contrasta l’adreça registral de Cenafe. Queden pendents els accessos docents interiors i l’activitat presencial de Cenafe a Mataró.
+
+La V82 reforça el contrast dels marcadors i sincronitza els colors de la llegenda. Els públics d’educació obligatòria es mostren en blau i els privats i concertats, en vermell.
 
 ## El projecte
 
