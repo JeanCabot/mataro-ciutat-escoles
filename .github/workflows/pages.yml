@@ -2,7 +2,7 @@ name: Publica el mapa a GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['Mataro_ciutat_escoles_V*_directori_ampliat.zip', '.github/workflows/pages.yml']
+    paths: ['Mataro_ciutat_escoles_V*.zip', 'v92_archive_parts/**', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,9 +19,14 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Prepara els fitxers del visor
         run: |
-          archive=$(find . -maxdepth 1 -name 'Mataro_ciutat_escoles_V*_directori_ampliat.zip' | sort -V | tail -1)
+          archive=$(find . -maxdepth 1 -name 'Mataro_ciutat_escoles_V*.zip' | sort -V | tail -1)
+          if [ -d v92_archive_parts ]; then
+            cat v92_archive_parts/part-*.bin > /tmp/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip
+            archive=/tmp/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip
+          fi
           test -n "$archive"
           unzip -q "$archive" -d _site
+          cp "$archive" _site/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip
           test -s _site/index.html
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v4

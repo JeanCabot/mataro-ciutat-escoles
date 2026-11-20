@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V91** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V92** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V91](Mataro_ciutat_escoles_V91_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V92](https://jeancabot.github.io/mataro-ciutat-escoles/Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip)**
 
 ## Com fer servir el mapa
 
@@ -79,9 +79,9 @@ La V89 arriba a 208 fites. Afegeix les autoritzacions, els cessaments d’El Jar
 
 La V90 arriba a 213 fites. Incorpora dues addendes del Tabalet, documenta l’oferta diferenciada dels dos codis dels Salesians el març de 2008 i situa la primera activitat documentada de Picasoques al curs 2022–2023.
 
-La V91 arriba a 218 fites. Incorpora el cessament del Patufet, l’acte informatiu sobre el nou Tabalet i dues referències als usos comunitaris d’un antic local. Queda documentada la referència del monogràfic d’El Punt Maresme per continuar la cerca de les adreces.
+La V91 arriba a 218 fites. Incorpora el cessament del Patufet, l’acte informatiu sobre el nou Tabalet i dues referències als usos comunitaris d’un antic local.
 
-La recerca ha identificat els dos antics locals del Tabalet i ha contrastat les adreces amb documents municipals. La [nota documental](recerca/antics_locals_tabalet.md) explica també una discrepància d’assignació entre les fonts.
+La V92 arriba a 220 fites. Identifica Tabalet I amb Sant Cugat, 120, i Tabalet II amb Ciutat Freta, 12; incorpora les dues seus històriques a la cronologia i al mapa temporal, amb coordenades aproximades i les limitacions de les fonts. La [nota documental](recerca/antics_locals_tabalet.md) explica la discrepància detectada en una fitxa de l’arxiu local.
 
 ## El projecte
 
@@ -105,7 +105,7 @@ Les fitxes del directori compten unitats documentades. Diverses fitxes poden com
 
 ## Dades i fitxers
 
-Els fitxers d’aquesta taula són dins del [ZIP de la V86](Mataro_ciutat_escoles_V91_directori_ampliat.zip).
+Els fitxers d’aquesta taula són dins del [ZIP de la V92](Mataro_ciutat_escoles_V92_cronologia_seus_historics_tabalet.zip).
 
 | Fitxer | Contingut |
 | --- | --- |
@@ -114,7 +114,8 @@ Els fitxers d’aquesta taula són dins del [ZIP de la V86](Mataro_ciutat_escole
 | `mataro_seus_observades.csv` i `mataro_seus_v2.geojson` | Registre de seus observades i punts associats |
 | `oferta_educativa_complementaria.csv` | Fitxes incorporades fora del cens de partida |
 | `incorporacions_V55_fonts.csv` | Fonts sobre l’oferta i la ubicació de les 50 fitxes afegides des de la V53 |
-| `esdeveniments_historics_v91.csv` i `fonts_historiques_v91.csv` | Fites històriques i referències documentals |
+| `esdeveniments_historics_v92.csv` i `fonts_historiques_v92.csv` | Fites històriques i referències documentals |
+| `mataro_seus_historics_tabalet_v92.csv` i `.geojson` | Adreces, períodes documentats i punts aproximats de les dues seus antigues del Tabalet |
 | `Mataro_lleure_educatiu.csv`, `Mataro_casals_estiu_2026.csv` i `mataro_lleure_i_casals.geojson` | Dades de la capa de lleure i casals |
 | `revisio-instagram.md` i `SHA256.json` | Nota de versió i sumes de verificació dels fitxers |
 

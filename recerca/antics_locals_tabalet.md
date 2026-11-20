@@ -1,6 +1,6 @@
 # Recerca: antics locals de l’escola bressol El Tabalet
 
-**Estat:** comprovació documental per preparar la incorporació a la cronologia.  
+**Estat:** adreces incorporades al mapa i a la cronologia de la V92.  
 **Data de revisió:** 20 de novembre de 2026.
 
 ## Resultat
@@ -30,9 +30,9 @@ Una fitxa de l’Arxiu de la Memòria del Maresme associa, en l’ordre del text
 6. Ajuntament de Mataró, [Plec de manteniment d’alarmes (2023)](https://www.contractaciomataro.cat/licitacion/documento?idDoc=R0083368&numExpediente=2023%2F000032818). Identifica el «Centre de Sords (Tabalet 1)» a Sant Cugat, 120.
 7. Arxiu de la Memòria del Maresme, [fitxa «Tabalet, escola bressol»](https://masmm.org/arxiu/llocs/03446.html). El cercador n’indexa una assignació dels dos carrers que no concorda amb la documentació municipal citada més amunt; la pàgina no s’ha pogut consultar directament durant aquesta revisió.
 
-## Criteri d’incorporació al visor
+## Incorporació a la V92
 
-Es poden representar els dos emplaçaments com a seus històriques del mateix centre, amb vigència anterior al trasllat de gener de 2004. Cal conservar separats:
+La V92 incorpora els dos emplaçaments al fitxer `mataro_seus_historics_tabalet_v92.csv` i al GeoJSON corresponent. El visor els mostra com a marcadors històrics als anys 2002 i 2003, i evita mostrar la seu actual del Tabalet abans del trasllat. Les coordenades són aproximades: el geocodificador oficial no ha retornat els portals exactes 120 i 12. La cronologia conserva separats:
 - la data del conveni (14-10-1992);
 - les evidències d’activitat dels dos locals;
 - el trasllat al nou edifici (gener de 2004);
