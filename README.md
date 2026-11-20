@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V79** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V80** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V79](Mataro_ciutat_escoles_V79_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V80](Mataro_ciutat_escoles_V80_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -56,6 +56,8 @@ La V77 contrasta 25 ubicacions, sis de les quals corresponen a escoles bressol m
 La V78 contrasta 14 ubicacions més i documenta les tres seus de l’Escola Pia. Queda pendent un punt del cens (Cenafe Mataró) i dos accessos interiors de l’Hospital.
 
 La V79 diferencia la titularitat dels centres d’educació obligatòria. Els públics es mostren en verd i els privats i concertats, en granat.
+
+La V80 situa tres seus docents amb marcador propi. El Torrent i Mar formen part de l’Escola Pia de Mataró. Roques Albes és una seu de l’Institut Josep Puig i Cadafalch i el seu punt és orientatiu. Els dos centres es compten una sola vegada i les seves seus es poden triar des de la fitxa en la vista Actualitat.
 
 ## El projecte
 
