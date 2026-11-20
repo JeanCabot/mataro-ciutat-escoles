@@ -108,3 +108,28 @@ La V74 contrasta deu ubicacions amb l’ICGC. La fitxa de Balmes mostra l’adre
 - **Balmes (08021016).** El cens de la Generalitat indica la plaça dels Bous, 6. El visor mostra el número 1, publicat pel centre i geocodificat amb l’ICGC. Es conserva l’adreça original al registre.
 - **HDA (08062407) i URPIJ-UCA (08077277).** El punt compartit correspon a la carretera de Cirera, 230 (41.55630188, 2.42894669). Les fitxes indiquen edifici ambulatori, planta 0, i distingeixen el punt del recinte de l’accés interior pendent.
 - **Educació infantil.** S’han contrastat El Xumet, Peques, La Caseta, Anca, Petit Somni, Snoopy i Nemomarlin. En els intervals de Peques i Petit Somni, el punt correspon al primer portal. Nemomarlin es manté com a centre tancat.
+
+## Contrast incorporat a la V76
+
+S’han contrastat 14 ubicacions. Queden 40 punts del cens per contrastar i dos accessos interiors de l’Hospital de Mataró per confirmar.
+
+El punt de Can Noè correspon a Tres Roques, l’adreça publicada a la guia municipal de matrícula del curs 2026–2027. El punt anterior era a prop de l’altra seu documentada. L’escola Camí del Mig conserva l’adreça publicada 1–3. L’ICGC retorna el portal 3 a uns 900 metres de l’escola; s’ha triat el portal 1, compatible amb la ubicació de l’escola i la [fotografia geolocalitzada](https://commons.wikimedia.org/wiki/File:Escola_Cam%C3%AD_del_Mig.jpg).
+
+Cenafe Mataró queda pendent de verificació. El [web de preinscripció del centre](https://www.cenafe.es/preinscripcion-online/cataluna/cenafe-mataro) mostra referències a Barcelona. Cal una font actual que confirmi si imparteix formació presencial a la seu que figura al cens de Mataró.
+
+| Centre | Adreça de partida | Portal de referència | Coordenades (latitud, longitud) |
+| --- | --- | --- | --- |
+| [CFA Alarona](https://agora.xtec.cat/afaalarona/contacte/) | c. Sant Cugat, 169-173 | [Carrer de Sant Cugat, 169](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+Sant+Cugat+169%2C+Matar%C3%B3&layers=address&size=4) | 41.53231668, 2.43420948 |
+| [CFA Can Noè](https://www.mataro.cat/ca/actualitat/noticies/2026/del-19-al-29-de-juny-es-fa-la-preinscripcio-a-la-formacio-de-persones-adultes/triptic_fa_v3.pdf/@@download) | pça. del Canigó, 7 | [Plaça del Canigó, 7](https://eines.icgc.cat/geocodificador/cerca?text=Pla%C3%A7a+del+Canig%C3%B3+7%2C+Matar%C3%B3&layers=address&size=4) | 41.54338483, 2.42804319 |
+| [CFA Els Tarongers](https://agora.xtec.cat/cfa-elstarongers/contacte/) | Mare de Déu de la Cisa, 80-92 | [Carrer de la Mare de Déu de la Cisa, 80](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+la+Mare+de+D%C3%A9u+de+la+Cisa+80%2C+Matar%C3%B3&layers=address&size=4) | 41.53618301, 2.42463588 |
+| [Divina Providència](https://www.providencia.cat/sec-Avis-legal-12274.html) | c. Llauder, s/n | [Carrer de Llauder, 30](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+Llauder+30%2C+Matar%C3%B3&layers=address&size=4) | 41.53515389, 2.44043665 |
+| [Escola Angeleta Ferrer](https://agora.xtec.cat/esc-angeletaferrer/) | p. de Ventura Ametller, 1-3 | [Plaça de Ventura Ametller, 1](https://eines.icgc.cat/geocodificador/cerca?text=Pla%C3%A7a+de+Ventura+Ametller+1%2C+Matar%C3%B3&layers=address&size=4) | 41.53557034, 2.44314757 |
+| [Escola Camí del Cros](https://agora.xtec.cat/esc-camidelcros/lescola/on-som/) | rda. Cros, s/n | [Ronda del Cros, 13](https://eines.icgc.cat/geocodificador/cerca?text=Ronda+del+Cros+13%2C+Matar%C3%B3&layers=address&size=4) | 41.53535533, 2.4220634 |
+| [Escola Camí del Mig](https://agora.xtec.cat/ceip-camidelmig/lescola/) | Camí del Mig, 1 i 3 | [Camí del Mig, 1](https://eines.icgc.cat/geocodificador/cerca?text=Cam%C3%AD+del+Mig+1%2C+Matar%C3%B3&layers=address&size=4) | 41.53667005, 2.43300696 |
+| [Escola La Llàntia](https://agora.xtec.cat/escola-lallantia/) | c. de Sant Sebastià, s/n | [Carrer de Sant Josep de Calassanç, 2](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+Sant+Josep+de+Calassan%C3%A7+2%2C+Matar%C3%B3&layers=address&size=4) | 41.54517318, 2.42701879 |
+| [Escola Vista Alegre](https://agora.xtec.cat/ceipvistaalegre/lescola/material-escolar/) | rda. Sant Oleguer, 91-101 | [Ronda de Sant Oleguer, 91](https://eines.icgc.cat/geocodificador/cerca?text=Ronda+de+Sant+Oleguer+91%2C+Matar%C3%B3&layers=address&size=4) | 41.55157659, 2.44643234 |
+| [Freta](https://www.freta.cat/contacte/) | pg. Rocafonda, 45-47 | [Passeig de Rocafonda, 45](https://eines.icgc.cat/geocodificador/cerca?text=Passeig+de+Rocafonda+45%2C+Matar%C3%B3&layers=address&size=4) | 41.54676968, 2.44735301 |
+| [Institut Alexandre Satorras](https://www.asatorras.cat/contact) | av. Velòdrom, s/n | [Avinguda del Velòdrom, 37](https://eines.icgc.cat/geocodificador/cerca?text=Avinguda+del+Vel%C3%B2drom+37%2C+Matar%C3%B3&layers=address&size=4) | 41.54689645, 2.43979842 |
+| [Llar d'infants La Llàntia](https://www.mataro.cat/ca/temes/educacio/escoles-bressol-0-3-anys/pas-a-pas-inscripcions-eb-2026.pdf) | c. de Galícia, 3-9 | [Carrer de Galícia, 3](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+Gal%C3%ADcia+3%2C+Matar%C3%B3&layers=address&size=4) | 41.54627167, 2.4268422 |
+| [Llar d'infants Rocafonda](https://www.mataro.cat/ca/temes/educacio/escoles-bressol-0-3-anys/pas-a-pas-inscripcions-eb-2026.pdf) | c. Santiago Rusiñol, 1-23 | [Carrer de Santiago Rusiñol, 1](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+Santiago+Rusi%C3%B1ol+1%2C+Matar%C3%B3&layers=address&size=4) | 41.5486618, 2.45005237 |
+| [Sagrat Cor de Jesús](https://www.sagratcordejesusmataro.com/contacte) | c. Coma, 19-21 | [Carrer de la Coma, 21](https://eines.icgc.cat/geocodificador/cerca?text=Carrer+de+la+Coma+21%2C+Matar%C3%B3&layers=address&size=4) | 41.54166385, 2.44734955 |
