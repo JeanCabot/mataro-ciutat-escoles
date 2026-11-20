@@ -2,7 +2,7 @@
 
 Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V55** recull **164 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa (previsualització privada)](https://mataro-ciutat-escoles.toastymarmalade16.chatgpt.site)** · **[Descarrega la V55](Mataro_ciutat_escoles_V55_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V55](Mataro_ciutat_escoles_V55_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
