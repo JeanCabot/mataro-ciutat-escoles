@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V68** recull **164 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V69** recull **164 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V68](Mataro_ciutat_escoles_V68_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V69](Mataro_ciutat_escoles_V69_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -35,6 +35,8 @@ La V67 incorpora l’apartat **Xarxes** a les fitxes, permet enllaçar més d’
 
 La V68 afegeix cinc enllaços a tres fitxes. El directori té 124 de 164 fitxes amb almenys una xarxa enllaçada.
 
+La V69 escurça l’etiqueta dels enllaços als webs dels centres i les entitats a **Web**.
+
 ## El projecte
 
 El mapa serveix tant per trobar oferta educativa avui com per explorar on s’ha après a Mataró al llarg del temps. Parteix d’un cens de centres identificats per codi i incorpora oferta complementària amb activitat formativa documentada, des d’idiomes i arts escèniques fins a formació viària, esport i aprenentatge per a gent gran.
@@ -57,7 +59,7 @@ Les fitxes del directori compten unitats documentades. Diverses fitxes poden com
 
 ## Dades i fitxers
 
-Els fitxers d’aquesta taula són dins del [ZIP de la V68](Mataro_ciutat_escoles_V68_directori_ampliat.zip).
+Els fitxers d’aquesta taula són dins del [ZIP de la V69](Mataro_ciutat_escoles_V69_directori_ampliat.zip).
 
 | Fitxer | Contingut |
 | --- | --- |
