@@ -1,8 +1,8 @@
 # Mataró, ciutat d’escoles
 
-Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V75** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
+Mapa interactiu de l’educació a Mataró. Reuneix centres d’ensenyament, acadèmies, universitats i espais on també s’aprèn, com biblioteques, museus, tallers i casals. La **V76** recull **163 fitxes al directori**, amb una capa addicional de lleure i casals.
 
-**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V75](Mataro_ciutat_escoles_V75_directori_ampliat.zip)**
+**[Obre el mapa a GitHub Pages](https://jeancabot.github.io/mataro-ciutat-escoles/)** · **[Descarrega la V76](Mataro_ciutat_escoles_V76_directori_ampliat.zip)**
 
 ## Com fer servir el mapa
 
@@ -48,6 +48,8 @@ La V73 contrasta set portals amb l’ICGC, identifica les seus compartides i doc
 La V74 contrasta deu ubicacions amb l’ICGC. La fitxa de Balmes mostra l’adreça de contacte publicada per l’escola (plaça dels Bous, 1). Els dos dispositius hospitalaris es mostren a l’adreça de referència del recinte. Queden 54 punts del cens per contrastar i dos accessos interiors per confirmar.
 
 La V75 obre el mapa amb el filtre d’educació obligatòria activat. Els quatre filtres tenen un punt del mateix color que els marcadors de la seva categoria.
+
+La V76 contrasta l’adreça i el punt de 14 centres amb els webs dels centres, l’Ajuntament i l’ICGC. El CFA Can Noè es mostra a Tres Roques. Queden 40 punts del cens per contrastar i dos accessos interiors de l’Hospital de Mataró per confirmar.
 
 ## El projecte
 
