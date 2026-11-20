@@ -90,3 +90,7 @@ Prioritat 1 per a seus múltiples, coincidències de punts o accessos que cal ac
 | 3 | 08076157 | Institut Escola Àngela Bransuela | rda. Sant Oleguer, 76 | 41.55052 | 2.445092 | Contrastar el portal amb la font del centre i el geocodificador. |
 | 3 | 08076790 | LLI privada Nemomarlin Maresme | c. Vallespir, 2, local 3 | 41.55463 | 2.46021 | Contrastar el portal amb la font del centre i el geocodificador. |
 | 3 | 08077976 | Institut Miquel Biada | c. Puig i Cadafalch, 89 | 41.53999 | 2.429224 | Contrastar el portal amb la font del centre i el geocodificador. |
+
+## Correccions incorporades a la V72
+
+GiEscola consta una sola vegada. El punt de l’Escola Municipal de Música identifica la seu central a la Nau Minguell i el registre conserva l’observació d’Antonio Machado. Les dues fitxes del carrer d’en Palau, 18, indiquen la planta. Queden 71 dels 72 punts pendents de contrast cartogràfic.
