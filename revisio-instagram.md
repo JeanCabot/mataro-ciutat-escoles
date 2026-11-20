@@ -27,7 +27,7 @@ Consulta del 20 de novembre de 2026. «No localitzat» indica que la cerca i les
 | EBU Centre d’Estudis | No localitzat | [Font](https://www.ebucentre.com/) |
 | Aprenem Mataró | No localitzat | [Font](https://www.aprenemataro.cat/) |
 | Acadèmia A Punt | No localitzat | [Font](https://apuntmataro.com/) |
-| Acadèmia Casanova | No localitzat | [Font](https://www.academiacasanova.com/contacto/) |
+| Acadèmia Casanova | [Compte general del grup](https://www.instagram.com/academia_casanova_oficial/), incorporat a la V66 | [Fitxa de Mataró](https://www.academiacasanova.com/nuestros-centros/cc-academia-casanova-mataro/) · [Directori comercial](https://directoriosempresas.es/1177/barcelona/academia-casanova.html) |
 | Servei d’Ocupació de Mataró | No localitzat | [Font](https://www.mataro.cat/es/empleo/personas/pruebas/empreses) |
 | Aula Activa | No localitzat | [Font](https://aula-activa.jimdoweb.com/contacta-amb-nosaltres/) |
 | MAP Assessorament i Serveis | [@mapserveis](https://www.instagram.com/mapserveis/), indicat a la carta de serveis | [Font](https://mapserveis.org/img_comuns/cartaserveis.pdf) |
@@ -62,3 +62,16 @@ Consulta del 20 de novembre de 2026. «No localitzat» indica que la cerca i les
 ## Actualització V66
 
 A la V66, la fitxa de Mataró incorpora el compte general de C&C Acadèmia Casanova, documentat en un [directori comercial](https://directoriosempresas.es/1177/barcelona/academia-casanova.html). La [pàgina oficial del grup](https://www.academiacasanova.com/nuestros-centros/cc-academia-casanova-mataro/) confirma la seu de Mataró. Queden 44 fitxes sense un perfil confirmat.
+
+## Comprovació directa de vuit webs
+
+El 20 de novembre de 2026 s’han revisat els enllaços de les pàgines següents, també els que es mostren amb icones. En aquestes pàgines no s’ha trobat cap enllaç a instagram.com. El resultat es limita a les pàgines consultades.
+
+- [Acadèmia A Punt](https://apuntmataro.com/)
+- [Live English Mataró](https://livenglishmataro.com/)
+- [Autoescoles Beltran](https://autoescolesbeltran.com/)
+- [Autoescola OK Mataró](https://autoescolaokmataro.com/contacto/)
+- [ALLE](https://www.alleinternational.com/)
+- [EBU Centre d’Estudis](https://www.ebucentre.com/)
+- [Musical Mataró](https://musicalmataro.com/)
+- [Aprenem Mataró](https://www.aprenemataro.cat/)
