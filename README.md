@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** el recorregut històric mostra al costat de l’any les entitats amb una primera fita documentada en aquell any; si n’hi ha més d’una, apareixen totes. En pantalles estretes el nom s’ajusta a una línia addicional sense tapar els controls.
+
 - **21 de novembre de 2026:** el cercador accepta variants habituals (com «ioga/yoga», «teatre/theatre» i «música/music»), ignora paraules de farciment com «classes de» i cerca també activitats documentades en fonts dels centres. Afegit ioga a la fitxa existent del Foment Mataroní. El full del corpus detalla els camps i sinònims cercables.
 
 - **21 de novembre de 2026:** reorganitzats els controls de la visita guiada en una fila pròpia i flexible perquè «Comença» no quedi retallat; revisat l’ajust del tutorial en pantalles estretes.

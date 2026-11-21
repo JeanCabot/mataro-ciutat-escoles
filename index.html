@@ -327,7 +327,7 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 <h2 id="tour-title" tabindex="-1">Cerca un centre</h2><p class="tour-copy" id="tour-copy">Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.</p>
 <div class="tour-actions"><label class="tour-dismiss"><input id="tour-never" type="checkbox"> No tornar a mostrar</label><div class="tour-nav"><button id="tour-skip" type="button">Salta</button><button id="tour-back" type="button" hidden>Enrere</button><button class="tour-next" id="tour-next" type="button">Següent</button></div></div>
 </aside><main class="explorer" id="main-content" tabindex="-1"><div class="map-column"><div id="map" role="region" tabindex="-1" aria-label="Mapa interactiu dels centres educatius de Mataró; les fitxes de la llista també permeten trobar-los"></div><section class="timeline" id="timeline" aria-label="Cronologia interactiva" hidden>
-<div class="timeline-top"><label for="year">Explora la cronologia <output id="selected-year" for="year">Actualitat</output></label>
+<div class="timeline-top"><div class="timeline-heading"><label for="year">Explora la cronologia <output id="selected-year" for="year">Actualitat</output></label><span class="timeline-opening-group" id="timeline-opening-group"><span class="timeline-opening-label">Entitats amb una fita aquest any:</span> <strong id="timeline-opening"></strong></span></div>
 <div class="play-controls"><button id="play" type="button" aria-pressed="false">▶ Reprodueix</button><button id="previous-year" type="button" aria-label="Any anterior">−</button> <button id="next-year" type="button" aria-label="Any següent">+</button> <button id="today" type="button">Actualitat</button></div></div>
 <input id="year" type="range" min="1737" max="2027" value="2027">
 <div class="timeline-meta"><span id="timeline-first-year">1737</span><span id="count" aria-label="Centres oberts a l’any seleccionat"></span><span>Actualitat</span></div>
@@ -2255,6 +2255,12 @@ function render(refit = false) {
   }
   if (!currentView()) selectedSite = undefined;
   document.getElementById('selected-year').textContent = currentView() ? 'Actualitat' : year;
+  const openingGroup = document.getElementById('timeline-opening-group');
+  const openingNames = timelineEntitiesByYear.get(year) || [];
+  openingGroup.hidden = currentView();
+  document.getElementById('timeline-opening').textContent = openingNames.length
+    ? openingNames.join(' · ')
+    : 'Cap entitat amb una fita documentada';
   yearSlider.setAttribute('aria-valuetext', currentView() ? 'Actualitat' : String(year));
   document.getElementById('timeline-address-note').hidden = currentView();
   document.getElementById('count').textContent = schools.length + (schools.length === 1 ? ' centre obert' : ' centres oberts');
@@ -2409,6 +2415,14 @@ function updateYear() {
 const playButton = document.getElementById('play');
 const firstYears = [...new Set(Object.values(firstDocumentedYear))].sort((a,b)=>a-b);
 const playbackYears = [...firstYears, Number(yearSlider.max)];
+const timelineEntitiesByYear = new Map();
+for (const [code, event] of Object.entries(firstDocumentedEvents)) {
+  const name = centres.find(record => record.codi_centre === code)?.nom;
+  if (!name) continue;
+  const names = timelineEntitiesByYear.get(Number(event.year)) || [];
+  names.push(name);
+  timelineEntitiesByYear.set(Number(event.year), names);
+}
 let playbackTimer = null;
 function pausePlayback() {
   if (playbackTimer !== null) clearInterval(playbackTimer);
