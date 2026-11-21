@@ -2355,6 +2355,16 @@ function pausePlayback() {
   playButton.textContent = '▶ Reprodueix';
   playButton.setAttribute('aria-pressed', 'false');
 }
+function startPlayback() {
+  if (playbackTimer !== null) return;
+  if (currentView()) {
+    yearSlider.value = yearSlider.min;
+    updateYear();
+  }
+  playButton.textContent = '❚❚ Pausa';
+  playButton.setAttribute('aria-pressed', 'true');
+  playbackTimer = setInterval(advancePlayback, 650);
+}
 function advancePlayback() {
   const next = playbackYears.find(year => year > Number(yearSlider.value));
   if (next === undefined) return pausePlayback();
@@ -2364,13 +2374,7 @@ function advancePlayback() {
 }
 playButton.addEventListener('click', () => {
   if (playbackTimer !== null) return pausePlayback();
-  if (currentView()) {
-    yearSlider.value = yearSlider.min;
-    updateYear();
-  }
-  playButton.textContent = '❚❚ Pausa';
-  playButton.setAttribute('aria-pressed', 'true');
-  playbackTimer = setInterval(advancePlayback, 650);
+  startPlayback();
 });
 yearSlider.addEventListener('input', () => {
   pausePlayback();
@@ -2406,6 +2410,6 @@ timelineToggle.addEventListener('click', () => {
   yearSlider.value = yearSlider.max;
   updateYear();
   timelineSection.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest'});
-  playButton.click();
+  startPlayback();
 });
 </script></html>
