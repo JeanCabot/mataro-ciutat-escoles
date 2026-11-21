@@ -13,12 +13,14 @@ La seqüència de tabulació arribava als punts SVG del mapa. Els punts no tenie
 
 La V101 etiqueta cada punt amb el nom del centre i l’adreça, declara el rol de botó, afegeix un indicador de focus visible i activa la fitxa amb Retorn o Espai. Els punts de seus addicionals i seus històriques indiquen també el tipus de seu. La llista HTML de centres continua disponible com a alternativa per trobar i obrir una fitxa.
 
-## Verificació prevista després del desplegament
+## Verificació al web publicat
 
-- Tabular fins a un marcador i comprovar que el focus és visible.
-- Comprovar al navegador que el punt exposa rol de botó i un nom comprensible.
-- Activar-lo amb Retorn i Espai i verificar que s’obre la fitxa correcta.
-- Seleccionar un centre amb el botó de la llista per confirmar que l’alternativa continua funcionant.
+- Després del desplegament, a la vista inicial hi havia 47 marcadors interactius: tots exposaven `role="button"` i un nom accessible; cap dels marcadors SVG interactius observats quedava sense nom.
+- En tabular fins a «Balmes», el focus visible es distingia del punt. El marcador exposava el nom «Balmes, Plaça dels Bous, 1».
+- Retorn i Espai van obrir la fitxa de Balmes i el focus va passar a l’encapçalament «Fitxa seleccionada».
+- En activar successivament «Altres centres», «Acadèmies de reforç» i «Lleure i casals», els marcadors creats per cada filtre també tenien noms accessibles (163, 56 i 81 punts visibles, respectivament; zero sense nom en cada comprovació). Els filtres es van deixar desactivats en acabar.
+- La llista HTML de centres continua exposant els elements com a botons amb nom, adreça i estudis, i ofereix una alternativa per obrir les fitxes.
+- Verificació manual amb Chrome d’escriptori després de publicar el commit `df007807e8c76f1ff78e32422fd27476b91bcd64`.
 
 ## Abast i limitacions
 
