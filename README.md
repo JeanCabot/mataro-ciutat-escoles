@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** polida la forma dels tres globus: cues més petites i integrades, puntes alineades a l’esquerra, al centre i a la dreta, i ajustos perquè els botons quedin equidistants entre el títol i el dibuix de Mataró.
+
 - **21 de novembre de 2026:** centrat el conjunt de botons i personatges entre el títol i la il·lustració de Mataró, amb espai visual equilibrat a cada costat.
 
 - **21 de novembre de 2026:** refinats els globus amb cues triangulars contínues, contorn i farciment coordinats, i text més llegible en una sola fila.
