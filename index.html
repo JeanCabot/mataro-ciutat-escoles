@@ -2482,7 +2482,7 @@ timelineToggle.addEventListener('click', () => {
   let alreadyDismissed=false;
   try{alreadyDismissed=localStorage.getItem('mataro-welcome-dismissed-v1')==='true';}catch{}
   if(!alreadyDismissed){
-    try{if(sessionStorage.getItem('mataro-welcome-seen-v2')!=='true'){sessionStorage.setItem('mataro-welcome-seen-v2','true');renderStep();dialog.showModal();}}catch{renderStep();dialog.showModal();}
+    try{if(sessionStorage.getItem('mataro-welcome-seen-v3')!=='true'){sessionStorage.setItem('mataro-welcome-seen-v3','true');renderStep();dialog.showModal();}}catch{renderStep();dialog.showModal();}
   }
   document.getElementById('welcome-close').addEventListener('click',close);
   dialog.addEventListener('click',event=>{if(event.target===dialog)close();});
