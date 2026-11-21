@@ -2215,6 +2215,7 @@ function clearSelectedCentre() {
 document.addEventListener('click', event => {
   const target = event.target instanceof Element ? event.target : null;
   if (!target) return;
+  const insidePopup = Boolean(target.closest('.leaflet-popup'));
   for (const details of document.querySelectorAll('details.centre-chronology[open]')) {
     if (!details.contains(target)) details.open = false;
   }
@@ -2222,10 +2223,9 @@ document.addEventListener('click', event => {
     photoViewer.close();
     return;
   }
-  if (!panel.contains(target) && !target.closest('.leaflet-popup')) {
-    clearSelectedCentre();
-    if (!target.closest('#map') && map) map.closePopup();
-  }
+  if (photoViewer.open && photoViewer.contains(target)) return;
+  if (!insidePopup && map) map.closePopup();
+  if (!panel.contains(target) && !insidePopup) clearSelectedCentre();
 }, true);
 document.getElementById('q').addEventListener('input', () => render(true));
 natureSelect.addEventListener('change', () => render(true));
