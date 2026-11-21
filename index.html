@@ -323,7 +323,7 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 <div class="header-links"><a href="introduccio.html">Sobre el projecte</a><a href="accessibilitat.html">Accessibilitat</a></div>
 </div>
 </nav></header><aside class="site-tour" id="site-tour" role="dialog" aria-labelledby="tour-title" aria-describedby="tour-copy" hidden>
-<div class="tour-card-top"><img class="tour-art" id="tour-art" src="assets/guia-cerca.webp" width="300" height="300" alt=""><div><p class="tour-kicker">Mataró · Ciutat d’escoles</p><p class="tour-count" id="tour-count" aria-live="polite">Pas 1 de 3</p></div><button class="tour-close" id="tour-close" type="button" aria-label="Tanca la visita guiada">×</button></div>
+<div class="tour-card-top"><img class="tour-art" id="tour-art" src="assets/guia-cerca.webp?v=20261121b" width="300" height="300" alt=""><div><p class="tour-kicker">Mataró · Ciutat d’escoles</p><p class="tour-count" id="tour-count" aria-live="polite">Pas 1 de 3</p></div><button class="tour-close" id="tour-close" type="button" aria-label="Tanca la visita guiada">×</button></div>
 <h2 id="tour-title" tabindex="-1">Cerca un centre</h2><p class="tour-copy" id="tour-copy">Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.</p>
 <div class="tour-actions"><label class="tour-dismiss"><input id="tour-never" type="checkbox"> No tornar a mostrar</label><div class="tour-nav"><button id="tour-skip" type="button">Salta</button><button id="tour-back" type="button" hidden>Enrere</button><button class="tour-next" id="tour-next" type="button">Següent</button></div></div>
 </aside><main class="explorer" id="main-content" tabindex="-1"><div class="map-column"><div id="map" role="region" tabindex="-1" aria-label="Mapa interactiu dels centres educatius de Mataró; les fitxes de la llista també permeten trobar-los"></div><section class="timeline" id="timeline" aria-label="Cronologia interactiva" hidden>
@@ -2451,9 +2451,9 @@ timelineToggle.addEventListener('click', () => {
   const next=document.getElementById('tour-next');
   const never=document.getElementById('tour-never');
   const steps=[
-    {title:'Cerca un centre',copy:'Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.',image:'assets/guia-cerca.webp',anchor:'#q',targets:['#q'],place:'below'},
-    {title:'Tria què vols veure',copy:'Activa o desactiva els filtres per mostrar els centres que t’interessen.',image:'assets/guia-filtres.webp',anchor:'#ownership-legend',targets:['#ownership-legend','.controls-secondary'],place:'below'},
-    {title:'Explora el mapa i les fitxes',copy:'Clica un punt del mapa o un centre de la llista per consultar-ne la fitxa.',image:'assets/guia-fitxes.webp',anchor:'#map',targets:['#map','.centre-panel'],place:'above'}
+    {title:'Cerca un centre',copy:'Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.',image:'assets/guia-cerca.webp?v=20261121b',anchor:'#q',targets:['#q'],place:'below'},
+    {title:'Tria què vols veure',copy:'Activa o desactiva els filtres per mostrar els centres que t’interessen.',image:'assets/guia-filtres.webp?v=20261121b',anchor:'#ownership-legend',targets:['#ownership-legend','.controls-secondary'],place:'below'},
+    {title:'Explora el mapa i les fitxes',copy:'Clica un punt del mapa o un centre de la llista per consultar-ne la fitxa.',image:'assets/guia-fitxes.webp?v=20261121b',anchor:'#map',targets:['#map','.centre-panel'],place:'above'}
   ];
   let step=0;
   let activeTargets=[];
@@ -2518,7 +2518,7 @@ timelineToggle.addEventListener('click', () => {
   let dismissed=false;
   try{dismissed=localStorage.getItem('mataro-welcome-dismissed-v1')==='true';}catch{}
   if(!dismissed){
-    try{if(sessionStorage.getItem('mataro-welcome-seen-v5')!=='true'){sessionStorage.setItem('mataro-welcome-seen-v5','true');render({scroll:false,focus:true});}}catch{render({scroll:false,focus:true});}
+    try{if(sessionStorage.getItem('mataro-welcome-seen-v6')!=='true'){sessionStorage.setItem('mataro-welcome-seen-v6','true');render({scroll:false,focus:true});}}catch{render({scroll:false,focus:true});}
   }
 })();
 </script></html>
