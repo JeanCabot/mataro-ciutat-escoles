@@ -1,4 +1,5 @@
 name: Publica el mapa a GitHub Pages
+# Republish after updating the MapTiler API key secret.
 on:
   push:
     branches: [main]
