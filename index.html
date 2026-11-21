@@ -114,17 +114,16 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 .mataro-art{display:block;width:min(260px,31vw);height:auto;max-height:108px}
 .skip-link{position:absolute;z-index:10000;top:8px;left:8px;transform:translateY(-160%);padding:11px 15px;border-radius:6px;background:#fff;color:#123a40;font-weight:700}
 .skip-link:focus{transform:translateY(0);outline:3px solid #e1a63a;outline-offset:2px}
-.controls-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:7px 11px;padding:10px clamp(12px,3vw,38px);background:#fff}
+.controls-nav{display:grid;gap:6px;padding:8px clamp(12px,3vw,38px);background:#fff}
 .controls-nav>a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:#07594f;font-weight:700;text-underline-offset:3px}
 .controls-nav input[type=search],.controls-nav select{box-sizing:border-box;min-height:44px;border:1px solid #526b67;border-radius:8px;background:#fff;color:#18352f;font:inherit}
 .controls-nav input[type=search]{width:min(260px,80vw);padding:9px 12px}
 .controls-nav select{padding:8px 28px 8px 10px}
 .controls-nav .layer-toggle{box-sizing:border-box;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 9px;border:1px solid #d0ded9;border-radius:8px;background:#f8faf8;color:#18352f;font-size:.9rem;white-space:normal;cursor:pointer}
-.controls-nav .list-shortcut{display:inline-flex;align-items:center;min-height:44px;padding:7px 12px;border:1px solid #216c5a;border-radius:7px;background:#fff;color:#14594d;font-weight:700;text-underline-offset:3px}
 .nearby-heading:focus{outline:3px solid #a94f16;outline-offset:4px;border-radius:2px}
 .controls-nav .layer-toggle:hover{background:#edf4f0;border-color:#6d8880}
 .controls-nav .layer-toggle input{width:20px;height:20px;margin:0;accent-color:#07594f;flex:0 0 20px}
-.controls-nav .compulsory-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.controls-primary,.controls-secondary{display:flex;align-items:center;gap:7px 9px;flex-wrap:wrap}.controls-primary{min-width:0}.controls-secondary{padding-top:5px;border-top:1px solid #d5e4e9}.header-links{display:flex;align-items:center;gap:14px;margin-left:auto}.header-links a{color:#075474;font-size:.9rem;font-weight:600;text-underline-offset:3px}.controls-nav .compulsory-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .ownership-legend{color:#18352f}
 .controls-nav :is(a,input,select,button):focus-visible{outline:3px solid #a94f16;outline-offset:3px;position:relative;z-index:2}
 .controls-nav .layer-toggle:focus-within{outline:3px solid #a94f16;outline-offset:2px}
@@ -132,7 +131,7 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 #map .leaflet-control a:focus-visible{outline:3px solid #8a380e!important;outline-offset:2px;z-index:1000}
 @media(prefers-reduced-motion:reduce){.leaflet-zoom-animated,.leaflet-fade-anim .leaflet-tile{transition:none!important}}
-@media(max-width:620px){.masthead{grid-template-columns:minmax(0,1fr) 96px;gap:8px;padding:16px}.mataro-art{width:96px}.masthead-subtitle{max-width:36ch;font-size:.94rem}.controls-nav{justify-content:flex-start}.controls-nav .compulsory-controls{width:100%}.controls-nav input[type=search]{width:100%;max-width:none}}
+@media(max-width:620px){.masthead{grid-template-columns:minmax(0,1fr) 96px;gap:8px;padding:16px}.mataro-art{width:96px}.masthead-subtitle{max-width:36ch;font-size:.94rem}.controls-nav{justify-content:flex-start}.controls-primary,.controls-secondary{width:100%}.controls-nav .compulsory-controls{width:100%}.controls-nav input[type=search]{width:100%;max-width:none}.header-links{margin-left:0}}
 @media(max-width:370px){.masthead{grid-template-columns:minmax(0,1fr) 66px}.mataro-art{width:66px}.masthead-kicker{font-size:.7rem}.masthead h1{font-size:1.5rem}}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
 /* Paleta mediterrània de Mataró i capçalera compacta per prioritzar el mapa. */
@@ -156,12 +155,11 @@ header.site-header{background:var(--mat-paper);border-bottom-color:var(--mat-lin
 .masthead h1{font-size:clamp(1.25rem,2.4vw,1.8rem)}
 .masthead-subtitle{margin-top:2px;color:#f2fbfd;font-size:.88rem;line-height:1.25}
 .mataro-art{width:min(158px,20vw);max-height:58px}
-.controls-nav{gap:5px 8px;padding:5px 12px;background:#eaf3f6}
+.controls-nav{gap:5px;padding:7px clamp(12px,2.5vw,30px);background:#eaf3f6}
 .controls-nav>a{color:#075474}
 .controls-nav input[type=search],.controls-nav select{border-color:#7e9faa;color:#15394d}
 .controls-nav .layer-toggle{border-color:#c7dce3;background:#f8fbfc;color:#15394d}
 .controls-nav .layer-toggle:hover{border-color:#49899b;background:#e1f0f2}
-.controls-nav .list-shortcut{border-color:#087c98;background:#dff1f1;color:#0d5368}
 .controls-nav :is(a,input,select,button):focus-visible{outline-color:var(--mat-focus)}
 .controls-nav .layer-toggle:focus-within{outline-color:var(--mat-focus)}
 #map:focus,#main-content:focus{outline-color:var(--mat-focus)}
@@ -191,17 +189,15 @@ header.site-header{background:var(--mat-paper);border-bottom-color:var(--mat-lin
 @media(prefers-reduced-motion:reduce){.masthead-cta{transition:none}.masthead-cta:hover{transform:none}}
 .nearby-heading{display:flex;align-items:center;gap:7px}
 .nearby-heading-arrow{color:#087c98;font-size:1.15em;line-height:1}
-.list-shortcut span{font-size:1.15em;line-height:1}
 .panel-actions{display:flex;justify-content:flex-end;margin:-4px 0 8px}
 .close-selected,.reset-filters{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:7px 12px;border:1px solid #087c98;border-radius:8px;background:#dff1f1;color:#0d5368;font:inherit;font-weight:700;cursor:pointer}
 .close-selected:hover,.reset-filters:hover{background:#cbe8eb}
 .close-selected:focus-visible,.reset-filters:focus-visible{outline:3px solid var(--mat-focus);outline-offset:3px}
 .empty-state p{margin-top:0}
-</style><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><h1><svg class="city-crest" viewBox="0 0 64 72" aria-hidden="true" focusable="false"><path d="m15 14 3-10 8 7 6-9 7 9 8-7 2 10" fill="#f4d28b" stroke="#12394d" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17h34v36L32 68 15 53z" fill="#fffdf5" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 19h15v45L17 52z" fill="#f4d28b"/><path d="M18 19h1.8v33H18zm4 0h1.8v38H22zm4 0h1.8v40H26zm4 0h1.8v43H30z" fill="#b83c3a"/><path d="M32 19h15v33L32 64z" fill="#fffdf5"/><path d="M32 44h7l3-3 2 2-3 4h-9z" fill="#1c775f"/><path d="M41 44V29m0 5-5-4m5 8 5-5m-5 11-5-3" fill="none" stroke="#1c775f" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="36" cy="29" rx="3.3" ry="1.8" transform="rotate(35 36 29)" fill="#1c775f"/><ellipse cx="46" cy="32" rx="3.3" ry="1.8" transform="rotate(-42 46 32)" fill="#1c775f"/><ellipse cx="36" cy="38" rx="3.2" ry="1.8" transform="rotate(30 36 38)" fill="#1c775f"/><path d="M15 17h34v36L32 68 15 53z" fill="none" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/></svg><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><a class="masthead-cta" href="#map">Explora l’oferta educativa <span aria-hidden="true">→</span></a></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav" aria-label="Navegació i filtres dels centres">
-<a href="introduccio.html">Sobre el projecte</a>
-<a href="accessibilitat.html">Accessibilitat</a>
+</style><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><h1><svg class="city-crest" viewBox="0 0 64 72" aria-hidden="true" focusable="false"><path d="m15 14 3-10 8 7 6-9 7 9 8-7 2 10" fill="#f4d28b" stroke="#12394d" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17h34v36L32 68 15 53z" fill="#fffdf5" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 19h15v45L17 52z" fill="#f4d28b"/><path d="M18 19h1.8v33H18zm4 0h1.8v38H22zm4 0h1.8v40H26zm4 0h1.8v43H30z" fill="#b83c3a"/><path d="M32 19h15v33L32 64z" fill="#fffdf5"/><path d="M32 44h7l3-3 2 2-3 4h-9z" fill="#1c775f"/><path d="M41 44V29m0 5-5-4m5 8 5-5m-5 11-5-3" fill="none" stroke="#1c775f" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="36" cy="29" rx="3.3" ry="1.8" transform="rotate(35 36 29)" fill="#1c775f"/><ellipse cx="46" cy="32" rx="3.3" ry="1.8" transform="rotate(-42 46 32)" fill="#1c775f"/><ellipse cx="36" cy="38" rx="3.2" ry="1.8" transform="rotate(30 36 38)" fill="#1c775f"/><path d="M15 17h34v36L32 68 15 53z" fill="none" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/></svg><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><a class="masthead-cta" href="#map">Explora l’oferta educativa <span aria-hidden="true">→</span></a></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav" aria-label="Filtres dels centres">
+<div class="controls-primary">
 <input id="q" type="search" placeholder="Cerca un centre o activitat…" aria-label="Cerca pel nom del centre, el carrer o l’activitat">
-<div class="compulsory-controls">
+<div class="compulsory-controls" role="group" aria-label="Educació obligatòria">
 <label class="layer-toggle"><input id="show-compulsory" type="checkbox" autocomplete="off" aria-describedby="ownership-legend" checked> Educació obligatòria</label>
 <select id="nat" aria-label="Filtra per tipus de centre"><option value="">Tots els centres</option><option value="Públic">Només públics</option><option value="Privat">Privats i concertats</option></select>
 <span class="ownership-legend" id="ownership-legend">
@@ -209,10 +205,13 @@ header.site-header{background:var(--mat-paper);border-bottom-color:var(--mat-lin
 <span data-category="compulsory-private"><span class="layer-dot" aria-hidden="true"></span>Privats i concertats</span>
 </span>
 </div>
+</div>
+<div class="controls-secondary" aria-label="Altres opcions">
 <label class="layer-toggle" data-category="other"><input id="show-other-education" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Altres centres, acadèmies i universitats</label>
 <label class="layer-toggle" data-category="tutoring"><input id="show-tutoring" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Acadèmies de reforç</label>
 <label class="layer-toggle" data-category="leisure"><input id="show-lleure" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Lleure i casals</label>
-<a class="list-shortcut" href="#nearby-title"><span aria-hidden="true">↓</span> Llista de centres</a>
+<div class="header-links"><a href="introduccio.html">Sobre el projecte</a><a href="accessibilitat.html">Accessibilitat</a></div>
+</div>
 </nav></header><main class="explorer" id="main-content" tabindex="-1"><div class="map-column"><div id="map" role="region" tabindex="-1" aria-label="Mapa interactiu dels centres educatius de Mataró; les fitxes de la llista també permeten trobar-los"></div><section class="timeline" aria-label="Cronologia interactiva" hidden>
 <div class="timeline-top"><label for="year">Explora la cronologia <output id="selected-year" for="year">Actualitat</output></label>
 <div class="play-controls"><button id="play" type="button" aria-pressed="false">▶ Reprodueix</button><button id="previous-year" type="button" aria-label="Any anterior">−</button> <button id="next-year" type="button" aria-label="Any següent">+</button> <button id="today" type="button">Actualitat</button></div></div>
