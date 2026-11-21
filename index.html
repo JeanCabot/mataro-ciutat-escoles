@@ -192,6 +192,11 @@ header.site-header{background:var(--mat-paper);border-bottom-color:var(--mat-lin
 .nearby-heading{display:flex;align-items:center;gap:7px}
 .nearby-heading-arrow{color:#087c98;font-size:1.15em;line-height:1}
 .list-shortcut span{font-size:1.15em;line-height:1}
+.panel-actions{display:flex;justify-content:flex-end;margin:-4px 0 8px}
+.close-selected,.reset-filters{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:7px 12px;border:1px solid #087c98;border-radius:8px;background:#dff1f1;color:#0d5368;font:inherit;font-weight:700;cursor:pointer}
+.close-selected:hover,.reset-filters:hover{background:#cbe8eb}
+.close-selected:focus-visible,.reset-filters:focus-visible{outline:3px solid var(--mat-focus);outline-offset:3px}
+.empty-state p{margin-top:0}
 </style><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><h1><svg class="city-crest" viewBox="0 0 64 72" aria-hidden="true" focusable="false"><path d="m15 14 3-10 8 7 6-9 7 9 8-7 2 10" fill="#f4d28b" stroke="#12394d" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17h34v36L32 68 15 53z" fill="#fffdf5" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 19h15v45L17 52z" fill="#f4d28b"/><path d="M18 19h1.8v33H18zm4 0h1.8v38H22zm4 0h1.8v40H26zm4 0h1.8v43H30z" fill="#b83c3a"/><path d="M32 19h15v33L32 64z" fill="#fffdf5"/><path d="M32 44h7l3-3 2 2-3 4h-9z" fill="#1c775f"/><path d="M41 44V29m0 5-5-4m5 8 5-5m-5 11-5-3" fill="none" stroke="#1c775f" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="36" cy="29" rx="3.3" ry="1.8" transform="rotate(35 36 29)" fill="#1c775f"/><ellipse cx="46" cy="32" rx="3.3" ry="1.8" transform="rotate(-42 46 32)" fill="#1c775f"/><ellipse cx="36" cy="38" rx="3.2" ry="1.8" transform="rotate(30 36 38)" fill="#1c775f"/><path d="M15 17h34v36L32 68 15 53z" fill="none" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/></svg><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><a class="masthead-cta" href="#map">Explora l’oferta educativa <span aria-hidden="true">→</span></a></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav" aria-label="Navegació i filtres dels centres">
 <a href="introduccio.html">Sobre el projecte</a>
 <a href="accessibilitat.html">Accessibilitat</a>
@@ -1988,12 +1993,12 @@ function renderPanel() {
   title.textContent = selected ? 'Fitxa seleccionada' : 'Explora el mapa';
   title.setAttribute('aria-label', selected ? 'Fitxa seleccionada: ' + selected.record.nom : 'Explora el mapa');
   selectedCentre.innerHTML = selected
-    ? (selected.leisure ? leisureCard(selected.record) : centrePopup(selected.record, selectedSite))
-        : visibleEntries.length
-      ? '<p>Descobreix on aprendre a Mataró, de l’escola bressol a la universitat, passant per les escoles d’idiomes, teatre, música i les acadèmies de reforç. Activa els filtres de dalt per veure cada categoria.</p>' +
-        '<p><strong>Tria un punt del mapa</strong> o un centre de la llista per obrir-ne la fitxa i veure què hi ha a prop. Amb el teclat, activa el punt amb Retorn o Espai.</p>' +
+    ? '<div class="panel-actions"><button class="close-selected" type="button" data-action="clear-selection">Tanca la fitxa <span aria-hidden="true">×</span></button></div>' +
+      (selected.leisure ? leisureCard(selected.record) : centrePopup(selected.record, selectedSite))
+    : visibleEntries.length
+      ? '<p>Busca un centre o activitat, o tria’n un al mapa. A la fitxa trobaràs informació i altres centres propers.</p>' +
         '<img class="learning-illustration" src="aprendre-plegades.webp" width="1200" height="400" alt="Persones de diverses edats aprenen plegades en un taller. Una noia pinta un paisatge marí i, per la finestra, es veu la basílica de Santa Maria de Mataró." decoding="async">'
-      : '<p>No hi ha fitxes amb aquests filtres.</p>';
+      : '<div class="empty-state"><p>No hem trobat centres amb aquesta cerca o aquests filtres. Canvia les paraules o activa més opcions.</p><button class="reset-filters" type="button" data-action="reset-filters">Mostra tota l’oferta</button></div>';
   const nearbyTitle = document.getElementById('nearby-title');
   nearbyTitle.querySelector('.nearby-heading-text').textContent = selected ? 'Altres centres educatius propers' : 'Centres del mapa';
   nearbyTitle.hidden = visibleEntries.length <= (selected ? 1 : 0);
@@ -2074,7 +2079,9 @@ function render(refit = false) {
     const resultCount = visibleEntries.length;
     clearTimeout(filterStatusTimer);
     filterStatusTimer = setTimeout(() => {
-      document.getElementById('filter-status').textContent = resultCount === 1 ? '1 resultat al mapa' : resultCount + ' resultats al mapa';
+      document.getElementById('filter-status').textContent = resultCount === 0
+        ? 'No hem trobat centres. Canvia la cerca o activa més opcions.'
+        : resultCount === 1 ? '1 resultat al mapa' : resultCount + ' resultats al mapa';
     }, 350);
   }
   if (!visibleEntries.some(entry => entry.id === selectedId)) {
@@ -2154,6 +2161,25 @@ function render(refit = false) {
   }
 }
 selectedCentre.addEventListener('click', event => {
+  const action = event.target.closest('button[data-action]')?.dataset.action;
+  if (action === 'clear-selection') {
+    clearSelectedCentre();
+    document.getElementById('panel-title').focus({preventScroll: true});
+    return;
+  }
+  if (action === 'reset-filters') {
+    document.getElementById('q').value = '';
+    compulsoryToggle.checked = true;
+    natureSelect.value = '';
+    otherEducationToggle.checked = true;
+    tutoringToggle.checked = true;
+    leisureToggle.checked = true;
+    yearSlider.value = yearSlider.max;
+    pausePlayback();
+    document.getElementById('q').focus({preventScroll: true});
+    updateYear();
+    return;
+  }
   const button = event.target.closest('button[data-site]');
   if (!button) return;
   const entry = visibleEntries.find(item => item.id === selectedId);
@@ -2177,6 +2203,30 @@ function renderSelection(entry) {
   }
   selectEntry(entry, true);
 }
+function clearSelectedCentre() {
+  if (selectedId === undefined) return;
+  selectedId = undefined;
+  selectedSite = undefined;
+  for (const marker of markers.values()) marker.setStyle({weight: 2});
+  for (const marker of siteMarkers.values()) marker.setStyle({weight: 2});
+  renderPanel();
+}
+
+document.addEventListener('click', event => {
+  const target = event.target instanceof Element ? event.target : null;
+  if (!target) return;
+  for (const details of document.querySelectorAll('details.centre-chronology[open]')) {
+    if (!details.contains(target)) details.open = false;
+  }
+  if (photoViewer.open && target === photoViewer) {
+    photoViewer.close();
+    return;
+  }
+  if (!panel.contains(target) && !target.closest('.leaflet-popup')) {
+    clearSelectedCentre();
+    if (!target.closest('#map') && map) map.closePopup();
+  }
+}, true);
 document.getElementById('q').addEventListener('input', () => render(true));
 natureSelect.addEventListener('change', () => render(true));
 compulsoryToggle.addEventListener('change', () => render(true));
