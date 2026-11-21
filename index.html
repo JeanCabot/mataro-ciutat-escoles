@@ -120,6 +120,8 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 .controls-nav input[type=search]{width:min(260px,80vw);padding:9px 12px}
 .controls-nav select{padding:8px 28px 8px 10px}
 .controls-nav .layer-toggle{box-sizing:border-box;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 9px;border:1px solid #d0ded9;border-radius:8px;background:#f8faf8;color:#18352f;font-size:.9rem;white-space:normal;cursor:pointer}
+.controls-nav .list-shortcut{display:inline-flex;align-items:center;min-height:44px;padding:7px 12px;border:1px solid #216c5a;border-radius:7px;background:#fff;color:#14594d;font-weight:700;text-underline-offset:3px}
+.nearby-heading:focus{outline:3px solid #a94f16;outline-offset:4px;border-radius:2px}
 .controls-nav .layer-toggle:hover{background:#edf4f0;border-color:#6d8880}
 .controls-nav .layer-toggle input{width:20px;height:20px;margin:0;accent-color:#07594f;flex:0 0 20px}
 .controls-nav .compulsory-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
@@ -148,6 +150,7 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 <label class="layer-toggle" data-category="other"><input id="show-other-education" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Altres centres, acadèmies i universitats</label>
 <label class="layer-toggle" data-category="tutoring"><input id="show-tutoring" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Acadèmies de reforç</label>
 <label class="layer-toggle" data-category="leisure"><input id="show-lleure" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Lleure i casals</label>
+<a class="list-shortcut" href="#nearby-title">Ves a la llista de centres</a>
 </nav></header><main class="explorer" id="main-content" tabindex="-1"><div class="map-column"><div id="map" role="region" tabindex="-1" aria-label="Mapa interactiu dels centres educatius de Mataró; les fitxes de la llista també permeten trobar-los"></div><section class="timeline" aria-label="Cronologia interactiva" hidden>
 <div class="timeline-top"><label for="year">Explora la cronologia <output id="selected-year" for="year">Actualitat</output></label>
 <div class="play-controls"><button id="play" type="button" aria-pressed="false">▶ Reprodueix</button><button id="previous-year" type="button" aria-label="Any anterior">−</button> <button id="next-year" type="button" aria-label="Any següent">+</button> <button id="today" type="button">Actualitat</button></div></div>
@@ -159,7 +162,7 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 <h2 id="panel-title" tabindex="-1">Explora el mapa</h2>
 <p class="visually-hidden" id="filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
 <div id="selected-centre"></div>
-<h3 class="nearby-heading" id="nearby-title">Altres centres educatius propers</h3>
+<h3 class="nearby-heading" id="nearby-title" tabindex="-1">Altres centres educatius propers</h3>
 <p class="distance-note" id="distance-note">Centres propers</p>
 <ul class="nearby-list" id="nearby-list" aria-labelledby="nearby-title"></ul>
 </aside></main>
