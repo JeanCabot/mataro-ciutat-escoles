@@ -317,7 +317,7 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 .masthead-copy{flex-wrap:wrap;row-gap:8px}
 .masthead-actions{display:flex;align-items:center;justify-content:center;gap:clamp(6px,1vw,14px);min-width:0;flex:1 1 100%}
 .header-mascot{display:block;flex:0 0 50px;width:50px;height:78px;background-image:url('assets/guia-filtres.webp?v=20261121f');background-repeat:no-repeat;background-size:85.7px 78px}
-.header-mascot-man{background-position:left center;transform:scaleX(-1)}
+.header-mascot-man{background-position:left center}
 .header-mascot-woman{background-position:right center}
 .masthead-actions .masthead-cta{flex:0 1 auto;min-width:0}
 .nearby-distance{max-width:145px;text-align:right;white-space:normal;line-height:1.35;font-variant-numeric:tabular-nums}
@@ -2195,7 +2195,6 @@ async function updateNearbyWalkingDistances(origin, entries) {
         routeDistances.set(entry.id,metres);
       });
     } catch (error) {
-      console.warn('No s’ha pogut calcular la distància a peu',error);
       batch.forEach(({entry,key})=>{walkingDistanceCache.set(key,null);routeDistances.set(entry.id,null);});
     }
     if(requestId!==nearbyRouteRequest) return;
