@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** la visita guiada ja no es tanca en clicar fora del globus, inclòs el títol o el mapa; es tanca amb els controls «Tanca»/«Salta», al final de la guia o amb Escape.
+
+
 - **21 de novembre de 2026:** afegit el mapa per satèl·lit com a capa alternativa; la cronologia ara incorpora les entitats i activitats de lleure segons el primer any documentat, i en obrir-la activa tots els filtres i mostra l’oferta completa més recent. El tutorial mostra una persona de la parella assenyalant clarament cap amunt, als filtres. Al costat del selector de capes apareix l’avís «Aquí pots canviar a vista satèl·lit», que es desa com a vist quan se selecciona la vista satèl·lit. Afegit el globus «Trobo a faltar un lloc!» amb un formulari per proposar centres, adreces i fonts.
 
 - **21 de novembre de 2026:** estabilitzada la capçalera de la cronologia perquè els noms llargs no facin saltar els controls; es reserven dues línies per al nom i el text complet queda disponible com a descripció emergent.
