@@ -2658,11 +2658,16 @@ function pausePlayback() {
 function startPlayback() {
   if (playbackTimer !== null) clearInterval(playbackTimer);
   const restartAtFirstYear = currentView();
+  for (const filter of [publicEducationToggle, privateEducationToggle, otherEducationToggle, tutoringToggle, leisureToggle]) {
+    filter.checked = true;
+  }
+  stageFilter.value = 'all';
+  document.getElementById('q').value = '';
   if (restartAtFirstYear) yearSlider.value = yearSlider.min;
+  updateYear();
   playButton.textContent = '❚❚ Pausa';
   playButton.setAttribute('aria-pressed', 'true');
   playbackTimer = setInterval(advancePlayback, 650);
-  if (restartAtFirstYear) updateYear();
 }
 function advancePlayback() {
   const next = playbackYears.find(year => year > Number(yearSlider.value));
