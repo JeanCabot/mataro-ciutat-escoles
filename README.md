@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** els botons principals ara permeten triar un centre a l’atzar entre els resultats visibles o iniciar un recorregut històric; retirada la targeta explicativa inicial per donar més espai al mapa i a les fitxes.
+
+
 - **21 de novembre de 2026:** afegit un identificador de versió a les imatges de la visita perquè els navegadors que havien desat l’error de càrrega tornin a demanar-les.
 
 - **21 de novembre de 2026:** regenerades i verificades les tres il·lustracions de la visita guiada; ajustada la mida del globus i dels controls per a pantalles estretes i zoom ampliat. En obrir el web, la guia torna a aparèixer amb aquesta versió.
