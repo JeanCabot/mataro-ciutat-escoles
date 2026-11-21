@@ -395,13 +395,10 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 
 @media(min-width:1150px){.masthead-actions{justify-content:center}}
 
-/* Globus de capçalera amb cua triangular integrada i alineada amb cada acció. */
+/* Botons principals de capçalera amb forma rodona, sense cues. */
 .masthead-actions .masthead-cta{
  --bubble-fill:#fffdfa;
  --bubble-border:#9bb6bd;
- position:relative;
- z-index:0;
- overflow:visible;
  box-sizing:border-box;
  min-height:46px;
  padding-inline:16px;
@@ -421,34 +418,9 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
  box-shadow:0 3px 9px rgba(6,37,57,.17);
  transform:translateY(-1px);
 }
-#random-centre-toggle{--tail-x:28px;--bubble-border:#a3b4b8}
-#timeline-toggle{--tail-x:50%;--bubble-border:#9bb6bd}
-#suggest-place-toggle{--tail-x:calc(100% - 28px);--bubble-fill:#fff7e8;--bubble-border:#f0c96f}
-.masthead-actions .masthead-cta::before,
-.masthead-actions .masthead-cta::after{
- position:absolute;
- left:var(--tail-x);
- top:auto;
- right:auto;
- content:"";
- transform:translateX(-50%);
- clip-path:polygon(0 0,100% 0,50% 100%);
- pointer-events:none;
-}
-.masthead-actions .masthead-cta::before{
- z-index:-1;
- bottom:-13px;
- width:22px;
- height:15px;
- background:var(--bubble-border);
-}
-.masthead-actions .masthead-cta::after{
- z-index:-1;
- bottom:-10px;
- width:16px;
- height:13px;
- background:var(--bubble-fill);
-}
+#random-centre-toggle{--bubble-border:#a3b4b8}
+#timeline-toggle{--bubble-border:#9bb6bd}
+#suggest-place-toggle{--bubble-fill:#fff7e8;--bubble-border:#f0c96f}
 .masthead-actions .masthead-cta:focus-visible{
  outline:3px solid #8f4517!important;
  outline-offset:4px;
