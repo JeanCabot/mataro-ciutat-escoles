@@ -68,7 +68,7 @@ header.site-header{background:var(--sand-card);border-bottom-color:var(--line);b
   outline:3px solid var(--focus-coral);outline-offset:2px
 }
 @media(min-width:851px){
-  .controls-single-row{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding:8px clamp(14px,2.5vw,34px);background:var(--sand-paper);border-bottom:1px solid var(--line)}
+  .controls-single-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;overflow-x:visible;padding:8px clamp(14px,2.5vw,34px);background:var(--sand-paper);border-bottom:1px solid var(--line)}
 }
 @media(max-width:850px){
   .controls-nav .layer-toggle{white-space:normal}
