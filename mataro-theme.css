@@ -64,7 +64,7 @@ header.site-header{background:var(--sand-card);border-bottom-color:var(--line);b
 .controls-nav .layer-toggle:hover{background:#f4ead6;border-color:var(--sea-wave)}
 .controls-nav .layer-toggle:has(input:checked){background:#e9f1f3;border-color:var(--sea-wave)}
 .controls-nav .layer-dot{border-color:#142f44}
-.controls-nav :is(a,input,select,button):focus-visible,.controls-nav .layer-toggle:focus-within{
+.controls-nav :is(a,input,select,button):focus-visible,.controls-nav .layer-toggle:has(input:focus-visible){
   outline:3px solid var(--focus-coral);outline-offset:2px
 }
 @media(min-width:851px){
@@ -154,9 +154,9 @@ nav.controls-nav .ownership-toggle{
   font-size:.88rem;transition:background-color .16s ease,border-color .16s ease
 }
 nav.controls-nav .ownership-toggle:hover,
-nav.controls-nav .ownership-toggle:focus-within{background:#f4ead6;border-color:var(--sea-wave)}
+nav.controls-nav .ownership-toggle:has(input:focus-visible){background:#f4ead6;border-color:var(--sea-wave)}
 nav.controls-nav .ownership-toggle:has(input:checked){background:#e9f1f3;border-color:var(--sea-wave)}
-nav.controls-nav .layer-toggle:focus-within{outline:3px solid var(--focus-coral);outline-offset:2px}
+nav.controls-nav .layer-toggle:has(input:focus-visible){outline:3px solid var(--focus-coral);outline-offset:2px}
 nav.controls-nav .layer-toggle::after{
   content:attr(data-hint);position:absolute;z-index:1200;top:calc(100% + 6px);left:50%;
   transform:translate(-50%,-3px);padding:5px 9px;border-radius:7px;background:var(--ink-navy);
@@ -164,7 +164,7 @@ nav.controls-nav .layer-toggle::after{
   opacity:0;visibility:hidden;pointer-events:none;transition:opacity .12s ease,transform .12s ease
 }
 nav.controls-nav .layer-toggle:hover::after,
-nav.controls-nav .layer-toggle:focus-within::after{
+nav.controls-nav .layer-toggle:has(input:focus-visible)::after{
   opacity:1;visibility:visible;transform:translate(-50%,0)
 }
 @media(prefers-reduced-motion:reduce){
