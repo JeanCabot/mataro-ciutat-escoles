@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibilitat · Mataró, ciutat d’escoles</title>
+<style>
+:root{color-scheme:light;--ink:#223b39;--green:#216c5a;--paper:#f5f1e8;--focus:#8a380e}
+*{box-sizing:border-box}
+body{max-width:900px;margin:32px auto;padding:0 20px 48px;font:17px/1.65 system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+h1,h2{line-height:1.2}h1{font:700 clamp(2rem,5vw,2.7rem) Georgia,serif;margin:24px 0 12px}h2{font-size:1.25rem;margin-top:30px}
+p,li{max-width:72ch}a{color:#14594d;text-decoration-thickness:.09em;text-underline-offset:.16em}.skip-link{position:absolute;top:8px;left:8px;transform:translateY(-160%);z-index:2;padding:10px 14px;border-radius:6px;background:#fff;color:#123a40;font-weight:700}.skip-link:focus{transform:translateY(0);outline:3px solid var(--focus);outline-offset:2px}a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.site-nav{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 24px}.site-nav a,.button{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:7px;background:var(--green);color:#fff;font-weight:700;text-decoration:none}.site-nav a:focus-visible,.button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.status{padding:16px 18px;border-left:5px solid #a75a30;background:#fff}.muted{color:#425a56}ul{padding-left:1.4em}li{margin:8px 0}main:focus{outline:3px solid var(--focus);outline-offset:4px}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Ves directament al contingut</a>
+<nav class="site-nav" aria-label="Navegació principal">
+<a href="index.html">← Torna al mapa</a>
+<a href="introduccio.html">Sobre el projecte</a>
+</nav>
+<main id="main-content" tabindex="-1">
+<h1>Accessibilitat</h1>
+<p class="status"><strong>Estat revisat el 21 de novembre de 2026: parcialment conforme.</strong> Aquesta és una autoavaluació tècnica del projecte, no una certificació ni una declaració oficial de conformitat.</p>
+<p>«Mataró, ciutat d’escoles» és un projecte personal de consulta educativa. No és el web oficial de l’Ajuntament ni dels centres que hi apareixen. La revisió s’ha fet sobre les pàgines del mapa, la presentació i la cronologia.</p>
+<h2>Com s’ha revisat</h2>
+<p>S’han revisat l’estructura i els noms accessibles dels controls, la navegació amb teclat, el contrast de la paleta principal, els estats de focus, el moviment reduït i l’anunci dels resultats dels filtres. També s’ha comprovat que els centres i les seves dades bàsiques es puguin consultar en una llista de text, a més del mapa. En una prova amb teclat al web publicat, s’ha obert una fotografia, s’ha recorregut el diàleg fins als enllaços de font i llicència, i s’ha tancat amb Escape; el focus ha tornat al botó de la fotografia.</p>
+<h2>Limitacions conegudes</h2>
+<ul>
+<li>No s’han fet proves amb persones amb discapacitat ni amb lectors de pantalla diferents; poden quedar barreres que aquesta revisió no detecti.</li>
+<li>El mapa interactiu depèn de Leaflet i del servei de cartografia. La llista de centres ofereix una via alternativa per consultar noms, adreces i estudis.</li>
+<li>Aquesta revisió no avalua l’accessibilitat dels serveis externs enllaçats ni certifica l’exactitud de tota la informació educativa.</li>
+</ul>
+<h2>Com comunicar una barrera</h2>
+<p>Si trobes una dificultat d’accés o tens una proposta de millora, pots contactar amb l’autor del projecte a <a href="https://www.linkedin.com/in/joan-blanco-cabot/">LinkedIn</a>.</p>
+<h2>Referents</h2>
+<p>La revisió pren com a referència la norma europea EN 301 549 v3.2.1, harmonitzada per als webs del sector públic en el marc de la Directiva (UE) 2016/2102, i també WCAG 2.2 nivell AA com a objectiu complementari. L’aplicabilitat legal concreta depèn de qui presta el servei i de la seva naturalesa.</p>
+<ul>
+<li><a href="https://eur-lex.europa.eu/eli/dir/2016/2102">Directiva (UE) 2016/2102 sobre accessibilitat digital del sector públic</a></li>
+<li><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">EN 301 549 v3.2.1 · ETSI</a></li>
+</ul>
+<p class="muted">La revisió tècnica no substitueix l’avaluació formal que pugui ser exigible a les organitzacions subjectes a la normativa.</p>
+</main>
+</body>
+</html>
