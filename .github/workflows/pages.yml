@@ -2,7 +2,7 @@ name: Publica el mapa a GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['Mataro_ciutat_escoles_V*.zip', 'v*_archive_parts/**', '.github/workflows/pages.yml']
+    paths: ['Mataro_ciutat_escoles_V*.zip', 'v*_archive_parts/**', 'accessibilitat.html', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -30,7 +30,6 @@ jobs:
           mkdir -p _site /tmp/site-source
           unzip -q "$archive" -d /tmp/site-source
           cp /tmp/site-source/index.html /tmp/site-source/introduccio.html /tmp/site-source/cronologia.html /tmp/site-source/accessibilitat.html _site/
-          if [ -s accessibilitat.html ]; then cp accessibilitat.html _site/accessibilitat.html; fi
           cp -R /tmp/site-source/fotos /tmp/site-source/logos _site/
           cp /tmp/site-source/aprendre-plegades.webp _site/
           test -s _site/index.html
