@@ -2155,8 +2155,8 @@ function formatWalkingDistance(metres) {
 }
 async function updateNearbyWalkingDistances(origin, entries) {
   const requestId = ++nearbyRouteRequest;
-  const pending = [];
   const routeDistances = new Map();
+  const pending = [];
   if (!Number.isFinite(Number(origin.lat)) || !Number.isFinite(Number(origin.lon))) return;
   for (const entry of entries) {
     const node = nearbyList.querySelector('[data-distance-for="' + CSS.escape(entry.id) + '"]');
@@ -2171,60 +2171,56 @@ async function updateNearbyWalkingDistances(origin, entries) {
       pending.push({entry, key});
     }
   }
-  const batches = [];
-  for (let i = 0; i < pending.length; i += 20) batches.push(pending.slice(i, i + 20));
-  let nextBatch = 0;
-  const workers = Array.from({length: Math.min(3, batches.length)}, async () => {
-    while (nextBatch < batches.length) {
-      const batch = batches[nextBatch++];
-      const params = {
-        sources: [{lat: Number(origin.lat), lon: Number(origin.lon)}],
-        targets: batch.map(({entry}) => ({lat: Number(entry.lat), lon: Number(entry.lon)})),
-        costing: 'pedestrian',
-        units: 'km',
-        verbose: false
-      };
-      try {
-        const response = await fetch('https://valhalla1.openstreetmap.de/sources_to_targets?json=' + encodeURIComponent(JSON.stringify(params)), {headers: {Accept: 'application/json'}});
-        if (!response.ok) throw new Error('Route unavailable');
-        const result = await response.json();
-        const distances = result.sources_to_targets?.[0] || [];
-        batch.forEach(({entry, key}, index) => {
-          const value = Number(distances[index]?.distance);
-          const distance = Number.isFinite(value) && value > 0 ? value * 1000 : null;
-          walkingDistanceCache.set(key, distance);
-          routeDistances.set(entry.id, distance);
-        });
-      } catch {
-        batch.forEach(({entry, key}) => { walkingDistanceCache.set(key, null); routeDistances.set(entry.id, null); });
-      }
-      if (requestId !== nearbyRouteRequest) continue;
-      batch.forEach(({entry, key}) => {
-        const node = nearbyList.querySelector('[data-distance-for="' + CSS.escape(entry.id) + '"]');
-        if (!node) return;
-        const distance = walkingDistanceCache.get(key);
-        node.textContent = distance === null ? 'Ruta a peu no disponible' : formatWalkingDistance(distance);
-        node.setAttribute('aria-label', node.textContent);
-      });
+  for (let offset = 0; offset < pending.length; offset += 80) {
+    const batch = pending.slice(offset, offset + 80);
+    const targets = batch.map(({entry}) => ({lat:Number(entry.lat),lon:Number(entry.lon)}));
+    if (targets.some(point => !Number.isFinite(point.lat) || !Number.isFinite(point.lon))) {
+      batch.forEach(({entry,key}) => {walkingDistanceCache.set(key,null);routeDistances.set(entry.id,null);});
+      continue;
     }
+    const coordinates = [{lat:Number(origin.lat),lon:Number(origin.lon)},...targets]
+      .map(point => Number(point.lon).toFixed(6)+','+Number(point.lat).toFixed(6)).join(';');
+    const destinations = targets.map((_,index)=>index+1).join(';');
+    try {
+      const url='https://routing.openstreetmap.de/routed-foot/table/v1/driving/'+coordinates+'?sources=0&destinations='+destinations+'&annotations=distance';
+      const response=await fetch(url,{headers:{Accept:'application/json'}});
+      if(!response.ok) throw new Error('Walking routes unavailable');
+      const result=await response.json();
+      if(result.code!=='Ok') throw new Error('Walking routes unavailable');
+      const distances=result.distances?.[0]||[];
+      batch.forEach(({entry,key},index)=>{
+        const distance=Number(distances[index]);
+        const metres=Number.isFinite(distance)&&distance>0?distance:null;
+        walkingDistanceCache.set(key,metres);
+        routeDistances.set(entry.id,metres);
+      });
+    } catch {
+      batch.forEach(({entry,key})=>{walkingDistanceCache.set(key,null);routeDistances.set(entry.id,null);});
+    }
+    if(requestId!==nearbyRouteRequest) return;
+    batch.forEach(({entry,key})=>{
+      const node=nearbyList.querySelector('[data-distance-for="'+CSS.escape(entry.id)+'"]');
+      if(!node)return;
+      const distance=walkingDistanceCache.get(key);
+      node.textContent=distance===null?'Ruta a peu no disponible':formatWalkingDistance(distance);
+      node.setAttribute('aria-label',node.textContent);
+    });
+  }
+  if(requestId!==nearbyRouteRequest)return;
+  const items=[...nearbyList.querySelectorAll('li')];
+  items.sort((a,b)=>{
+    const leftId=a.querySelector('[data-centre]')?.dataset.centre;
+    const rightId=b.querySelector('[data-centre]')?.dataset.centre;
+    const leftDistance=routeDistances.get(leftId);
+    const rightDistance=routeDistances.get(rightId);
+    const leftValue=typeof leftDistance==='number'?leftDistance:Number.MAX_SAFE_INTEGER;
+    const rightValue=typeof rightDistance==='number'?rightDistance:Number.MAX_SAFE_INTEGER;
+    const leftName=visibleEntries.find(entry=>entry.id===leftId)?.record.nom||'';
+    const rightName=visibleEntries.find(entry=>entry.id===rightId)?.record.nom||'';
+    return leftValue-rightValue||leftName.localeCompare(rightName,'ca');
   });
-  await Promise.all(workers);
-  if (requestId !== nearbyRouteRequest) return;
-  const items = [...nearbyList.querySelectorAll('li')];
-  items.sort((a, b) => {
-    const leftId = a.querySelector('[data-centre]')?.dataset.centre;
-    const rightId = b.querySelector('[data-centre]')?.dataset.centre;
-    const leftDistance = routeDistances.get(leftId);
-    const rightDistance = routeDistances.get(rightId);
-    const leftValue = typeof leftDistance === 'number' ? leftDistance : Number.MAX_SAFE_INTEGER;
-    const rightValue = typeof rightDistance === 'number' ? rightDistance : Number.MAX_SAFE_INTEGER;
-    const leftName = visibleEntries.find(entry => entry.id === leftId)?.record.nom || '';
-    const rightName = visibleEntries.find(entry => entry.id === rightId)?.record.nom || '';
-    return leftValue - rightValue || leftName.localeCompare(rightName, 'ca');
-  });
-  items.forEach(item => nearbyList.append(item));
+  items.forEach(item=>nearbyList.append(item));
 }
-
 const leisureSocialProfiles = {
   "Grup d’Esplai L’Erol": [
     [
