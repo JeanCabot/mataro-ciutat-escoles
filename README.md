@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** simplificats els filtres del mapa: caselles ocultes, indicació «Clica» en passar-hi o enfocar-los, i selecció activa per a centres públics i privats/concertats.
+
 - **21 de novembre de 2026:** prova del tema visual «Quadern de Platja & Dibuix», amb paleta sorra, blau marí, blau mar i coral, filtres accessibles i acabats orgànics coherents al mapa, la cronologia i les pàgines informatives. La versió anterior continua recuperable des de l’historial de Git.
 
 - **21 de novembre de 2026:** filtres del mapa i de la cronologia alineats en una fila en pantalles amples; en pantalles estretes s’apilen per mantenir-los accessibles.
