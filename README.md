@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** aplicat als tres botons principals el gest de conversa de la captura, amb cues petites, integrades i situades a l’esquerra, al centre i a la dreta.
+
 - **21 de novembre de 2026:** la reproducció de la cronologia activa totes les categories i etapes i neteja la cerca abans de començar.
 
 - **21 de novembre de 2026:** simplificats els tres botons de capçalera: globus rodons sense cues, amb colors coordinats i espaiat equilibrat.
