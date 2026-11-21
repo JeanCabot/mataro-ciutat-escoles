@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** reorganitzats els controls de la visita guiada en una fila pròpia i flexible perquè «Comença» no quedi retallat; revisat l’ajust del tutorial en pantalles estretes.
+
+
 - **21 de novembre de 2026:** ampliades aproximadament un 30% les il·lustracions de la visita guiada, també en pantalles petites.
 
 
