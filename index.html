@@ -118,6 +118,9 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 .controls-nav>a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:#07594f;font-weight:700;text-underline-offset:3px}
 .controls-nav input[type=search],.controls-nav select{box-sizing:border-box;min-height:44px;border:1px solid #526b67;border-radius:8px;background:#fff;color:#18352f;font:inherit}
 .controls-nav input[type=search]{width:min(230px,22vw);padding:9px 12px}
+.stage-filter{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:#15394d;font-size:.88rem;font-weight:700;white-space:nowrap}
+.stage-filter select{min-width:160px;max-width:205px}
+@media(max-width:520px){.stage-filter{flex:1 1 100%;justify-content:space-between}.stage-filter select{flex:1;max-width:none}}
 .controls-nav select{padding:8px 28px 8px 10px}
 .controls-nav .layer-toggle{box-sizing:border-box;display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:5px 7px;border:1px solid #d0ded9;border-radius:8px;background:#f8faf8;color:#18352f;font-size:.84rem;white-space:nowrap;cursor:pointer}
 .nearby-heading:focus{outline:3px solid #a94f16;outline-offset:4px;border-radius:2px}
@@ -335,6 +338,7 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 </style><link rel="stylesheet" href="mataro-theme.css?v=20261121-8"><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><h1><svg class="city-crest" viewBox="0 0 64 72" aria-hidden="true" focusable="false"><path d="m15 14 3-10 8 7 6-9 7 9 8-7 2 10" fill="#f4d28b" stroke="#12394d" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17h34v36L32 68 15 53z" fill="#fffdf5" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 19h15v45L17 52z" fill="#f4d28b"/><path d="M18 19h1.8v33H18zm4 0h1.8v38H22zm4 0h1.8v40H26zm4 0h1.8v43H30z" fill="#b83c3a"/><path d="M32 19h15v33L32 64z" fill="#fffdf5"/><path d="M32 44h7l3-3 2 2-3 4h-9z" fill="#1c775f"/><path d="M41 44V29m0 5-5-4m5 8 5-5m-5 11-5-3" fill="none" stroke="#1c775f" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="36" cy="29" rx="3.3" ry="1.8" transform="rotate(35 36 29)" fill="#1c775f"/><ellipse cx="46" cy="32" rx="3.3" ry="1.8" transform="rotate(-42 46 32)" fill="#1c775f"/><ellipse cx="36" cy="38" rx="3.2" ry="1.8" transform="rotate(30 36 38)" fill="#1c775f"/><path d="M15 17h34v36L32 68 15 53z" fill="none" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/></svg><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><button class="masthead-cta" id="random-centre-toggle" type="button">Mostra’m un centre a l’atzar!</button><button class="masthead-cta timeline-cta" id="timeline-toggle" type="button" aria-controls="timeline" aria-expanded="false">Fes-me un recorregut històric!</button><button class="masthead-cta suggest-place-cta" id="suggest-place-toggle" type="button" aria-haspopup="dialog" aria-controls="suggest-place-dialog">Trobo a faltar un lloc!</button></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav controls-single-row" aria-label="Filtres dels centres">
 <div class="controls-primary">
 <input id="q" type="search" placeholder="Centre, ioga, música, teatre…" aria-label="Cerca un centre, una adreça o una activitat com ioga, idiomes, música o teatre">
+<label class="stage-filter"><span>Etapa</span><select id="stage-filter" aria-label="Filtra per etapa educativa"><option value="all">Totes les etapes</option><option value="infantil">Infantil (0–6)</option><option value="primaria">Primària</option><option value="eso">ESO</option><option value="batxillerat">Batxillerat</option><option value="fp">Formació professional</option><option value="especial">Educació especial</option><option value="adults">Formació d’adults</option></select></label>
 <div class="ownership-legend" id="ownership-legend" role="group" aria-label="Filtra els centres per tipus"><label class="layer-toggle ownership-toggle" data-category="compulsory-public" data-hint="Clica" title="Clica per mostrar o amagar els centres públics"><input id="show-public" type="checkbox" checked autocomplete="off" aria-label="Centres públics"><span class="layer-dot" aria-hidden="true"></span>Públics</label><label class="layer-toggle ownership-toggle" data-category="compulsory-private" data-hint="Clica" title="Clica per mostrar o amagar els centres privats i concertats"><input id="show-private" type="checkbox" checked autocomplete="off" aria-label="Centres privats i concertats"><span class="layer-dot" aria-hidden="true"></span>Privats i concertats</label></div>
 </div>
 <div class="controls-secondary" aria-label="Altres opcions">
@@ -2073,6 +2077,7 @@ const publicEducationToggle = document.getElementById('show-public');
 const privateEducationToggle = document.getElementById('show-private');
 const otherEducationToggle = document.getElementById('show-other-education');
 const tutoringToggle = document.getElementById('show-tutoring');
+const stageFilter = document.getElementById('stage-filter');
 const filterToggleHints = [
   [publicEducationToggle, 'els centres públics'],
   [privateEducationToggle, 'els centres privats i concertats'],
@@ -2260,6 +2265,9 @@ function searchText(value) {
 function render(refit = false) {
   const terms = searchText(document.getElementById('q').value).split(/\s+/).filter(term => term && !searchStopWords.has(term));
   const year = Number(yearSlider.value);
+  const selectedStage = stageFilter.value;
+  const stageGroups = {infantil:['EINF1C','EINF2C'],primaria:['EPRI'],eso:['ESO'],batxillerat:['BATX'],fp:['CFPM','CFPS','CFAM','CFAS','TEGM','TEGS','ESCM','ESCS','PFI','IFE'],especial:['EE'],adults:['ADULTS']};
+  const stageMatches = entry => selectedStage === 'all' || (entry.record.ensenyaments_codis || '').split('|').map(code=>code.trim()).some(code=>(stageGroups[selectedStage]||[]).includes(code));
   const tabaletHistoricView = !currentView() && year < 2004;
   const matches = ({record, id}) => {
     const fields = [record.nom, record.adreca, record.tipus, record.detall, record.descripcio, ...categoriesFor(record).map(([, label]) => label)];
@@ -2278,11 +2286,11 @@ function render(refit = false) {
     entry.lat && entry.lon && !entry.record.control_coordenades.startsWith('FORA') &&
     (currentView() || firstDocumentedYear[entry.id] <= year) &&
     (entry.compulsory ? (entry.isPublic ? publicEducationToggle.checked : privateEducationToggle.checked) : (entry.tutoring ? tutoringToggle.checked : otherEducationToggle.checked)) &&
-    matches(entry));
-  const leisure = leisureToggle.checked ? leisureEntries.filter(entry => (currentView() || entry.firstDocumentedYear <= year) && matches(entry)) : [];
+    stageMatches(entry) && matches(entry));
+  const leisure = leisureToggle.checked ? leisureEntries.filter(entry => (currentView() || entry.firstDocumentedYear <= year) && stageMatches(entry) && matches(entry)) : [];
   visibleEntries = schools.concat(leisure);
   const activeFilter = document.activeElement?.id;
-  if (['q','show-public','show-private','show-other-education','show-tutoring','show-lleure'].includes(activeFilter)) {
+  if (['q','stage-filter','show-public','show-private','show-other-education','show-tutoring','show-lleure'].includes(activeFilter)) {
     const resultCount = visibleEntries.length;
     clearTimeout(filterStatusTimer);
     filterStatusTimer = setTimeout(() => {
@@ -2384,6 +2392,7 @@ selectedCentre.addEventListener('click', event => {
   }
   if (action === 'reset-filters') {
     document.getElementById('q').value = '';
+    stageFilter.value = 'all';
     otherEducationToggle.checked = true;
     tutoringToggle.checked = true;
     leisureToggle.checked = true;
@@ -2441,6 +2450,7 @@ document.addEventListener('click', event => {
   if (!panel.contains(target) && !insidePopup) clearSelectedCentre();
 }, true);
 document.getElementById('q').addEventListener('input', () => render(true));
+stageFilter.addEventListener('change', () => render(true));
 publicEducationToggle.addEventListener('change', () => render(true));
 privateEducationToggle.addEventListener('change', () => render(true));
 otherEducationToggle.addEventListener('change', () => render(true));
@@ -2529,6 +2539,7 @@ timelineToggle.addEventListener('click', () => {
   timelineToggle.textContent = 'Tanca la cronologia';
   document.getElementById('timeline-first-year').textContent = String(firstYears[0]);
   document.getElementById('q').value = '';
+  stageFilter.value = 'all';
   for (const filter of [publicEducationToggle, privateEducationToggle, otherEducationToggle, tutoringToggle, leisureToggle]) filter.checked = true;
   yearSlider.value = yearSlider.max;
   updateYear();
@@ -2546,7 +2557,7 @@ timelineToggle.addEventListener('click', () => {
   const never=document.getElementById('tour-never');
   const steps=[
     {title:'Cerca un centre',copy:'Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.',image:'assets/guia-cerca.webp?v=20261121b',anchor:'#q',targets:['#q'],place:'below'},
-    {title:'Tria què vols veure',copy:'Activa o desactiva els filtres per mostrar els centres que t’interessen.',image:'assets/guia-filtres.svg?v=20261121e',anchor:'#ownership-legend',targets:['#ownership-legend','.controls-secondary'],place:'below'},
+    {title:'Tria què vols veure',copy:'Activa o desactiva els filtres per mostrar els centres que t’interessen.',image:'assets/guia-filtres.svg?v=20261121e',anchor:'#ownership-legend',targets:['#ownership-legend','#stage-filter','.controls-secondary'],place:'below'},
     {title:'Explora el mapa i les fitxes',copy:'Clica un punt del mapa o un centre de la llista per consultar-ne la fitxa.',image:'assets/guia-fitxes.webp?v=20261121b',anchor:'#map',targets:['#map','.centre-panel'],place:'above'}
   ];
   let step=0;
