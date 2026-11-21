@@ -289,34 +289,28 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 .controls-secondary .layer-toggle{min-height:40px;padding:6px 13px;border-radius:999px}
 @media(max-width:620px){.ownership-legend{width:100%;padding-left:2px}.controls-secondary .layer-toggle{flex:1 1 auto;justify-content:flex-start}}
 </style><style>
-.welcome-dialog{box-sizing:border-box;width:min(760px,calc(100vw - 28px));max-width:none;max-height:calc(100dvh - 28px);overflow:auto;padding:0;border:1px solid #b8d0d8;border-radius:24px;background:#fffdf7;color:#15394d;box-shadow:0 24px 80px rgba(11,42,61,.28)}
-.welcome-dialog::backdrop{background:rgba(13,39,55,.66)}
-.welcome-layout{display:grid;grid-template-columns:minmax(180px,270px) minmax(0,1fr);align-items:center;gap:clamp(16px,3vw,28px);padding:clamp(20px,4vw,34px)}
-.welcome-art{display:grid;place-items:center;min-width:0}
-.welcome-art img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain}
-.welcome-copy{min-width:0}
-.welcome-kicker{margin:0 0 7px;color:#087c98;font-size:.82rem;font-weight:750;letter-spacing:.07em;text-transform:uppercase}
-.welcome-copy h2{margin:0 40px 9px 0;color:#15394d;font-size:clamp(1.45rem,3vw,1.85rem);line-height:1.15}
-.welcome-copy>p:not(.welcome-kicker):not(.welcome-hint){min-height:3em;margin:0 0 16px;line-height:1.5}
-.welcome-progress{display:flex;align-items:center;gap:10px;margin:0 0 10px;color:#425d69;font-size:.9rem;font-weight:700}
-.welcome-progress-track{display:flex;gap:6px}
-.welcome-progress-dot{width:10px;height:10px;border:1px solid #507181;border-radius:50%;background:transparent}
-.welcome-progress-dot[aria-current="step"]{border-color:#087c98;background:#087c98;box-shadow:0 0 0 2px #d7edf0}
-.welcome-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.welcome-dismiss-choice{display:flex;align-items:center;gap:8px;min-height:44px;font-size:.92rem;cursor:pointer}
-.welcome-dismiss-choice input{width:20px;height:20px;margin:0;accent-color:#087c98}
-.welcome-nav{display:flex;align-items:center;gap:8px;margin-left:auto}
-.welcome-start,.welcome-back,.welcome-skip{min-height:48px;padding:10px 16px;border:1px solid #174a63;border-radius:999px;font:inherit;font-weight:750;cursor:pointer}
-.welcome-start{background:#174a63;color:#fffdf7}
-.welcome-start:hover{background:#08728a}
-.welcome-back,.welcome-skip{background:transparent;color:#174a63}
-.welcome-back:hover,.welcome-skip:hover{background:#e8f2f3}
-.welcome-back[hidden]{display:none}
-.welcome-close{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:44px;height:44px;border:1px solid #9bb8c2;border-radius:50%;background:#fff;color:#15394d;font:inherit;font-size:1.35rem;cursor:pointer}
-.welcome-hint{margin:11px 0 0;color:#425d69;font-size:.88rem;line-height:1.4}
-.welcome-dialog :is(button,input):focus-visible{outline:3px solid #b53d24;outline-offset:3px}
-@media(max-width:900px){.welcome-dialog{width:min(580px,calc(100vw - 28px))}.welcome-layout{grid-template-columns:minmax(0,1fr);gap:4px;padding:20px}.welcome-art img{width:min(230px,62vw);max-height:190px}.welcome-copy h2{margin-right:34px}.welcome-copy>p:not(.welcome-kicker):not(.welcome-hint){min-height:0}.welcome-actions{align-items:stretch}.welcome-nav{width:100%;margin-left:0}.welcome-nav button{flex:1}.welcome-dismiss-choice{order:2}}
-@media(prefers-reduced-motion:reduce){.welcome-dialog,.welcome-dialog *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* Guia flotant: tres passos contextuals amb el control actiu ressaltat. */
+.site-tour{box-sizing:border-box;position:fixed;z-index:14000;width:min(360px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;padding:12px;border:1px solid #b8d0d8;border-radius:18px;background:#fffdf7;color:#15394d;box-shadow:0 12px 36px rgba(11,42,61,.24)}
+.site-tour[hidden]{display:none}
+.tour-card-top{display:grid;grid-template-columns:78px minmax(0,1fr) 40px;align-items:center;gap:10px;margin-bottom:8px}
+.tour-art{display:block;width:78px;height:78px;object-fit:contain}
+.tour-kicker{margin:0 0 3px;color:#087c98;font-size:.75rem;font-weight:750;letter-spacing:.05em;text-transform:uppercase}
+.tour-count{margin:0;color:#425d69;font-size:.85rem;font-weight:700}
+.tour-close{display:grid;place-items:center;width:40px;height:40px;border:1px solid #9bb8c2;border-radius:50%;background:#fff;color:#15394d;font:inherit;font-size:1.25rem;cursor:pointer}
+.site-tour h2{margin:0 0 6px;color:#15394d;font-size:1.15rem;line-height:1.25}
+.site-tour p.tour-copy{margin:0 0 12px;font-size:.96rem;line-height:1.45}
+.tour-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tour-dismiss{display:flex;align-items:center;gap:6px;min-height:44px;font-size:.84rem;cursor:pointer}
+.tour-dismiss input{width:18px;height:18px;margin:0;accent-color:#087c98}
+.tour-nav{display:flex;align-items:center;gap:6px;margin-left:auto}
+.tour-nav button{min-height:44px;padding:8px 12px;border:1px solid #174a63;border-radius:999px;background:#fffdf7;color:#174a63;font:inherit;font-weight:700;cursor:pointer}
+.tour-nav button:hover{background:#e8f2f3}
+.tour-nav .tour-next{background:#174a63;color:#fffdf7}
+.tour-nav .tour-next:hover{background:#08728a}
+.site-tour :is(button,input):focus-visible{outline:3px solid #b53d24;outline-offset:3px}
+.tour-highlight{outline:4px solid #b53d24!important;outline-offset:3px!important;box-shadow:0 0 0 8px rgba(181,61,36,.17)!important;border-radius:10px}
+@media(max-width:520px){.site-tour{width:min(360px,calc(100vw - 20px));padding:10px}.tour-card-top{grid-template-columns:66px minmax(0,1fr) 40px;gap:8px}.tour-art{width:66px;height:66px}.tour-actions{align-items:flex-start;flex-direction:column}.tour-nav{width:100%;margin-left:0}.tour-nav button{flex:1}}
+@media(prefers-reduced-motion:reduce){.site-tour,.site-tour *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style><link rel="stylesheet" href="mataro-theme.css?v=20261121-6"><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><h1><svg class="city-crest" viewBox="0 0 64 72" aria-hidden="true" focusable="false"><path d="m15 14 3-10 8 7 6-9 7 9 8-7 2 10" fill="#f4d28b" stroke="#12394d" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17h34v36L32 68 15 53z" fill="#fffdf5" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 19h15v45L17 52z" fill="#f4d28b"/><path d="M18 19h1.8v33H18zm4 0h1.8v38H22zm4 0h1.8v40H26zm4 0h1.8v43H30z" fill="#b83c3a"/><path d="M32 19h15v33L32 64z" fill="#fffdf5"/><path d="M32 44h7l3-3 2 2-3 4h-9z" fill="#1c775f"/><path d="M41 44V29m0 5-5-4m5 8 5-5m-5 11-5-3" fill="none" stroke="#1c775f" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="36" cy="29" rx="3.3" ry="1.8" transform="rotate(35 36 29)" fill="#1c775f"/><ellipse cx="46" cy="32" rx="3.3" ry="1.8" transform="rotate(-42 46 32)" fill="#1c775f"/><ellipse cx="36" cy="38" rx="3.2" ry="1.8" transform="rotate(30 36 38)" fill="#1c775f"/><path d="M15 17h34v36L32 68 15 53z" fill="none" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/></svg><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><a class="masthead-cta" href="#map">Explora l’oferta educativa</a><button class="masthead-cta timeline-cta" id="timeline-toggle" type="button" aria-controls="timeline" aria-expanded="false">Recorre la història educativa</button></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav controls-single-row" aria-label="Filtres dels centres">
 <div class="controls-primary">
 <input id="q" type="search" placeholder="Cerca un centre o activitat…" aria-label="Cerca pel nom del centre, el carrer o l’activitat">
@@ -328,14 +322,11 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 <label class="layer-toggle" data-category="leisure" data-hint="Clica" title="Clica per mostrar o amagar lleure i casals"><input id="show-lleure" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Lleure i casals</label>
 <div class="header-links"><a href="introduccio.html">Sobre el projecte</a><a href="accessibilitat.html">Accessibilitat</a></div>
 </div>
-</nav></header><dialog class="welcome-dialog" id="welcome-dialog" aria-labelledby="welcome-title" aria-describedby="welcome-description">
-<button class="welcome-close" id="welcome-close" type="button" aria-label="Tanca la benvinguda">×</button>
-<div class="welcome-layout"><div class="welcome-art"><img src="assets/benvinguda-mapa.webp" width="1312" height="1199" alt="Dues persones somrients, dibuixades en estil manga, sostenen un mapa de Mataró amb punts educatius"></div>
-<div class="welcome-copy"><p class="welcome-kicker">Mataró · Ciutat d’escoles</p><p class="welcome-progress"><span id="welcome-step-status" aria-live="polite">Pas 1 de 3</span><span class="welcome-progress-track" aria-hidden="true"><span class="welcome-progress-dot" data-step-dot="0" aria-current="step"></span><span class="welcome-progress-dot" data-step-dot="1"></span><span class="welcome-progress-dot" data-step-dot="2"></span></span></p><h2 id="welcome-title" tabindex="-1">T’hi donem la benvinguda!</h2>
-<p id="welcome-description">Explora l’oferta educativa de Mataró amb el mapa i la llista de centres.</p>
-<div class="welcome-actions"><label class="welcome-dismiss-choice"><input id="welcome-never" type="checkbox"> No tornar a mostrar</label><div class="welcome-nav"><button class="welcome-skip" id="welcome-skip" type="button">Salta la guia</button><button class="welcome-back" id="welcome-back" type="button" hidden>Enrere</button><button class="welcome-start" id="welcome-next" type="button" autofocus>Següent</button></div></div>
-<p class="welcome-hint">Pots tancar aquesta finestra amb Escape o fent clic fora.</p></div></div>
-</dialog><main class="explorer" id="main-content" tabindex="-1"><div class="map-column"><div id="map" role="region" tabindex="-1" aria-label="Mapa interactiu dels centres educatius de Mataró; les fitxes de la llista també permeten trobar-los"></div><section class="timeline" id="timeline" aria-label="Cronologia interactiva" hidden>
+</nav></header><aside class="site-tour" id="site-tour" role="dialog" aria-labelledby="tour-title" aria-describedby="tour-copy" hidden>
+<div class="tour-card-top"><img class="tour-art" id="tour-art" src="assets/guia-cerca.webp" width="300" height="300" alt=""><div><p class="tour-kicker">Mataró · Ciutat d’escoles</p><p class="tour-count" id="tour-count" aria-live="polite">Pas 1 de 3</p></div><button class="tour-close" id="tour-close" type="button" aria-label="Tanca la visita guiada">×</button></div>
+<h2 id="tour-title" tabindex="-1">Cerca un centre</h2><p class="tour-copy" id="tour-copy">Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.</p>
+<div class="tour-actions"><label class="tour-dismiss"><input id="tour-never" type="checkbox"> No tornar a mostrar</label><div class="tour-nav"><button id="tour-skip" type="button">Salta</button><button id="tour-back" type="button" hidden>Enrere</button><button class="tour-next" id="tour-next" type="button">Següent</button></div></div>
+</aside><main class="explorer" id="main-content" tabindex="-1"><div class="map-column"><div id="map" role="region" tabindex="-1" aria-label="Mapa interactiu dels centres educatius de Mataró; les fitxes de la llista també permeten trobar-los"></div><section class="timeline" id="timeline" aria-label="Cronologia interactiva" hidden>
 <div class="timeline-top"><label for="year">Explora la cronologia <output id="selected-year" for="year">Actualitat</output></label>
 <div class="play-controls"><button id="play" type="button" aria-pressed="false">▶ Reprodueix</button><button id="previous-year" type="button" aria-label="Any anterior">−</button> <button id="next-year" type="button" aria-label="Any següent">+</button> <button id="today" type="button">Actualitat</button></div></div>
 <input id="year" type="range" min="1737" max="2027" value="2027">
@@ -2451,44 +2442,83 @@ timelineToggle.addEventListener('click', () => {
 });
 </script><script>
 (()=>{
-  const dialog=document.getElementById('welcome-dialog');
-  const never=document.getElementById('welcome-never');
-  const title=document.getElementById('welcome-title');
-  const description=document.getElementById('welcome-description');
-  const status=document.getElementById('welcome-step-status');
-  const back=document.getElementById('welcome-back');
-  const next=document.getElementById('welcome-next');
-  const dots=[...document.querySelectorAll('[data-step-dot]')];
+  const tour=document.getElementById('site-tour');
+  const title=document.getElementById('tour-title');
+  const copy=document.getElementById('tour-copy');
+  const art=document.getElementById('tour-art');
+  const count=document.getElementById('tour-count');
+  const back=document.getElementById('tour-back');
+  const next=document.getElementById('tour-next');
+  const never=document.getElementById('tour-never');
   const steps=[
-    {title:'T’hi donem la benvinguda!',description:'Explora l’oferta educativa de Mataró amb el mapa i la llista de centres.',next:'Següent'},
-    {title:'Troba el que t’interessa',description:'Escriu el nom d’un centre o una activitat. També pots activar o desactivar els filtres per veure només les opcions que busques.',next:'Següent'},
-    {title:'Consulta cada centre',description:'Tria un punt del mapa o un centre de la llista per veure’n la fitxa i les dades disponibles.',next:'Comença a explorar'}
+    {title:'Cerca un centre',copy:'Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.',image:'assets/guia-cerca.webp',anchor:'#q',targets:['#q'],place:'below'},
+    {title:'Tria què vols veure',copy:'Activa o desactiva els filtres per mostrar els centres que t’interessen.',image:'assets/guia-filtres.webp',anchor:'#ownership-legend',targets:['#ownership-legend','.controls-secondary'],place:'below'},
+    {title:'Explora el mapa i les fitxes',copy:'Clica un punt del mapa o un centre de la llista per consultar-ne la fitxa.',image:'assets/guia-fitxes.webp',anchor:'#map',targets:['#map','.centre-panel'],place:'above'}
   ];
   let step=0;
-  const close=()=>{if(dialog.open)dialog.close();};
-  const renderStep=()=>{
-    const current=steps[step];
-    title.textContent=current.title;
-    description.textContent=current.description;
-    status.textContent=`Pas ${step+1} de ${steps.length}`;
-    back.hidden=step===0;
-    next.textContent=current.next;
-    dots.forEach((dot,index)=>{if(index===step)dot.setAttribute('aria-current','step');else dot.removeAttribute('aria-current');});
-  };
-  next.addEventListener('click',()=>{if(step===steps.length-1){close();return;}step+=1;renderStep();title.focus({preventScroll:true});});
-  back.addEventListener('click',()=>{if(step>0){step-=1;renderStep();title.focus({preventScroll:true});}});
-  document.getElementById('welcome-skip').addEventListener('click',close);
-  const focusSearch=()=>document.getElementById('q')?.focus({preventScroll:true});
-  let alreadyDismissed=false;
-  try{alreadyDismissed=localStorage.getItem('mataro-welcome-dismissed-v1')==='true';}catch{}
-  if(!alreadyDismissed){
-    try{if(sessionStorage.getItem('mataro-welcome-seen-v3')!=='true'){sessionStorage.setItem('mataro-welcome-seen-v3','true');renderStep();dialog.showModal();}}catch{renderStep();dialog.showModal();}
-  }
-  document.getElementById('welcome-close').addEventListener('click',close);
-  dialog.addEventListener('click',event=>{if(event.target===dialog)close();});
-  dialog.addEventListener('close',()=>{
+  let activeTargets=[];
+  let positionFrame=0;
+  const close=()=>{
+    if(tour.hidden)return;
+    tour.hidden=true;
+    activeTargets.forEach(element=>element.classList.remove('tour-highlight'));
+    activeTargets=[];
     if(never.checked){try{localStorage.setItem('mataro-welcome-dismissed-v1','true');}catch{}}
-    focusSearch();
-  });
+    const focusTarget=document.querySelector(steps[step].anchor);
+    focusTarget?.focus?.({preventScroll:true});
+  };
+  const positionTour=()=>{
+    if(tour.hidden)return;
+    const anchor=document.querySelector(steps[step].anchor);
+    if(!anchor)return;
+    const rect=anchor.getBoundingClientRect();
+    const margin=12,gap=12;
+    const width=tour.getBoundingClientRect().width||360;
+    const height=tour.getBoundingClientRect().height||210;
+    const maxLeft=Math.max(margin,window.innerWidth-width-margin);
+    const maxTop=Math.max(margin,window.innerHeight-height-margin);
+    const candidates=steps[step].place==='above'?
+      [{left:rect.left,top:rect.top-height-gap},{left:rect.right+gap,top:rect.top},{left:rect.left,top:rect.bottom+gap},{left:rect.left-width-gap,top:rect.top}]:
+      [{left:rect.left,top:rect.bottom+gap},{left:rect.right+gap,top:rect.top},{left:rect.left,top:rect.top-height-gap},{left:rect.left-width-gap,top:rect.top}];
+    const point=candidates.find(pos=>pos.left>=margin&&pos.left+width<=window.innerWidth-margin&&pos.top>=margin&&pos.top+height<=window.innerHeight-margin)||candidates[0];
+    tour.style.left=`${Math.min(maxLeft,Math.max(margin,point.left))}px`;
+    tour.style.top=`${Math.min(maxTop,Math.max(margin,point.top))}px`;
+  };
+  const schedulePosition=()=>{if(positionFrame)cancelAnimationFrame(positionFrame);positionFrame=requestAnimationFrame(positionTour);};
+  const render=({scroll=true,focus=true}={})=>{
+    activeTargets.forEach(element=>element.classList.remove('tour-highlight'));
+    const current=steps[step];
+    activeTargets=current.targets.map(selector=>document.querySelector(selector)).filter(Boolean);
+    activeTargets.forEach(element=>element.classList.add('tour-highlight'));
+    title.textContent=current.title;
+    copy.textContent=current.copy;
+    art.src=current.image;
+    art.alt='';
+    count.textContent=`Pas ${step+1} de ${steps.length}`;
+    back.hidden=step===0;
+    next.textContent=step===steps.length-1?'Comença a explorar':'Següent';
+    tour.hidden=false;
+    if(scroll){
+      document.querySelector(current.anchor)?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest',inline:'nearest'});
+    }
+    requestAnimationFrame(()=>{positionTour();if(focus)title.focus({preventScroll:true});});
+  };
+  next.addEventListener('click',()=>{if(step===steps.length-1){close();return;}step+=1;render();});
+  back.addEventListener('click',()=>{if(step>0){step-=1;render();}});
+  document.getElementById('tour-skip').addEventListener('click',close);
+  document.getElementById('tour-close').addEventListener('click',close);
+  document.addEventListener('keydown',event=>{if(!tour.hidden&&event.key==='Escape'){event.preventDefault();close();}});
+  document.addEventListener('pointerdown',event=>{
+    if(tour.hidden||tour.contains(event.target))return;
+    if(activeTargets.some(element=>element===event.target||element.contains(event.target)))return;
+    close();
+  },true);
+  window.addEventListener('scroll',schedulePosition,{capture:true,passive:true});
+  window.addEventListener('resize',schedulePosition,{passive:true});
+  let dismissed=false;
+  try{dismissed=localStorage.getItem('mataro-welcome-dismissed-v1')==='true';}catch{}
+  if(!dismissed){
+    try{if(sessionStorage.getItem('mataro-welcome-seen-v4')!=='true'){sessionStorage.setItem('mataro-welcome-seen-v4','true');render({scroll:false,focus:true});}}catch{render({scroll:false,focus:true});}
+  }
 })();
 </script></html>

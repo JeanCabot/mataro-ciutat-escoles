@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** substituït el quadre de benvinguda per una visita guiada petita que es col·loca al costat de la cerca, els filtres i el mapa. Ressalta cada zona i mostra una il·lustració diferent de la parella a cada pas; es pot avançar, tornar, saltar o tancar.
+
 - **21 de novembre de 2026:** corregida la publicació de la caricatura de benvinguda, que no es copiava al desplegament, i adaptat el diàleg perquè es mostri en una sola columna en finestres estretes.
 
 - **21 de novembre de 2026:** la benvinguda ara guia en tres passos: cerca, filtres i consulta de fitxes. Inclou una caricatura manga chibi de les persones creadores, controls per avançar, tornar enrere o saltar, i conserva les opcions de tancament accessibles.
