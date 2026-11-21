@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** afegit el filtre «Etapa» perquè es puguin limitar els resultats per infantil, primària, ESO, batxillerat, formació professional, educació especial o formació d’adults. La guia també assenyala aquest filtre; la cerca d’activitats continua disponible.
+
+
 - **21 de novembre de 2026:** la visita guiada ja no es tanca en clicar fora del globus, inclòs el títol o el mapa; es tanca amb els controls «Tanca»/«Salta», al final de la guia o amb Escape.
 
 
