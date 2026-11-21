@@ -114,6 +114,8 @@ header.site-header{background:var(--sand-card);border-bottom-color:var(--line);b
 .close-selected{color:var(--sea-wave)}
 .close-selected:hover{background:#f1ede3}
 .timeline{background:var(--sand-card);border-color:var(--line)}
+.timeline[hidden]{display:none!important}
+.timeline:not([hidden]){display:block!important}
 .timeline output{background:#e8eff0;color:#1d526e}
 .timeline #play{background:var(--sea-wave);border-color:var(--sea-wave)}
 .timeline #play:hover{background:#205976}

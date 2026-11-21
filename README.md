@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** afegit al costat del botó principal un botó per iniciar o tancar la cronologia. Comença amb el primer any documentat (1737), recorre els anys amb les dades disponibles i mostra el nombre de centres oberts en cada any. Els filtres públic i privat/concertat s’obren activats.
+
 - **21 de novembre de 2026:** els filtres ara indiquen «Activa» o «Desactiva» segons l’estat actual. Els filtres de centres públics i privats/concertats continuen activats en obrir la pàgina.
 
 - **21 de novembre de 2026:** simplificats els filtres del mapa: caselles ocultes, indicació «Clica» en passar-hi o enfocar-los, i selecció activa per a centres públics i privats/concertats.
