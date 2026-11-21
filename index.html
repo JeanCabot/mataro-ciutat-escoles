@@ -2683,18 +2683,18 @@ function pausePlayback() {
   playButton.textContent = '▶ Reprodueix';
   playButton.setAttribute('aria-pressed', 'false');
 }
-function startPlayback() {
+function startPlayback(fromBeginning = false) {
   if (playbackTimer !== null) clearInterval(playbackTimer);
-  const restartAtFirstYear = currentView();
+  const restartAtFirstYear = fromBeginning || currentView();
   for (const filter of [publicEducationToggle, privateEducationToggle, otherEducationToggle, tutoringToggle, leisureToggle]) {
     filter.checked = true;
   }
   stageFilter.value = 'all';
   document.getElementById('q').value = '';
   if (restartAtFirstYear) yearSlider.value = yearSlider.min;
-  updateYear();
   playButton.textContent = '❚❚ Pausa';
   playButton.setAttribute('aria-pressed', 'true');
+  updateYear();
   playbackTimer = setInterval(advancePlayback, 650);
 }
 function advancePlayback() {
@@ -2749,13 +2749,8 @@ timelineToggle.addEventListener('click', () => {
   timelineToggle.setAttribute('aria-expanded', 'true');
   timelineToggle.textContent = 'Tanca la cronologia';
   document.getElementById('timeline-first-year').textContent = String(firstYears[0]);
-  document.getElementById('q').value = '';
-  stageFilter.value = 'all';
-  for (const filter of [publicEducationToggle, privateEducationToggle, otherEducationToggle, tutoringToggle, leisureToggle]) filter.checked = true;
-  yearSlider.value = yearSlider.max;
-  updateYear();
   timelineSection.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest'});
-  startPlayback();
+  startPlayback(true);
 });
 </script><script>
 (()=>{
