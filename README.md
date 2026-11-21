@@ -19,7 +19,7 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
-- **21 de novembre de 2026:** simplificació dels filtres del mapa; renovació de les pàgines informatives i de la cronologia amb el mateix estil visual, i afegida la cerca de fites.
+- **21 de novembre de 2026:** simplificació dels filtres del mapa; renovació de les pàgines informatives i de la cronologia amb el mateix estil visual, i afegida la cerca de fites, amb ajustos finals de lectura i navegació.
 
 - **21 de novembre de 2026:** neteja dels paquets antics del repositori, simplificació d’aquesta guia i actualització del desplegament perquè faci servir una única font estable per als recursos del web.
 
