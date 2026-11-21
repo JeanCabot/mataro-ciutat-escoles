@@ -2356,14 +2356,13 @@ function pausePlayback() {
   playButton.setAttribute('aria-pressed', 'false');
 }
 function startPlayback() {
-  if (playbackTimer !== null) return;
-  if (currentView()) {
-    yearSlider.value = yearSlider.min;
-    updateYear();
-  }
+  if (playbackTimer !== null) clearInterval(playbackTimer);
+  const restartAtFirstYear = currentView();
+  if (restartAtFirstYear) yearSlider.value = yearSlider.min;
   playButton.textContent = '❚❚ Pausa';
   playButton.setAttribute('aria-pressed', 'true');
   playbackTimer = setInterval(advancePlayback, 650);
+  if (restartAtFirstYear) updateYear();
 }
 function advancePlayback() {
   const next = playbackYears.find(year => year > Number(yearSlider.value));
