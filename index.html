@@ -135,6 +135,51 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 @media(max-width:620px){.masthead{grid-template-columns:minmax(0,1fr) 96px;gap:8px;padding:16px}.mataro-art{width:96px}.masthead-subtitle{max-width:36ch;font-size:.94rem}.controls-nav{justify-content:flex-start}.controls-nav .compulsory-controls{width:100%}.controls-nav input[type=search]{width:100%;max-width:none}}
 @media(max-width:370px){.masthead{grid-template-columns:minmax(0,1fr) 66px}.mataro-art{width:66px}.masthead-kicker{font-size:.7rem}.masthead h1{font-size:1.5rem}}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
+/* Paleta mediterrània de Mataró i capçalera compacta per prioritzar el mapa. */
+:root{
+ --mat-page:#f1f7f9;
+ --mat-paper:#fff;
+ --mat-ink:#15394d;
+ --mat-muted:#496573;
+ --mat-line:#cbdfe6;
+ --mat-sea:#124a75;
+ --mat-sea-mid:#087c98;
+ --mat-turquoise:#19a3a2;
+ --mat-sand:#f4d28b;
+ --mat-focus:#8f4517;
+}
+body{background:var(--mat-page);color:var(--mat-ink)}
+header.site-header{background:var(--mat-paper);border-bottom-color:var(--mat-line)}
+.masthead{gap:10px;padding:7px clamp(14px,2.5vw,30px);background:linear-gradient(108deg,var(--mat-sea) 0%,var(--mat-sea-mid) 68%,var(--mat-turquoise) 100%)}
+.masthead:after{background:radial-gradient(ellipse at 87% 112%,rgba(255,255,255,.12) 0 18%,transparent 18.5%),radial-gradient(ellipse at 94% 118%,rgba(244,210,139,.2) 0 24%,transparent 24.5%)}
+.masthead-kicker{margin-bottom:1px;color:#ffe4a7;font-size:.68rem}
+.masthead h1{font-size:clamp(1.25rem,2.4vw,1.8rem)}
+.masthead-subtitle{margin-top:2px;color:#f2fbfd;font-size:.88rem;line-height:1.25}
+.mataro-art{width:min(158px,20vw);max-height:58px}
+.controls-nav{gap:5px 8px;padding:5px 12px;background:#eaf3f6}
+.controls-nav>a{color:#075474}
+.controls-nav input[type=search],.controls-nav select{border-color:#7e9faa;color:#15394d}
+.controls-nav .layer-toggle{border-color:#c7dce3;background:#f8fbfc;color:#15394d}
+.controls-nav .layer-toggle:hover{border-color:#49899b;background:#e1f0f2}
+.controls-nav .list-shortcut{border-color:#087c98;background:#dff1f1;color:#0d5368}
+.controls-nav :is(a,input,select,button):focus-visible{outline-color:var(--mat-focus)}
+.controls-nav .layer-toggle:focus-within{outline-color:var(--mat-focus)}
+#map:focus,#main-content:focus{outline-color:var(--mat-focus)}
+#map .leaflet-control a:focus-visible{outline-color:var(--mat-focus)!important}
+.nearby-heading:focus{outline-color:var(--mat-focus)}
+.explorer{grid-template-columns:minmax(0,1fr) clamp(340px,31vw,490px)}
+.centre-panel{background:#fff;border-left-color:var(--mat-line)}
+.nearby-list li{border-top-color:#d6e5ea}
+.nearby-item{color:var(--mat-ink)}
+.nearby-item:hover,.nearby-item:focus-visible{background:#e8f3f6}
+.nearby-item small,.nearby-distance,.distance-note{color:var(--mat-muted)}
+.education-category{background:#e7f2f4;color:#224d5d}
+.site-switch button{border-color:#b9d2dc;color:#0b5974}
+.site-switch button[aria-pressed=true]{background:#dceff1;border-color:#087c98}
+.entity-link-icon{border-color:#cbdfe6;background:#f3f8fa;color:#0b5974}
+.entity-link-icon:hover,.entity-link-icon:focus-visible{background:#e1f0f2}
+@media(max-width:620px){.masthead{gap:8px;padding:9px 14px}.mataro-art{width:76px;max-height:48px}.masthead h1{font-size:clamp(1.2rem,5vw,1.55rem)}.masthead-subtitle{font-size:.82rem}}
+@media(max-width:370px){.masthead{padding:8px 11px;grid-template-columns:minmax(0,1fr) 58px}.mataro-art{width:58px;max-height:42px}.masthead h1{font-size:1.18rem}.masthead-kicker{font-size:.62rem}}
 </style><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><p class="masthead-kicker">Mataró · Maresme</p><h1><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><p class="masthead-subtitle">Centres, estudis i activitats educatives de la ciutat</p></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav" aria-label="Navegació i filtres dels centres">
 <a href="introduccio.html">Sobre el projecte</a>
 <a href="accessibilitat.html">Accessibilitat</a>
