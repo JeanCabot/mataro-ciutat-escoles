@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** la benvinguda ara guia en tres passos: cerca, filtres i consulta de fitxes. Inclou una caricatura manga chibi de les persones creadores, controls per avançar, tornar enrere o saltar, i conserva les opcions de tancament accessibles.
+
 - **21 de novembre de 2026:** incorporat el logotip de l’Institut Escola Àngela Bransuela a partir de la imatge facilitada per la persona usuària.
 
 - **21 de novembre de 2026:** afegida una benvinguda accessible a la landing, amb una caricatura de les persones creadores i indicacions breus per cercar, filtrar i obrir fitxes. Es pot tancar amb Escape, clic fora o el botó de tancament, i es pot triar que no torni a aparèixer.
