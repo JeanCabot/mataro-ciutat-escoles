@@ -29,7 +29,7 @@ jobs:
           test -n "$archive"
           mkdir -p _site /tmp/site-source
           unzip -q "$archive" -d /tmp/site-source
-          cp /tmp/site-source/index.html /tmp/site-source/introduccio.html /tmp/site-source/cronologia.html _site/
+          cp /tmp/site-source/index.html /tmp/site-source/introduccio.html /tmp/site-source/cronologia.html /tmp/site-source/accessibilitat.html _site/
           cp -R /tmp/site-source/fotos /tmp/site-source/logos _site/
           cp /tmp/site-source/aprendre-plegades.webp _site/
           test -s _site/index.html
