@@ -2755,6 +2755,7 @@ timelineToggle.addEventListener('click', () => {
   yearSlider.value = yearSlider.max;
   updateYear();
   timelineSection.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest'});
+  startPlayback();
 });
 </script><script>
 (()=>{
