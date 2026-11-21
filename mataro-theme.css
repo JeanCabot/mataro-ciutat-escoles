@@ -1,0 +1,140 @@
+/* Tema Quadern de Platja & Dibuix — paleta Mataró, amb contrastos de lectura clars. */
+:root{
+  --sand-paper:#fbf7ee;
+  --sand-card:#fffdf8;
+  --ink-navy:#142f44;
+  --ink-border:#2c4a63;
+  --sea-wave:#2a6f97;
+  --focus-coral:#b53d24;
+  --sea:var(--ink-navy);
+  --sea2:var(--sea-wave);
+  --turq:#5e9fa6;
+  --sand:#e9bd69;
+  --ink:var(--ink-navy);
+  --muted:#4b5f6d;
+  --line:#d8cbb7;
+  --focus:var(--focus-coral);
+  --mat-page:var(--sand-paper);
+  --mat-paper:var(--sand-card);
+  --mat-ink:var(--ink-navy);
+  --mat-muted:var(--muted);
+  --mat-line:var(--line);
+  --mat-sea:var(--ink-navy);
+  --mat-sea-mid:var(--sea-wave);
+  --mat-turquoise:#5e9fa6;
+  --mat-sand:#e9bd69;
+  --mat-focus:var(--focus-coral);
+}
+html{background:var(--sand-paper);scrollbar-color:#9aabb0 var(--sand-paper)}
+body{color:var(--ink-navy);background:linear-gradient(145deg,#fbf7ee 0%,#f5efe3 100%)}
+a{color:#245e7e}
+a:hover{color:#17445e}
+:focus-visible{outline:3px solid var(--focus-coral)!important;outline-offset:3px}
+.sketch-box{
+  background:var(--sand-card);
+  border:2px solid var(--ink-border);
+  border-radius:255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow:3px 4px 0 rgba(20,47,68,.12);
+}
+/* Capçalera i navegació */
+header.site-header{background:var(--sand-card);border-bottom-color:var(--line);box-shadow:0 4px 14px rgba(20,47,68,.08)}
+.masthead,.site-banner{
+  color:#fff;
+  background:linear-gradient(108deg,#142f44 0%,#1d526e 64%,#2a6f97 100%);
+}
+.masthead:before{background:linear-gradient(90deg,#e9bd69,rgba(233,189,105,.08) 72%)}
+.masthead-kicker{color:#ffe2a4}
+.masthead-subtitle{color:#f7f8f5}
+.masthead .city-crest{filter:drop-shadow(0 2px 2px rgba(0,0,0,.2))}
+.masthead-cta{color:#142f44;background:#fffdf8}
+.masthead-cta:hover{background:#f7e7c7}
+.brand,.brand:hover{color:#fff}
+.brand-mark{background:#e9bd69;color:#142f44}
+.main-nav a,.site-nav a{color:#fff}
+.main-nav a:hover,.site-nav a:hover{background:rgba(255,253,248,.15)}
+/* Filtres i controls: una fila en ample, disposició còmoda en pantalles estretes. */
+.controls-nav{background:var(--sand-paper);border-bottom:1px solid var(--line)}
+.controls-nav input[type=search],.controls-nav select{
+  min-height:44px;border:1px solid #748994;border-radius:999px;background:var(--sand-card);color:var(--ink-navy)
+}
+.controls-nav input[type=search]::placeholder{color:#5b6d77;opacity:1}
+.controls-nav .layer-toggle,.controls-nav .site-switch button{
+  min-height:44px;border:1px solid #8598a0;border-radius:999px;background:var(--sand-card);color:var(--ink-navy)
+}
+.controls-nav .layer-toggle:hover{background:#f4ead6;border-color:var(--sea-wave)}
+.controls-nav .layer-toggle:has(input:checked){background:#e9f1f3;border-color:var(--sea-wave)}
+.controls-nav .layer-dot{border-color:#142f44}
+.controls-nav :is(a,input,select,button):focus-visible,.controls-nav .layer-toggle:focus-within{
+  outline:3px solid var(--focus-coral);outline-offset:2px
+}
+@media(min-width:851px){
+  .controls-single-row{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding:8px clamp(14px,2.5vw,34px);background:var(--sand-paper);border-bottom:1px solid var(--line)}
+}
+@media(max-width:850px){
+  .controls-nav .layer-toggle{white-space:normal}
+}
+/* Superfícies amb acabat il·lustrat discret */
+.hero.sketch-box,.hero,.info-card,.about,.empty-state,.centre-panel .centre-popup,.centre-panel .leisure-popup{
+  background-color:var(--sand-card);border-color:#9aa9a8;color:var(--ink-navy);
+  border-radius:34px 12px 28px 12px / 12px 28px 12px 34px;
+  box-shadow:3px 4px 0 rgba(20,47,68,.09)
+}
+.hero{background-image:radial-gradient(ellipse at 96% 0%,rgba(233,189,105,.22),transparent 44%),linear-gradient(135deg,#fffdf8,#f7f1e5)}
+.hero h1,.info-card h2,.about h2,.centre-panel h2,.nearby-heading{color:var(--ink-navy)}
+.hero p,.info-card p,.info-card ul,.about p{color:var(--muted)}
+.info-card,.centre-panel .centre-popup,.centre-panel .leisure-popup{border:1.5px solid #9aa9a8}
+.jump-links a{border-color:#8798a0;background:var(--sand-card);color:var(--ink-navy)}
+.jump-links a:hover{background:#f4ead6}
+.primary-cta,.timeline-button{background:var(--sea-wave);border-color:var(--sea-wave);color:#fff}
+.primary-cta:hover,.timeline-button:hover{background:#205976;color:#fff}
+.status,.note{border-left-color:var(--sea-wave);background:#f1ede3}
+.site-switch button[aria-pressed=true]{background:#e4edf0;border-color:var(--sea-wave);color:var(--ink-navy)}
+/* Mapa protagonista; marbre, sorra i tintes del litoral sense recobrir les dades. */
+.explorer,.map-column{background:#e9f0ef}
+.centre-panel{background:linear-gradient(155deg,#fffdf8 0%,#fbf7ee 100%);border-left-color:var(--line);box-shadow:-5px 0 18px rgba(20,47,68,.07)}
+#selected-centre>p{border-color:#d8cbb7;border-left-color:#5e9fa6;background:#fffdf8;color:#314f60}
+.learning-illustration{border-color:#d8cbb7;border-radius:34px 12px 28px 12px / 12px 28px 12px 34px;box-shadow:3px 4px 0 rgba(20,47,68,.1)}
+.nearby-heading{border-bottom-color:var(--line)}
+.nearby-heading-arrow{background:#e9edf0;color:var(--sea-wave)}
+.distance-note{background:#f1ede3;color:#4b5f6d}
+.nearby-item{
+  border:1px solid #b1bcb9;border-radius:24px 9px 20px 9px / 9px 20px 9px 24px;
+  background:var(--sand-card);color:var(--ink-navy);box-shadow:2px 3px 0 rgba(20,47,68,.07)
+}
+.nearby-item:hover,.nearby-item:focus-visible{background:#fff;border-color:var(--sea-wave);box-shadow:3px 5px 0 rgba(20,47,68,.12)}
+.nearby-item strong{color:var(--ink-navy)}
+.nearby-item small,.nearby-distance,.distance-note{color:var(--muted)}
+.nearby-distance{background:#f1ede3}
+.education-category{border-color:#d3c6b1;background:#f5eee0;color:#314f60}
+.centre-panel .entity-web{border-color:#c3d5d9;background:#eaf1f1;color:#174d68}
+.entity-link-icon{border-color:#b7c2c0;background:#f5f0e7;color:#245e7e}
+.entity-link-icon:hover,.entity-link-icon:focus-visible{background:#e7eef0}
+.reset-filters{border-color:var(--sea-wave);background:#e7eff0;color:var(--ink-navy)}
+.reset-filters:hover{background:#dce8eb}
+.close-selected{color:var(--sea-wave)}
+.close-selected:hover{background:#f1ede3}
+.timeline{background:var(--sand-card);border-color:var(--line)}
+.timeline output{background:#e8eff0;color:#1d526e}
+.timeline #play{background:var(--sea-wave);border-color:var(--sea-wave)}
+.timeline #play:hover{background:#205976}
+.timeline button{border-color:#8798a0;color:var(--ink-navy);background:var(--sand-card)}
+.leaflet-popup-content{color:var(--ink-navy)}
+.leaflet-popup-content article{background:var(--sand-card);border-color:var(--line)}
+.leaflet-control-zoom,.leaflet-control-layers{border-color:rgba(20,47,68,.28)!important}
+.leaflet-control-zoom a,.leaflet-control-layers-toggle{color:var(--ink-navy)!important}
+.leaflet-control-attribution{color:#29495d!important}
+.photo-viewer{background:var(--sand-card);color:var(--ink-navy)}
+.photo-viewer button{border-color:#8798a0;background:#f1ede3;color:var(--ink-navy)}
+/* Cronologia */
+.controls{background:var(--sand-card);border-color:var(--line);border-radius:34px 12px 28px 12px / 12px 28px 12px 34px}
+.controls input,.controls select,.controls button,.reset{
+  min-height:44px;border-color:#8798a0;border-radius:999px;background:var(--sand-card);color:var(--ink-navy)
+}
+article{border-color:#b8b6a9;background:var(--sand-card);box-shadow:3px 4px 0 rgba(20,47,68,.08)}
+article::before{background:var(--sea-wave)}
+article h2{color:var(--ink-navy)}
+footer{color:var(--muted)}
+@media(prefers-reduced-motion:reduce){
+  .nearby-item,.controls-nav .layer-toggle,.masthead-cta{transition:none}
+  .nearby-item:hover,.controls-nav .layer-toggle:hover,.masthead-cta:hover{transform:none}
+}
