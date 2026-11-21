@@ -2181,7 +2181,7 @@ async function updateNearbyWalkingDistances(origin, entries) {
         sources: [{lat: Number(origin.lat), lon: Number(origin.lon)}],
         targets: batch.map(({entry}) => ({lat: Number(entry.lat), lon: Number(entry.lon)})),
         costing: 'pedestrian',
-        units: 'kilometers',
+        units: 'km',
         verbose: false
       };
       try {
