@@ -19,10 +19,11 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** incorporat el logotip de l’Institut Escola Àngela Bransuela a partir de la imatge facilitada per la persona usuària.
+
 - **21 de novembre de 2026:** afegida una benvinguda accessible a la landing, amb una caricatura de les persones creadores i indicacions breus per cercar, filtrar i obrir fitxes. Es pot tancar amb Escape, clic fora o el botó de tancament, i es pot triar que no torni a aparèixer.
 
-- **21 de novembre de 2026:** afegits a les fitxes els logotips localitzats de l’Institut Miquel Biada, Meritxell, l’Institut Josep Puig i Cadafalch i el Consorci Sanitari del Maresme (per a URPIJ-UCA); fonts dels logotips documentades a `logos/fonts.json`. L’Àngela Bransuela queda pendent: no s’ha localitzat un logotip propi verificable a les fonts consultades.
-
+- **21 de novembre de 2026:** afegits a les fitxes els logotips localitzats de l’Institut Miquel Biada, Meritxell, l’Institut Josep Puig i Cadafalch i el Consorci Sanitari del Maresme (per a URPIJ-UCA); fonts dels logotips documentades a `logos/fonts.json`.
 
 - **21 de novembre de 2026:** recuperades al repositori les 72 fotografies i 48 logos que ja tenia documentats el projecte, perquè es carreguin a les fitxes; afegit també el registre de cobertura de les fotografies.
 
