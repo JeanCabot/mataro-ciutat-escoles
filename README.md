@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** regenerades i verificades les tres il·lustracions de la visita guiada; ajustada la mida del globus i dels controls per a pantalles estretes i zoom ampliat. En obrir el web, la guia torna a aparèixer amb aquesta versió.
+
 - **21 de novembre de 2026:** substituït el quadre de benvinguda per una visita guiada petita que es col·loca al costat de la cerca, els filtres i el mapa. Ressalta cada zona i mostra una il·lustració diferent de la parella a cada pas; es pot avançar, tornar, saltar o tancar.
 
 - **21 de novembre de 2026:** corregida la publicació de la caricatura de benvinguda, que no es copiava al desplegament, i adaptat el diàleg perquè es mostri en una sola columna en finestres estretes.
