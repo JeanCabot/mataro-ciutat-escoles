@@ -3,7 +3,7 @@ name: Publica el mapa a GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['site_archive_parts/**', 'index.html', 'accessibilitat.html', 'introduccio.html', 'cronologia.html', 'mataro-theme.css', '.github/workflows/pages.yml']
+    paths: ['site_archive_parts/**', 'assets/**', 'index.html', 'accessibilitat.html', 'introduccio.html', 'cronologia.html', 'mataro-theme.css', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -35,6 +35,7 @@ jobs:
           if [ -s introduccio.html ]; then cp introduccio.html _site/introduccio.html; fi
           if [ -s cronologia.html ]; then cp cronologia.html _site/cronologia.html; fi
           cp -R /tmp/site-source/fotos /tmp/site-source/logos _site/
+          if [ -d assets ]; then cp -R assets _site/; fi
           cp /tmp/site-source/aprendre-plegades.webp _site/
           cp mataro-theme.css _site/mataro-theme.css
           if [ -n "$MAPTILER_API_KEY" ]; then
