@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** «Sobre el projecte» i «Accessibilitat» se situen a la mateixa fila que els filtres quan hi ha espai; en pantalles estretes continuen baixant de fila per facilitar-ne l’ús.
+
 - **21 de novembre de 2026:** els filtres ja no mantenen la vora vermella ni el globus d’acció quan s’aparta el ratolí; els indicadors continuen disponibles en navegar amb el teclat.
 
 - **21 de novembre de 2026:** afegit al costat del botó principal un botó per iniciar o tancar la cronologia. Comença amb el primer any documentat (1737), recorre els anys amb les dades disponibles i mostra el nombre de centres oberts en cada any. Els filtres públic i privat/concertat s’obren activats.
