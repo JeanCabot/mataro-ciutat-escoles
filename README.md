@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** les fitxes mostren ara la distància aproximada a peu fins als altres centres, calculada amb rutes per a vianants, i la llista s’ordena per aquesta distància. La capçalera incorpora la noia i el noi de la guia als extrems dels botons, assenyalant les opcions amb un ajust específic per a mòbil.
+
 - **21 de novembre de 2026:** afegit el filtre «Etapa» perquè es puguin limitar els resultats per infantil, primària, ESO, batxillerat, formació professional, educació especial o formació d’adults. La guia també assenyala aquest filtre; la cerca d’activitats continua disponible.
 
 
