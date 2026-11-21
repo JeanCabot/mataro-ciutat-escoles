@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** redibuixades les puntes dels tres globus com a triangles amb vora i farciment, integrades amb cada botó perquè no semblin rombes solts.
+
 - **21 de novembre de 2026:** alineades les puntes dels tres globus dels botons: a baix a l’esquerra, al centre i a baix a la dreta.
 
 - **21 de novembre de 2026:** restaurada la il·lustració de Mataró a la dreta de la capçalera i afegida una franja ondulada de mar a la part inferior, mantenint la composició en una línia quan hi ha espai.
