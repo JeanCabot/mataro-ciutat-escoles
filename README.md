@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** simplificació dels filtres del mapa; renovació de les pàgines informatives i de la cronologia amb el mateix estil visual, i afegida la cerca de fites.
+
 - **21 de novembre de 2026:** neteja dels paquets antics del repositori, simplificació d’aquesta guia i actualització del desplegament perquè faci servir una única font estable per als recursos del web.
 
 Per mantenir el repositori lleuger, es conservaran com a màxim **cinc versions anteriors**. Evitarem pujar ZIPs grans quan els recursos actuals del web ja siguin suficients. Cada actualització publicada quedarà resumida en aquest historial; les versions antigues es podran recuperar des de l’historial de Git.
