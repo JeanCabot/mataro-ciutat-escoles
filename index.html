@@ -2001,6 +2001,23 @@ const publicEducationToggle = document.getElementById('show-public');
 const privateEducationToggle = document.getElementById('show-private');
 const otherEducationToggle = document.getElementById('show-other-education');
 const tutoringToggle = document.getElementById('show-tutoring');
+const filterToggleHints = [
+  [publicEducationToggle, 'els centres públics'],
+  [privateEducationToggle, 'els centres privats i concertats'],
+  [otherEducationToggle, 'altres centres'],
+  [tutoringToggle, 'els centres de reforç'],
+  [leisureToggle, 'lleure i casals']
+];
+function updateFilterToggleHints() {
+  filterToggleHints.forEach(([toggle, description]) => {
+    const label = toggle.closest('.layer-toggle');
+    const action = toggle.checked ? 'Desactiva' : 'Activa';
+    label.dataset.hint = action;
+    label.title = `${action} ${description}`;
+  });
+}
+updateFilterToggleHints();
+filterToggleHints.forEach(([toggle]) => toggle.addEventListener('change', updateFilterToggleHints));
 const categoryColors = Object.fromEntries(
   [...document.querySelectorAll('nav [data-category]')].map(label =>
     [label.dataset.category, getComputedStyle(label).getPropertyValue('--category-color').trim()])
