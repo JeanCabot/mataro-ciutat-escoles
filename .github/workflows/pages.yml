@@ -3,7 +3,7 @@ name: Publica el mapa a GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['Mataro_ciutat_escoles_V*.zip', 'v*_archive_parts/**', 'index.html', 'accessibilitat.html', 'introduccio.html', '.github/workflows/pages.yml']
+    paths: ['site_archive_parts/**', 'index.html', 'accessibilitat.html', 'introduccio.html', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,14 +22,11 @@ jobs:
         env:
           MAPTILER_API_KEY: ${{ secrets.MAPTILER_API_KEY }}
         run: |
-          archive=$(find . -maxdepth 1 -name 'Mataro_ciutat_escoles_V*.zip' | sort -V | tail -1)
-          parts_dir=$(find . -maxdepth 1 -type d -name 'v*_archive_parts' | sort -V | tail -1)
-          if [ -n "$parts_dir" ]; then
-            archive_name=$(cat "$parts_dir/ARCHIVE_NAME.txt")
-            cat "$parts_dir"/part-*.bin > "/tmp/$archive_name"
-            archive="/tmp/$archive_name"
-          fi
-          test -n "$archive"
+          parts_dir=site_archive_parts
+          archive_name=$(cat "$parts_dir/ARCHIVE_NAME.txt")
+          cat "$parts_dir"/part-*.bin > "/tmp/$archive_name"
+          archive="/tmp/$archive_name"
+          test -s "$archive"
           mkdir -p _site /tmp/site-source
           unzip -q "$archive" -d /tmp/site-source
           cp /tmp/site-source/index.html /tmp/site-source/introduccio.html /tmp/site-source/cronologia.html /tmp/site-source/accessibilitat.html _site/
@@ -50,7 +47,7 @@ jobs:
           PYKEY
           fi
           test -s _site/index.html
-          test -s _site/fotos
+          test -d _site/fotos
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v4
         with:
