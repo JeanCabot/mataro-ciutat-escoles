@@ -199,6 +199,86 @@ header.site-header{background:var(--mat-paper);border-bottom-color:var(--mat-lin
 .maptiler-logo{position:absolute;z-index:1000;left:10px;bottom:10px;display:block;line-height:0}
 .maptiler-logo img{display:block;width:82px;height:auto}
 .maptiler-logo:focus-visible{outline:3px solid var(--mat-focus);outline-offset:3px}
+
+/* Estètica mediterrània compartida: el mapa conserva el protagonisme. */
+:root{
+ --mat-page:#edf5f6;
+ --mat-paper:#fffefa;
+ --mat-ink:#15394d;
+ --mat-muted:#526e78;
+ --mat-line:#cbdfe6;
+ --mat-sea:#124a75;
+ --mat-sea-mid:#087c98;
+ --mat-turquoise:#19a3a2;
+ --mat-sand:#f4d28b;
+ --mat-focus:#8f4517;
+}
+body{background:linear-gradient(135deg,#f3f8f8 0%,#eaf3f5 100%);color:var(--mat-ink)}
+header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,57,77,.11)}
+.masthead{position:relative;padding:9px clamp(16px,2.5vw,34px);background:linear-gradient(108deg,#123f5a 0%,#08768b 65%,#3eaaa5 100%)}
+.masthead:before{position:absolute;inset:0 0 auto;height:3px;content:"";background:linear-gradient(90deg,var(--mat-sand),rgba(244,210,139,.08) 70%)}
+.masthead:after{opacity:.72}
+.masthead .city-crest{filter:drop-shadow(0 2px 2px rgba(0,0,0,.14))}
+.masthead-cta{box-shadow:0 3px 12px rgba(6,37,57,.2)}
+.controls-nav{gap:8px;padding:9px clamp(14px,2.5vw,34px) 10px;background:linear-gradient(180deg,#eff6f7,#e7f1f4)}
+.controls-primary,.controls-secondary{gap:8px 10px}
+.controls-secondary{padding-top:8px;border-top:1px solid #ccdee4}
+.controls-nav input[type=search],.controls-nav select{box-shadow:0 1px 3px rgba(21,57,77,.05)}
+.controls-nav input[type=search]:focus-visible,.controls-nav select:focus-visible{border-color:#087c98}
+.controls-nav .layer-toggle{border-color:#c8dce2;background:rgba(255,255,255,.84);box-shadow:0 1px 3px rgba(21,57,77,.04);transition:background-color .16s ease,border-color .16s ease,transform .16s ease}
+.controls-nav .layer-toggle:hover{transform:translateY(-1px);background:#fff;border-color:#78a8b2}
+.controls-nav .layer-toggle:has(input:checked){background:#fff;border-color:#8fb8c1}
+.header-links a{padding:7px 2px;text-underline-offset:4px}
+.explorer{background:#eaf2f4}
+.map-column{background:#e8f2f4}
+.centre-panel{position:relative;background:linear-gradient(160deg,#fffefa 0%,#f8fbfa 54%,#f1f7f8 100%);border-left-color:#c4dbe2;box-shadow:-7px 0 22px rgba(21,57,77,.08);padding:22px clamp(16px,2vw,28px)}
+.centre-panel h2{font:700 clamp(1.35rem,2vw,1.65rem)/1.2 Georgia,serif;color:#164662;letter-spacing:-.02em;margin:0 0 14px}
+#selected-centre>p{margin:0 0 14px;padding:14px 15px;border:1px solid #d4e6e8;border-left:4px solid #19a3a2;border-radius:13px;background:rgba(255,255,255,.82);color:#345b68;line-height:1.55}
+.learning-illustration{margin:10px 0 18px;border:1px solid #d8e7e9;border-radius:16px;box-shadow:0 8px 20px rgba(21,57,77,.1)}
+.nearby-heading{display:flex;align-items:center;gap:9px;margin:21px 0 4px;padding:0 0 10px;border-bottom:1px solid #cbdfe6;font:700 1.12rem/1.3 Georgia,serif;color:#164662}
+.nearby-heading-arrow{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#deeff0;color:#087c98;font-size:1rem}
+.distance-note{display:inline-block;margin:5px 0 9px;padding:5px 9px;border-radius:999px;background:#e7f1f2;color:#496573;font-size:.86rem}
+.nearby-list{display:grid;gap:8px;margin:10px 0 0}
+.nearby-list li{border:0}
+.nearby-item{padding:11px 10px;border:1px solid #d5e4e7;border-radius:13px;background:rgba(255,255,255,.88);box-shadow:0 2px 6px rgba(21,57,77,.04);transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+.nearby-item:hover,.nearby-item:focus-visible{background:#fff;border-color:#8db8c1;box-shadow:0 5px 13px rgba(21,57,77,.09);transform:translateY(-1px)}
+.nearby-item:focus-visible{outline:3px solid var(--mat-focus);outline-offset:2px}
+.nearby-item strong{color:#17465c;font-size:.97rem;line-height:1.35}
+.nearby-item small,.nearby-distance{color:#526e78}
+.nearby-distance{padding:4px 7px;border-radius:999px;background:#edf5f6;font-size:.78rem;font-variant-numeric:tabular-nums}
+.education-category{border:1px solid #d5e7e8;border-radius:999px;padding:3px 8px;background:#eef6f6;color:#315a67;font-size:.78rem}
+.centre-panel .centre-popup,.centre-panel .leisure-popup{margin:0 0 16px;border:1px solid #d3e4e7;border-radius:16px;padding:14px;background:rgba(255,255,255,.92);box-shadow:0 5px 16px rgba(21,57,77,.07)}
+.centre-panel .centre-popup .card-heading,.centre-panel .leisure-popup .card-heading{margin-bottom:8px}
+.centre-panel .centre-popup .card-heading b,.centre-panel .leisure-popup .card-heading b{color:#164662}
+.centre-panel .centre-photo img{border:1px solid #d8e7e9;border-radius:12px}
+.centre-panel .entity-web{background:#e5f2f2;border:1px solid #c9e1e3;border-radius:999px;color:#075b6d}
+.centre-panel .site-switch button{min-height:40px;border-radius:999px;background:#fff;border-color:#cbdfe6;color:#164f67}
+.centre-panel .site-switch button[aria-pressed=true]{background:#deeff0;border-color:#087c98;color:#104d61}
+.panel-actions{margin:-7px -5px -2px 0}
+.close-selected{color:#0b7187}
+.close-selected:hover{background:#e1f0f2}
+.empty-state{padding:16px;border:1px solid #d3e4e7;border-radius:15px;background:#fff;box-shadow:0 4px 14px rgba(21,57,77,.06)}
+.reset-filters{border-color:#087c98;background:#e0f0f1;color:#124a75}
+.leaflet-control-zoom,.leaflet-control-layers{border:1px solid rgba(18,74,117,.2)!important;border-radius:12px!important;overflow:hidden;box-shadow:0 4px 14px rgba(21,57,77,.18)!important}
+.leaflet-control-zoom a,.leaflet-control-layers-toggle{background-color:rgba(255,255,255,.94)!important;color:#164662!important}
+.leaflet-control-attribution{border-radius:7px 0 0 0;background:rgba(255,255,255,.82)!important;color:#34515d!important}
+.timeline{background:#fffefa;border-color:#cbdfe6}
+.timeline output{background:#e3f1f1;color:#075c71}
+.timeline #play{background:#087c98;border-color:#087c98}
+.timeline #play:hover{background:#075f73}
+.timeline button:focus-visible,.timeline input:focus-visible{outline-color:var(--mat-focus)}
+.photo-viewer{border:1px solid #d2e2e5;border-radius:18px;box-shadow:0 18px 60px rgba(0,0,0,.28)}
+.photo-viewer button{min-height:44px;padding:7px 12px;border:1px solid #b9d2dc;border-radius:999px;background:#eaf4f5;color:#124a75;font-weight:700}
+.photo-viewer button:focus-visible{outline:3px solid var(--mat-focus);outline-offset:3px}
+@media(max-width:760px){
+ .centre-panel{padding:18px 16px 26px;border-top-color:#c4dbe2}
+ .nearby-list{grid-template-columns:1fr}
+ .nearby-item{padding:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ .controls-nav .layer-toggle,.nearby-item{transition:none}
+ .controls-nav .layer-toggle:hover,.nearby-item:hover{transform:none}
+}
 </style><a class="skip-link" href="#map">Ves directament al mapa</a><header class="site-header"><div class="masthead"><div class="masthead-copy"><h1><svg class="city-crest" viewBox="0 0 64 72" aria-hidden="true" focusable="false"><path d="m15 14 3-10 8 7 6-9 7 9 8-7 2 10" fill="#f4d28b" stroke="#12394d" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17h34v36L32 68 15 53z" fill="#fffdf5" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 19h15v45L17 52z" fill="#f4d28b"/><path d="M18 19h1.8v33H18zm4 0h1.8v38H22zm4 0h1.8v40H26zm4 0h1.8v43H30z" fill="#b83c3a"/><path d="M32 19h15v33L32 64z" fill="#fffdf5"/><path d="M32 44h7l3-3 2 2-3 4h-9z" fill="#1c775f"/><path d="M41 44V29m0 5-5-4m5 8 5-5m-5 11-5-3" fill="none" stroke="#1c775f" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="36" cy="29" rx="3.3" ry="1.8" transform="rotate(35 36 29)" fill="#1c775f"/><ellipse cx="46" cy="32" rx="3.3" ry="1.8" transform="rotate(-42 46 32)" fill="#1c775f"/><ellipse cx="36" cy="38" rx="3.2" ry="1.8" transform="rotate(30 36 38)" fill="#1c775f"/><path d="M15 17h34v36L32 68 15 53z" fill="none" stroke="#12394d" stroke-width="2.6" stroke-linejoin="round"/></svg><a class="home-title" href="index.html">Mataró, ciutat d’escoles</a></h1><a class="masthead-cta" href="#map">Explora l’oferta educativa</a></div><svg class="mataro-art" viewBox="0 0 300 116" aria-hidden="true" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#f4d489" stroke-width="3"><path d="M25 79h159M46 78V48h34v30M52 48V32h8v16M68 48V32h8v16M41 78V58h-8v20M82 78V58h8v20M91 78V53h71v25M101 53V42h12v11M117 53V42h12v11M135 53V42h12v11M111 42q15-23 30 0M126 19v-7M93 78V62q0-13 13-13h8q13 0 13 13v16M103 78V65q0-8 8-8t8 8v13"/><path d="M174 48h12v30M180 48V34l-6 7h12z"/></g><g stroke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 26 0 26 0"/><path d="M35 101q12-7 24 0t24 0 24 0 24 0 24 0 24 0 24 0"/></g></g><g fill="#f0bd62"><path d="m222 40 11 11-11 11-11-11z"/><path d="m248 40 11 11-11 11-11-11z"/><path d="m235 62 11 11-11 11-11-11z"/><path d="m261 62 11 11-11 11-11-11z"/></g><circle cx="235" cy="31" r="3" fill="#f0bd62"/><circle cx="261" cy="31" r="3" fill="#f0bd62"/></svg></div><nav class="controls-nav" aria-label="Filtres dels centres">
 <div class="controls-primary">
 <input id="q" type="search" placeholder="Cerca un centre o activitat…" aria-label="Cerca pel nom del centre, el carrer o l’activitat">
