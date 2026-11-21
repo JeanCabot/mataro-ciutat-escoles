@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **21 de novembre de 2026:** recuperades al repositori les 72 fotografies i 48 logos que ja tenia documentats el projecte, perquè es carreguin a les fitxes; afegit també el registre de cobertura de les fotografies.
+
 - **21 de novembre de 2026:** «Sobre el projecte» i «Accessibilitat» se situen a la mateixa fila que els filtres quan hi ha espai; en pantalles estretes continuen baixant de fila per facilitar-ne l’ús.
 
 - **21 de novembre de 2026:** els filtres ja no mantenen la vora vermella ni el globus d’acció quan s’aparta el ratolí; els indicadors continuen disponibles en navegar amb el teclat.
