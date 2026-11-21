@@ -2194,7 +2194,8 @@ async function updateNearbyWalkingDistances(origin, entries) {
         walkingDistanceCache.set(key,metres);
         routeDistances.set(entry.id,metres);
       });
-    } catch {
+    } catch (error) {
+      console.warn('No s’ha pogut calcular la distància a peu',error);
       batch.forEach(({entry,key})=>{walkingDistanceCache.set(key,null);routeDistances.set(entry.id,null);});
     }
     if(requestId!==nearbyRouteRequest) return;
