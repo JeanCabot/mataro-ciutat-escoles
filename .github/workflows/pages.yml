@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - name: Prepara els fitxers del visor
+        env:
+          MAPTILER_API_KEY: ${{ secrets.MAPTILER_API_KEY }}
         run: |
           archive=$(find . -maxdepth 1 -name 'Mataro_ciutat_escoles_V*.zip' | sort -V | tail -1)
           parts_dir=$(find . -maxdepth 1 -type d -name 'v*_archive_parts' | sort -V | tail -1)
@@ -35,6 +37,17 @@ jobs:
           if [ -s introduccio.html ]; then cp introduccio.html _site/introduccio.html; fi
           cp -R /tmp/site-source/fotos /tmp/site-source/logos _site/
           cp /tmp/site-source/aprendre-plegades.webp _site/
+          if [ -n "$MAPTILER_API_KEY" ]; then
+            python3 - <<'PYKEY'
+          import html
+          import os
+          from pathlib import Path
+          page = Path("_site/index.html")
+          content = page.read_text(encoding="utf-8")
+          content = content.replace('<meta name="maptiler-api-key" content="">', '<meta name="maptiler-api-key" content="' + html.escape(os.environ["MAPTILER_API_KEY"], quote=True) + '">')
+          page.write_text(content, encoding="utf-8")
+          PYKEY
+          fi
           test -s _site/index.html
           test -s _site/fotos
           touch _site/.nojekyll
