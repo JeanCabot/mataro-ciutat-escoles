@@ -2602,11 +2602,7 @@ timelineToggle.addEventListener('click', () => {
   document.getElementById('tour-skip').addEventListener('click',close);
   document.getElementById('tour-close').addEventListener('click',close);
   document.addEventListener('keydown',event=>{if(!tour.hidden&&event.key==='Escape'){event.preventDefault();close();}});
-  document.addEventListener('pointerdown',event=>{
-    if(tour.hidden||tour.contains(event.target))return;
-    if(activeTargets.some(element=>element===event.target||element.contains(event.target)))return;
-    close();
-  },true);
+  // Els clics fora del tutorial no el tanquen; només ho fan els controls del tutorial (i Escape).
   window.addEventListener('scroll',schedulePosition,{capture:true,passive:true});
   window.addEventListener('resize',schedulePosition,{passive:true});
   let dismissed=false;
