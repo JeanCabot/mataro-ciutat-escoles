@@ -19,7 +19,7 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
-- **22 de novembre de 2026:** s’apropen una mica més les entitats del mapa durant la selecció i el recorregut històric. S’afegeixen els logotips oficials identificats de l’Escola Camí del Cros i de Fundesplai a les fitxes associades, i se’n documenta la procedència a `logos/fonts.json`.
+- **22 de novembre de 2026:** s’apropen una mica més les entitats del mapa durant la selecció i el recorregut històric. S’afegeixen logotips identificats de l’Escola Camí del Cros, Codelearn, TecnoCampus, Fundació Maresme i Fundesplai a les fitxes corresponents, i se’n documenta la procedència a `logos/fonts.json`.
 
 
 - **22 de novembre de 2026:** apropat lleugerament el zoom del recorregut històric. Les entitats destacades es veuen més grans i el càlcul continua ajustant-se als centres actius i a l’espai visible.
