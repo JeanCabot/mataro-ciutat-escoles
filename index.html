@@ -2761,6 +2761,7 @@ timelineToggle.addEventListener('click', () => {
   if (!timelineSection.hidden) {
     pausePlayback();
     timelineSection.hidden = true;
+    map?.invalidateSize({pan: false});
     timelineToggle.setAttribute('aria-expanded', 'false');
     timelineToggle.textContent = 'Fes-me un recorregut històric!';
     timelineToggle.focus();
@@ -2771,6 +2772,7 @@ timelineToggle.addEventListener('click', () => {
   timelineToggle.textContent = 'Tanca la cronologia';
   document.getElementById('timeline-first-year').textContent = String(firstYears[0]);
   timelineSection.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest'});
+  map?.invalidateSize({pan: false});
   startPlayback(true);
 });
 </script><script>
