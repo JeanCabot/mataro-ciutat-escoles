@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** incorporades imatges de perfil/logotip per a CEE Les Aigües, Escola Marta Mata, Vista Alegre, Petit Somni, Belles Arts Rovira Viñas, Autoescola Maresme, Cronopis i Live English. Afegides imatges de fitxa de La Caseta i La Cossette i enllaços a xarxes socials. La possible relació històrica de Peques amb Pica-Soques/Petit Somni queda com a pista pendent de contrastar; no s’han fusionat fitxes ni canviat ubicacions.
+
+
 - **22 de novembre de 2026:** la cerca «Jove Ballet» no trobava la fitxa «Escola de Dansa Marta Bustamante». S’han incorporat variants i sigles verificades, i ara també es poden cercar les introduccions de les fitxes. En afegir entitats, revisarem si tenen noms de marca, sigles o altres formes habituals de cerca.
 
 - **22 de novembre de 2026:** ampliat el corpus de cerca de l’Escola de Dansa Marta Bustamante amb els noms «Jove Ballet de Catalunya» i «EDMB Jove Ballet de Catalunya».
