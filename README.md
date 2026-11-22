@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** corregit l’inici del recorregut automàtic perquè les entitats sense coordenades no interrompin la reproducció; ara avança des de la primera fita fins a l’actualitat i s’atura al final.
+
 - **22 de novembre de 2026:** el botó «Fes-me un recorregut històric!» inicia automàticament el recorregut per totes les categories, des de la primera fita fins a l’actualitat, i s’atura en acabar.
 
 - **22 de novembre de 2026:** aplicat als tres botons principals el gest de conversa de la captura, amb cues petites, integrades i situades a l’esquerra, al centre i a la dreta.
