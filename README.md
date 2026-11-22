@@ -19,7 +19,7 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
-- **22 de novembre de 2026:** ampliades les xarxes de les fitxes amb canals oficials identificats d’Escola GEM, Salesians Mataró, TecnoCampus, l’AFA de l’Escola Marta Mata, Aula de Teatre, Biblioteques de Mataró, Escola Municipal de Música, Mataró Art Contemporani, Col·lecció Bassat i Cultura/Museu de Mataró. Afegida la icona de Pinterest.
+- **22 de novembre de 2026:** ampliades les xarxes de les fitxes amb canals oficials identificats d’Escola GEM, Salesians Mataró, TecnoCampus, l’AFA de l’Escola Marta Mata, Maristes Valldemia i Aula de Teatre, Biblioteques de Mataró, Escola Municipal de Música, Mataró Art Contemporani, Col·lecció Bassat i Cultura/Museu de Mataró. Afegida la icona de Pinterest.
 
 - **22 de novembre de 2026:** s’apropen una mica més les entitats del mapa durant la selecció i el recorregut històric. S’afegeixen logotips identificats de l’Escola Camí del Cros, Codelearn, TecnoCampus, Fundació Maresme i Fundesplai a les fitxes corresponents, i se’n documenta la procedència a `logos/fonts.json`.
 
