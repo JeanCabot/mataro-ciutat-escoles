@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** apropat lleugerament el zoom del recorregut històric. Les entitats destacades es veuen més grans i el càlcul continua ajustant-se als centres actius i a l’espai visible.
+
 - **22 de novembre de 2026:** el mapa recalcula la seva mida en obrir o tancar la cronologia, mantenint les fites centrades quan canvia l’espai disponible.
 
 - **22 de novembre de 2026:** corregit el focus visual del recorregut: el mapa es centra en el conjunt de centres actius perquè la ciutat quedi al mig, i les entitats que s’incorporen aquell any es destaquen amb estrelles grogues.
