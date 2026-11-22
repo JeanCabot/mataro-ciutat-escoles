@@ -323,7 +323,7 @@ header.site-header{position:relative;z-index:500;box-shadow:0 5px 18px rgba(21,5
 .nearby-distance{max-width:145px;text-align:right;white-space:normal;line-height:1.35;font-variant-numeric:tabular-nums}
 @media(max-width:850px){.masthead-actions{flex-wrap:wrap}.masthead-actions .masthead-cta{flex:1 1 auto}.header-mascot{flex-basis:42px;width:42px;height:68px;background-size:74.7px 68px}}
 @media(max-width:620px){.masthead-copy{align-items:center;flex-direction:row}.masthead-actions{width:100%;flex:1 1 100%;gap:6px}.masthead-actions .masthead-cta{flex:1 1 100%;justify-content:center}.header-mascot{flex:0 0 38px;width:38px;height:58px;background-size:63.9px 58px}.nearby-item{grid-template-columns:34px minmax(0,1fr);}.nearby-distance{grid-column:2;grid-row:auto;text-align:left;max-width:none;padding-top:2px}.nearby-item .education-categories{grid-column:2}}
-</style><style>
+.selected-star-marker{background:transparent;border:0}.selected-star-marker svg{display:block;width:42px;height:42px;overflow:visible;filter:drop-shadow(0 2px 3px rgba(21,57,77,.48));animation:selected-star-pop .22s cubic-bezier(.2,.9,.3,1.4)}@keyframes selected-star-pop{from{transform:scale(.55) rotate(-18deg)}to{transform:scale(1) rotate(0)}}@media(prefers-reduced-motion:reduce){.selected-star-marker svg{animation:none}}\n</style><style>
 /* Guia flotant: tres passos contextuals amb el control actiu ressaltat. */
 .site-tour{box-sizing:border-box;position:fixed;z-index:14000;width:min(340px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;padding:11px;border:1px solid #b8d0d8;border-radius:18px;background:#fffdf7;color:#15394d;box-shadow:0 12px 36px rgba(11,42,61,.24)}
 .site-tour[hidden]{display:none}
@@ -2405,10 +2405,10 @@ function selectEntry(entry, fromList, site) {
   selectedId = entry.id;
   selectedSite = site;
   const point = site || entry;
-  renderPanel();
-  for (const [id, marker] of markers) marker.setStyle({weight: !site && id === selectedId ? 3.5 : 2});
-  for (const [id, marker] of siteMarkers) marker.setStyle({weight: id === site?.id ? 3.5 : 2});
-  (site ? siteMarkers.get(site.id) : markers.get(entry.id))?.bringToFront();
+  render();
+  const highlightedMarker = site ? siteMarkers.get(site.id) : markers.get(entry.id);
+  highlightedMarker?.bringToFront?.();
+  highlightedMarker?.setZIndexOffset?.(1000);
   if (fromList && map) map.panTo([point.lat, point.lon]);
   panel.scrollTop = 0;
   if (window.matchMedia('(max-width:760px), (max-height:480px)').matches) {
@@ -2468,7 +2468,7 @@ function searchText(value) {
     .replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
 }
 
-function render(refit = false) {
+function render(refit = false, playbackFocusYear = null) {
   const terms = searchText(document.getElementById('q').value).split(/\s+/).filter(term => term && !searchStopWords.has(term));
   const year = Number(yearSlider.value);
   const selectedStage = stageFilter.value;
@@ -2513,7 +2513,7 @@ function render(refit = false) {
   if (!currentView()) selectedSite = undefined;
   document.getElementById('selected-year').textContent = currentView() ? 'Actualitat' : year;
   const openingGroup = document.getElementById('timeline-opening-group');
-  const openingNames = timelineEntitiesByYear.get(year) || [];
+  const openingNames = [...new Set([...(timelineEntitiesByYear.get(year) || []), ...leisureEntries.filter(entry => entry.firstDocumentedYear === year).map(entry => entry.record.nom)])];
   openingGroup.hidden = currentView();
   const openingName = document.getElementById('timeline-opening');
   openingName.textContent = openingNames.length
@@ -2548,11 +2548,16 @@ function render(refit = false) {
     const ownershipCategory = record.naturalesa === 'Públic' ? 'compulsory-public' : 'compulsory-private';
     const category = entry.compulsory ? ownershipCategory : entry.leisure ? 'leisure' : entry.tutoring ? 'tutoring' : 'other';
     const fillColor = categoryColors[category];
-    const marker = makeCircleMarkerAccessible(L.circleMarker([entry.lat, entry.lon], {
-      radius: entry.leisure ? 10 : 8, className: 'education-marker', color: '#fff', fillColor, weight: !selectedSite && entry.id === selectedId ? 3.5 : 2,
-      dashArray: record.font_estat_activitat ? '3 3' : undefined,
-      fillOpacity: record.font_estat_activitat ? .35 : 1
-    }), record.nom + ', ' + record.adreca).bindTooltip(esc(record.nom)).on('click', () => selectEntry(entry, false))
+    const isSelectedEntity = !selectedSite && entry.id === selectedId;
+    const markerBase = isSelectedEntity
+      ? L.marker([entry.lat, entry.lon], {icon: L.divIcon({className: 'selected-star-marker', html: '<svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 2.5 26.3 14.1 38.9 15.3 29.5 23.7 32.1 36 21 29.7 9.9 36 12.5 23.7 3.1 15.3 15.7 14.1Z" fill="#ffd43b" stroke="#15394d" stroke-width="2.5" stroke-linejoin="round"/></svg>', iconSize: [42, 42], iconAnchor: [21, 21]}), zIndexOffset: 1000})
+      : L.circleMarker([entry.lat, entry.lon], {
+          radius: entry.leisure ? 10 : 8, className: 'education-marker', color: '#fff', fillColor, weight: 2,
+          dashArray: record.font_estat_activitat ? '3 3' : undefined,
+          fillOpacity: record.font_estat_activitat ? .35 : 1
+        });
+    const marker = makeCircleMarkerAccessible(markerBase, record.nom + ', ' + record.adreca)
+      .bindTooltip(esc(record.nom)).on('click', () => selectEntry(entry, false))
       .addTo(entry.leisure ? leisureLayer : layer);
     markers.set(entry.id, marker);
     mapPoints.push([entry.lat, entry.lon]);
@@ -2560,9 +2565,11 @@ function render(refit = false) {
     for (const site of additionalSites[entry.id] || []) {
       if (!Number.isFinite(site.lat) || !Number.isFinite(site.lon) || site.lat < -90 || site.lat > 90 || site.lon < -180 || site.lon > 180) continue;
       const point = [site.lat, site.lon];
-      const siteMarker = makeCircleMarkerAccessible(L.circleMarker(point, {
-        radius: 6, className: 'education-marker', color: '#fff', fillColor, fillOpacity: 1, weight: site.id === selectedSite?.id ? 3.5 : 2
-      }), record.nom + ', seu addicional: ' + site.name + ', ' + site.address).bindTooltip(esc(record.nom + ' · ' + site.name))
+      const siteMarkerBase = site.id === selectedSite?.id
+        ? L.marker(point, {icon: L.divIcon({className: 'selected-star-marker', html: '<svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 2.5 26.3 14.1 38.9 15.3 29.5 23.7 32.1 36 21 29.7 9.9 36 12.5 23.7 3.1 15.3 15.7 14.1Z" fill="#ffd43b" stroke="#15394d" stroke-width="2.5" stroke-linejoin="round"/></svg>', iconSize: [42, 42], iconAnchor: [21, 21]}), zIndexOffset: 1000})
+        : L.circleMarker(point, {radius: 6, className: 'education-marker', color: '#fff', fillColor, fillOpacity: 1, weight: 2});
+      const siteMarker = makeCircleMarkerAccessible(siteMarkerBase, record.nom + ', seu addicional: ' + site.name + ', ' + site.address)
+        .bindTooltip(esc(record.nom + ' · ' + site.name))
         .on('click', () => selectEntry(entry, false, site)).addTo(layer);
       siteMarkers.set(site.id, siteMarker);
       mapPoints.push(point);
@@ -2587,8 +2594,24 @@ function render(refit = false) {
       mapPoints.push(point);
     }
   }
-  (selectedSite ? siteMarkers.get(selectedSite.id) : markers.get(selectedId))?.bringToFront();
-  if (refit && mapPoints.length) {
+  const highlightedMarker = selectedSite ? siteMarkers.get(selectedSite.id) : markers.get(selectedId);
+  highlightedMarker?.bringToFront?.();
+  highlightedMarker?.setZIndexOffset?.(1000);
+  if (playbackFocusYear !== null && mapPoints.length) {
+    const focusEntries = visibleEntries.filter(entry => Number(entry.leisure ? entry.firstDocumentedYear : firstDocumentedYear[entry.id]) === Number(playbackFocusYear));
+    const focusPoints = focusEntries.filter(entry => Number.isFinite(entry.lat) && Number.isFinite(entry.lon)).map(entry => [entry.lat, entry.lon]);
+    if (focusPoints.length) {
+      const centerLat = focusPoints.reduce((sum, point) => sum + point[0], 0) / focusPoints.length;
+      const centerLon = focusPoints.reduce((sum, point) => sum + point[1], 0) / focusPoints.length;
+      const latRadius = Math.max(0.003, ...mapPoints.map(point => Math.abs(point[0] - centerLat))) * 1.12;
+      const lonRadius = Math.max(0.004, ...mapPoints.map(point => Math.abs(point[1] - centerLon))) * 1.12;
+      const centeredBounds = L.latLngBounds([centerLat - latRadius, centerLon - lonRadius], [centerLat + latRadius, centerLon + lonRadius]);
+      const zoom = Math.min(12, map.getBoundsZoom(centeredBounds, false, L.point(48, 48)));
+      const destination = [centerLat, centerLon];
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) map.setView(destination, zoom, {animate: false});
+      else map.flyTo(destination, zoom, {duration: .48, easeLinearity: .25});
+    }
+  } else if (refit && mapPoints.length) {
     map.fitBounds(mapPoints, {padding: [25, 25], maxZoom: 15});
   }
 }
@@ -2638,9 +2661,7 @@ function clearSelectedCentre() {
   if (selectedId === undefined) return;
   selectedId = undefined;
   selectedSite = undefined;
-  for (const marker of markers.values()) marker.setStyle({weight: 2});
-  for (const marker of siteMarkers.values()) marker.setStyle({weight: 2});
-  renderPanel();
+  render();
 }
 
 document.addEventListener('click', event => {
@@ -2667,14 +2688,14 @@ tutoringToggle.addEventListener('change', () => render(true));
 leisureToggle.addEventListener('change', () => render());
 render(true);
 
-function updateYear() {
+function updateYear(playbackFocusYear = null) {
   const leisureToggle = document.getElementById('show-lleure');
   leisureToggle.disabled = false;
   if (map) {
     map.closePopup();
     if (!currentView() && extra) map.removeLayer(extra);
   }
-  render();
+  render(false, playbackFocusYear);
 }
 const playButton = document.getElementById('play');
 const firstYears = [...new Set([...Object.values(firstDocumentedYear), ...leisureEntries.map(entry => entry.firstDocumentedYear)])].sort((a,b)=>a-b);
@@ -2698,13 +2719,13 @@ function startPlayback(fromBeginning = false) {
   playButton.textContent = '❚❚ Pausa';
   playButton.setAttribute('aria-pressed', 'true');
   playbackTimer = setInterval(advancePlayback, 650);
-  updateYear();
+  updateYear(restartAtFirstYear ? Number(yearSlider.value) : null);
 }
 function advancePlayback() {
   const next = playbackYears.find(year => year > Number(yearSlider.value));
   if (next === undefined) return pausePlayback();
   yearSlider.value = String(next);
-  updateYear();
+  updateYear(next);
   if (currentView()) pausePlayback();
 }
 playButton.addEventListener('click', () => {
