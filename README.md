@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** revisat el nou lot d’imatges. Actualitzades la fotografia del CEE Les Aigües i la de La Cossette, i incorporat el logotip de l’Escola Marta Mata; la imatge de La Caseta ja coincidia amb la fotografia rebuda. Cronopis, Autoescola Maresme i Live English ja tenien els recursos visuals aportats i ara consten millor documentats. La imatge de Petit Somni no s’assigna a Peques: el directori del Departament d’Educació de 2024 llista Peques al c. Rierot, Picasoques a la Ronda de la República i Petit Somni al Camí Ral; la continuïtat no queda acreditada. Les miniatures de Google i les imatges sense llicència indicada continuen identificades com a pendents de verificació.
+
+
 - **22 de novembre de 2026:** incorporades imatges de perfil/logotip per a CEE Les Aigües, Escola Marta Mata, Vista Alegre, Petit Somni, Belles Arts Rovira Viñas, Autoescola Maresme, Cronopis i Live English. Afegides imatges de fitxa de La Caseta i La Cossette i enllaços a xarxes socials. La possible relació històrica de Peques amb Pica-Soques/Petit Somni queda com a pista pendent de contrastar; no s’han fusionat fitxes ni canviat ubicacions.
 
 

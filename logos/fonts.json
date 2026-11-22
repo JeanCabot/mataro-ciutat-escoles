@@ -260,5 +260,21 @@
     "web": "https://www.fundaciomaresme.cat/",
     "imatge_original": "https://aspace.org/assets/uploads/entidades/ce5dd-maresme.png",
     "font_detall": "Logotip de Fundació Maresme publicat al perfil de l’entitat a ASPACE."
+  },
+  "08065287": {
+    "web": "https://agora.xtec.cat/esc-mmata-mataro/",
+    "imatge_original": "https://agora.xtec.cat/esc-mmata-mataro/wp-content/uploads/usu828/2017/05/29X19.jpg"
+  },
+  "MAT-auto-maresme": {
+    "web": "https://autoescolamaresme.es/",
+    "imatge_original": "https://www.autoescolamaresme.es/"
+  },
+  "MAT-cronopis": {
+    "web": "https://www.apcc.cat/ca/circ-a-catalunya/espais-de-circ/145/espai-de-circ-cronopis",
+    "imatge_original": "https://circsocial.cat/storage/app/uploads/public/620/261/cdc/620261cdc6f82754767655.png"
+  },
+  "MAT-live-english": {
+    "web": "https://livenglishmataro.com/contacte",
+    "imatge_original": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPU7oZdkgNqZXZvG1KnFJ5x69wAoNTU51W1Hbme0fG2A&s=10"
   }
 }
