@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** eliminada la capa separada de l’Escola Joan Coromines, pendent de documentar les dates d’ocupació de la seu addicional. L’auditoria ha identificat 10 fitxes sense cap imatge; el detall consta al manifest de logos.
+
+
 - **22 de novembre de 2026:** normalitzats els salts de línia accidentals en dades d’entitats i adreces que impedien executar l’script del mapa.
 
 
