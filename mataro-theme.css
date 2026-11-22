@@ -177,3 +177,111 @@ nav.controls-nav .layer-toggle:has(input:focus-visible)::after{
 @media(prefers-reduced-motion:reduce){
   nav.controls-nav .ownership-toggle,nav.controls-nav .layer-toggle::after{transition:none}
 }
+
+/* Capçalera mòbil: títol i il·lustració a dalt, accions apilades i personatges als extrems. */
+@media (max-width: 720px) {
+  header.site-header .masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(76px, 24vw);
+    grid-template-areas:
+      "title art"
+      "actions actions";
+    align-items: center;
+    gap: 10px 12px;
+    padding: 12px 14px 18px;
+  }
+
+  .masthead-copy { display: contents; }
+
+  .masthead h1 {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    margin: 0;
+    font-size: clamp(1.1rem, 5vw, 1.55rem);
+    line-height: 1.04;
+  }
+
+  .masthead h1 .city-crest {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 34px;
+  }
+
+  .masthead h1 .home-title {
+    display: block;
+    min-width: 0;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: normal;
+    overflow-wrap: normal;
+  }
+
+  .masthead .mataro-art {
+    grid-area: art;
+    justify-self: end;
+    align-self: center;
+    width: clamp(76px, 24vw, 108px);
+    max-height: none;
+  }
+
+  .masthead-actions {
+    grid-area: actions;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    grid-template-areas:
+      "man random ."
+      ". timeline ."
+      ". suggest woman";
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+    min-width: 0;
+    gap: 8px 6px;
+  }
+
+  .masthead-actions .header-mascot {
+    width: 42px;
+    height: 60px;
+    flex: none;
+    justify-self: center;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .masthead-actions .header-mascot-man { grid-area: man; }
+  .masthead-actions .header-mascot-woman { grid-area: woman; }
+  #random-centre-toggle { grid-area: random; }
+  #timeline-toggle { grid-area: timeline; }
+  #suggest-place-toggle { grid-area: suggest; }
+
+  .masthead-actions .masthead-cta {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 9px 12px;
+    font-size: clamp(.95rem, 4.3vw, 1.08rem);
+    line-height: 1.18;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  header.site-header .masthead {
+    grid-template-columns: minmax(0, 1fr) 72px;
+    gap: 8px 8px;
+    padding-inline: 10px;
+  }
+
+  .masthead h1 { gap: 6px; }
+  .masthead h1 .city-crest { flex-basis: 27px; width: 27px; height: 31px; }
+  .masthead-actions { grid-template-columns: 36px minmax(0, 1fr) 36px; gap: 7px 5px; }
+  .masthead-actions .header-mascot { width: 36px; height: 54px; }
+  .masthead-actions .masthead-cta { padding-inline: 8px; }
+}
