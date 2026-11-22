@@ -115,6 +115,7 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 .skip-link{position:absolute;z-index:10000;top:8px;left:8px;transform:translateY(-160%);padding:11px 15px;border-radius:6px;background:#fff;color:#123a40;font-weight:700}
 .skip-link:focus{transform:translateY(0);outline:3px solid #e1a63a;outline-offset:2px}
 .controls-nav{display:flex;align-items:center;gap:8px 10px;flex-wrap:wrap;padding:8px clamp(12px,3vw,38px);background:#fff}
+.directory-count{flex:1 0 100%;margin:0;padding:0 0 2px 2px;color:#426056;font-size:.82rem;line-height:1.35}
 .controls-nav>a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:#07594f;font-weight:700;text-underline-offset:3px}
 .controls-nav input[type=search],.controls-nav select{box-sizing:border-box;min-height:44px;border:1px solid #526b67;border-radius:8px;background:#fff;color:#18352f;font:inherit}
 .controls-nav input[type=search]{width:min(230px,22vw);padding:9px 12px}
@@ -125,6 +126,8 @@ header.site-header{display:block;padding:0;background:#fff;border:0;border-botto
 .controls-nav .layer-toggle{box-sizing:border-box;display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:5px 7px;border:1px solid #d0ded9;border-radius:8px;background:#f8faf8;color:#18352f;font-size:.84rem;white-space:nowrap;cursor:pointer}
 .nearby-heading:focus{outline:3px solid #a94f16;outline-offset:4px;border-radius:2px}
 .controls-nav .layer-toggle:hover{background:#edf4f0;border-color:#6d8880}
+.shared-location-marker{background:transparent;border:0}
+.shared-location-marker span{display:grid;place-items:center;box-sizing:border-box;width:30px;height:30px;border:2px solid #fff;border-radius:50%;background:#15394d;color:#fff;font:700 13px/1 system-ui;box-shadow:0 1px 5px #0009;outline:2px solid #15394d}
 .controls-nav .layer-toggle input{width:20px;height:20px;margin:0;accent-color:#07594f;flex:0 0 20px}
 .controls-primary,.controls-secondary{display:contents}.controls-primary{min-width:0}.controls-secondary{min-width:0}.header-links{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-left:auto;flex:0 0 auto}.header-links a{color:#075474;font-size:.9rem;font-weight:600;text-underline-offset:3px}.controls-nav .compulsory-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .ownership-legend{color:#18352f}
@@ -476,6 +479,7 @@ troke="#a8ded2" stroke-width="3"><path d="M23 90q13-8 26 0t26 0 26 0 26 0 26 0 2
 <label class="layer-toggle" data-category="leisure" data-hint="Clica" title="Clica per mostrar o amagar lleure i casals"><input id="show-lleure" type="checkbox" autocomplete="off"><span class="layer-dot" aria-hidden="true"></span>Lleure i casals</label>
 <div class="header-links"><a href="introduccio.html">Sobre el projecte</a><a href="accessibilitat.html">Accessibilitat</a></div>
 </div>
+<p class="directory-count" id="directory-count"></p>
 </nav></header><aside class="site-tour" id="site-tour" role="dialog" aria-labelledby="tour-title" aria-describedby="tour-copy" hidden>
 <div class="tour-card-top"><img class="tour-art" id="tour-art" src="assets/guia-cerca.webp?v=20261121b" width="300" height="300" alt=""><div><p class="tour-kicker">Mataró · Ciutat d’escoles</p><p class="tour-count" id="tour-count" aria-live="polite">Pas 1 de 3</p></div><button class="tour-close" id="tour-close" type="button" aria-label="Tanca la visita guiada">×</button></div>
 <h2 id="tour-title" tabindex="-1">Cerca un centre</h2><p class="tour-copy" id="tour-copy">Escriu el nom d’un centre o d’una activitat per trobar-la de seguida.</p>
@@ -1661,7 +1665,11 @@ function renderPanel() {
   const nearbyTitle = document.getElementById('nearby-title');
   nearbyTitle.querySelector('.nearby-heading-text').textContent = selected ? 'Altres centres educatius propers' : 'Centres del mapa';
   nearbyTitle.hidden = visibleEntries.length <= (selected ? 1 : 0);
-  document.getElementById('distance-note').hidden = !selected || visibleEntries.length < 2;
+  const distanceNote = document.getElementById('distance-note');
+  distanceNote.textContent = selected
+    ? 'Distància aproximada a peu des del centre seleccionat.'
+    : 'Selecciona una fitxa per veure la distància aproximada a peu fins als altres centres.';
+  distanceNote.hidden = visibleEntries.length === 0 || (Boolean(selected) && visibleEntries.length < 2);
   const nearbyEntries = visibleEntries
     .filter(entry => entry.id !== selectedId)
     .map(entry => ({entry, distance: selected ? distanceMetres(selectedSite || selected, entry) : 0}))
@@ -1815,6 +1823,10 @@ function render(refit = false, playbackFocusYear = null) {
   yearSlider.setAttribute('aria-valuetext', currentView() ? 'Actualitat' : String(year));
   document.getElementById('timeline-address-note').hidden = currentView();
   document.getElementById('count').textContent = visibleEntries.length + (visibleEntries.length === 1 ? ' centre obert' : ' centres oberts');
+  const totalRecords = schoolEntries.length + leisureEntries.length;
+  document.getElementById('directory-count').textContent =
+    visibleEntries.length + (visibleEntries.length === 1 ? ' fitxa visible' : ' fitxes visibles') +
+    ' de ' + totalRecords + ' registres; els filtres en poden amagar.';
   renderPanel();
   if (!map) return;
   layer.clearLayers();
@@ -1824,6 +1836,14 @@ function render(refit = false, playbackFocusYear = null) {
   siteMarkers.clear();
   const mapPoints = [];
   const leisureLocations = new Set();
+  const entriesByLocation = new Map();
+  for (const candidate of visibleEntries) {
+    if (!Number.isFinite(candidate.lat) || !Number.isFinite(candidate.lon)) continue;
+    const locationKey = candidate.lat + ',' + candidate.lon;
+    const colocated = entriesByLocation.get(locationKey) || [];
+    colocated.push(candidate);
+    entriesByLocation.set(locationKey, colocated);
+  }
   for (const entry of visibleEntries) {
     if (!Number.isFinite(entry.lat) || !Number.isFinite(entry.lon) || entry.lat < -90 || entry.lat > 90 || entry.lon < -180 || entry.lon > 180) continue;
     if (tabaletHistoricView && entry.id === '08046451') continue;
@@ -1834,17 +1854,27 @@ function render(refit = false, playbackFocusYear = null) {
     const ownershipCategory = record.naturalesa === 'Públic' ? 'compulsory-public' : 'compulsory-private';
     const category = entry.compulsory ? ownershipCategory : entry.leisure ? 'leisure' : entry.tutoring ? 'tutoring' : 'other';
     const fillColor = categoryColors[category];
+    const colocatedEntries = entriesByLocation.get(key) || [entry];
+    const colocatedNames = [...new Set(colocatedEntries.map(item => item.record.nom))];
+    const sharedLocationLabel = colocatedNames.length > 1
+      ? colocatedNames.length + ' centres comparteixen aquest punt: ' + colocatedNames.join(', ') + ', ' + record.adreca
+      : record.nom + ', ' + record.adreca;
     const isOpenedThisYear = playbackFocusYear !== null && Number(entry.leisure ? entry.firstDocumentedYear : firstDocumentedYear[entry.id]) === Number(playbackFocusYear);
     const isSelectedEntity = (!selectedSite && entry.id === selectedId) || isOpenedThisYear;
     const markerBase = isSelectedEntity
       ? L.marker([entry.lat, entry.lon], {icon: L.divIcon({className: 'selected-star-marker', html: '<svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 2.5 26.3 14.1 38.9 15.3 29.5 23.7 32.1 36 21 29.7 9.9 36 12.5 23.7 3.1 15.3 15.7 14.1Z" fill="#ffd43b" stroke="#15394d" stroke-width="2.5" stroke-linejoin="round"/></svg>', iconSize: [42, 42], iconAnchor: [21, 21]}), zIndexOffset: 1000})
-      : L.circleMarker([entry.lat, entry.lon], {
-          radius: entry.leisure ? 10 : 8, className: 'education-marker', color: '#fff', fillColor, weight: 2,
-          dashArray: record.font_estat_activitat ? '3 3' : undefined,
-          fillOpacity: record.font_estat_activitat ? .35 : 1
-        });
-    const marker = makeCircleMarkerAccessible(markerBase, record.nom + ', ' + record.adreca)
-      .bindTooltip(esc(record.nom)).on('click', () => selectEntry(entry, false))
+      : colocatedNames.length > 1
+        ? L.marker([entry.lat, entry.lon], {
+            icon: L.divIcon({className: 'shared-location-marker', html: '<span aria-hidden="true">' + colocatedNames.length + '</span>', iconSize: [30, 30], iconAnchor: [15, 15]}),
+            title: sharedLocationLabel
+          })
+        : L.circleMarker([entry.lat, entry.lon], {
+            radius: entry.leisure ? 10 : 8, className: 'education-marker', color: '#fff', fillColor, weight: 2,
+            dashArray: record.font_estat_activitat ? '3 3' : undefined,
+            fillOpacity: record.font_estat_activitat ? .35 : 1
+          });
+    const marker = makeCircleMarkerAccessible(markerBase, sharedLocationLabel)
+      .bindTooltip(esc(sharedLocationLabel)).on('click', () => selectEntry(entry, false))
       .addTo(entry.leisure ? leisureLayer : layer);
     markers.set(entry.id, marker);
     mapPoints.push([entry.lat, entry.lon]);
