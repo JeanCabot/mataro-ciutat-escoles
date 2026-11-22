@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** la cerca «Jove Ballet» no trobava la fitxa «Escola de Dansa Marta Bustamante». S’han incorporat variants i sigles verificades, i ara també es poden cercar les introduccions de les fitxes. En afegir entitats, revisarem si tenen noms de marca, sigles o altres formes habituals de cerca.
+
 - **22 de novembre de 2026:** ampliat el corpus de cerca de l’Escola de Dansa Marta Bustamante amb els noms «Jove Ballet de Catalunya» i «EDMB Jove Ballet de Catalunya».
 
 - **22 de novembre de 2026:** afegides a les fitxes les icones d’Instagram de CEE Les Aigües, Escola Marta Mata i Escola Vista Alegre, i la icona de Facebook del Jove Ballet de Catalunya.

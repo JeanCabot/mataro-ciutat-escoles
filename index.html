@@ -1696,11 +1696,29 @@ const searchAliases = {
 // termes ajuden a cercar sense afegir-los a la informació visible de la fitxa.
 // Foment Mataroní publica el curs de ioga: https://fomentmataroni.cat/curs/ioga/
 const searchActivityCorpus = {
-  'MAT-foment': ['ioga yoga'],
-  'MAT-marta-bustamante': ['Jove Ballet de Catalunya', 'EDMB Jove Ballet de Catalunya', 'escola de ballet']
+  'MAT-foment': ['ioga yoga']
+};
+
+const searchEntityAliases = {
+  '08045227': ['Centre d’educació especial Les Aigües'],
+  '08065123': ['Salesians Mataró'],
+  '08021089': ['Salesians Mataró'],
+  '08070209': ['Escola Bressol La Caseta', 'La Caseta dels Infants'],
+  '08062547': ['Escola Bressol Peques'],
+  '08070623': ['Escola de Música El Carreró'],
+  '08057126': ['Escola de Música Liceu Mataró'],
+  '08071470': ['Escola Municipal de Música Mataró', 'EMM Mataró', 'EMMMataró'],
+  '08052931': ['Escola Oficial d’Idiomes del Maresme'],
+  'MAT-marta-bustamante': ['Jove Ballet', 'Jove Ballet de Catalunya', 'EDMB Jove Ballet de Catalunya'],
+  'MAT-dansa-ramos': ['Danza Tu Aire Mataró'],
+  'MAT-mtr-jiujitsu': ['MTR Jiu-Jitsu', 'jiu jitsu', 'Brazilian jiu-jitsu']
 };
 
 const searchSynonyms = {
+  guarderia: ['guarderia', 'escola bressol', 'llar infants'],
+  bressol: ['bressol', 'guarderia', 'llar infants'],
+  infants: ['infants', 'bressol', 'guarderia'],
+
   ioga: ['ioga', 'yoga'], yoga: ['ioga', 'yoga'],
   musica: ['musica', 'music'], music: ['musica', 'music'],
   teatre: ['teatre', 'theatre', 'theater'], theatre: ['teatre', 'theatre', 'theater'],
@@ -1740,7 +1758,7 @@ function render(refit = false, playbackFocusYear = null) {
     for (const code of (record.ensenyaments_codis || '').split('|').map(code => code.trim())) {
       fields.push(stageNames[code], searchAliases[code]);
     }
-    fields.push(...(searchActivityCorpus[id] || []));
+    fields.push(centreIntroductions[id], ...(searchEntityAliases[id] || []), ...(searchActivityCorpus[id] || []));
     if (currentView()) {
       for (const site of additionalSites[id] || []) fields.push(site.name, site.address, site.stages);
     }
