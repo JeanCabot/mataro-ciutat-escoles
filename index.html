@@ -2539,6 +2539,7 @@ function render(refit = false) {
   const mapPoints = [];
   const leisureLocations = new Set();
   for (const entry of visibleEntries) {
+    if (!Number.isFinite(entry.lat) || !Number.isFinite(entry.lon) || entry.lat < -90 || entry.lat > 90 || entry.lon < -180 || entry.lon > 180) continue;
     if (tabaletHistoricView && entry.id === '08046451') continue;
     const key = entry.lat + ',' + entry.lon;
     if (entry.leisure && leisureLocations.has(key) && entry.id !== selectedId) continue;
@@ -2557,6 +2558,7 @@ function render(refit = false) {
     mapPoints.push([entry.lat, entry.lon]);
     if (!currentView()) continue;
     for (const site of additionalSites[entry.id] || []) {
+      if (!Number.isFinite(site.lat) || !Number.isFinite(site.lon) || site.lat < -90 || site.lat > 90 || site.lon < -180 || site.lon > 180) continue;
       const point = [site.lat, site.lon];
       const siteMarker = makeCircleMarkerAccessible(L.circleMarker(point, {
         radius: 6, className: 'education-marker', color: '#fff', fillColor, fillOpacity: 1, weight: site.id === selectedSite?.id ? 3.5 : 2
@@ -2568,6 +2570,7 @@ function render(refit = false) {
   }
   if (tabaletHistoricView) {
     for (const seat of tabaletHistoricalSeats) {
+      if (!Number.isFinite(seat.lat) || !Number.isFinite(seat.lon) || seat.lat < -90 || seat.lat > 90 || seat.lon < -180 || seat.lon > 180) continue;
       if (year < seat.fromYear || year > seat.toYear) continue;
       const popup = '<b>' + esc(seat.name) + '</b><br>' + esc(seat.address) +
         '<p>' + esc(seat.activity) + '</p><p><small>' + esc(seat.precision) + '</small></p>' +
@@ -2585,7 +2588,7 @@ function render(refit = false) {
     }
   }
   (selectedSite ? siteMarkers.get(selectedSite.id) : markers.get(selectedId))?.bringToFront();
-  if (refit && visibleEntries.length) {
+  if (refit && mapPoints.length) {
     map.fitBounds(mapPoints, {padding: [25, 25], maxZoom: 15});
   }
 }
@@ -2694,8 +2697,8 @@ function startPlayback(fromBeginning = false) {
   if (restartAtFirstYear) yearSlider.value = yearSlider.min;
   playButton.textContent = '❚❚ Pausa';
   playButton.setAttribute('aria-pressed', 'true');
-  updateYear();
   playbackTimer = setInterval(advancePlayback, 650);
+  updateYear();
 }
 function advancePlayback() {
   const next = playbackYears.find(year => year > Number(yearSlider.value));
