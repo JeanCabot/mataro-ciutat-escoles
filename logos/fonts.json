@@ -245,5 +245,20 @@
     "web": "http://www.xtec.cat/centres/a8046451/",
     "imatge_original": "https://www.fundaciodamm.cat/sites/default/files/2022-09/Fundesplai.png",
     "font_detall": "Logotip de Fundesplai; perfil social associat a aquestes fitxes: https://www.instagram.com/fundesplai/."
+  },
+  "MAT-codelearn": {
+    "web": "https://codelearn.cat/",
+    "imatge_original": "https://cdn.brandfetch.io/id1LPbQ1tY/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1742384087505",
+    "font_detall": "Recurs de marca de Codelearn localitzat a Brandfetch."
+  },
+  "MAT-tecnocampus": {
+    "web": "https://www.tecnocampus.cat/es/universitat/imatge-corporativa-tecnocampus",
+    "imatge_original": "https://www.tecnocampus.cat/sites/default/files/Imatge%20corporativa/x01-logo-cat-cmyk-tcm-V.png.pagespeed.ic.az51LMKBm-.png",
+    "font_detall": "Logotip corporatiu publicat a la pàgina oficial d’imatge corporativa de TecnoCampus."
+  },
+  "MAT-fundacio-maresme": {
+    "web": "https://www.fundaciomaresme.cat/",
+    "imatge_original": "https://aspace.org/assets/uploads/entidades/ce5dd-maresme.png",
+    "font_detall": "Logotip de Fundació Maresme publicat al perfil de l’entitat a ASPACE."
   }
 }
