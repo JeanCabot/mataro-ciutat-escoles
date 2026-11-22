@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** normalitzats els salts de línia accidentals en dades d’entitats i adreces que impedien executar l’script del mapa.
+
+
 - **22 de novembre de 2026:** les fitxes mostren sota el nom la primera data d’inauguració o inici documentat i el temps transcorregut fins a l’any actual. Quan no hi ha una data documentada, s’indica explícitament.
 
 
