@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** afegides a les fitxes les icones d’Instagram de CEE Les Aigües, Escola Marta Mata i Escola Vista Alegre, i la icona de Facebook del Jove Ballet de Catalunya.
+
 - **22 de novembre de 2026:** incorporades tres fotografies de centres (CEE Les Aigües, Escola Marta Mata i Escola Vista Alegre), diferenciades dels logos que continuen pendents, i el logo de perfil del Jove Ballet de Catalunya per a l’Escola de Dansa Marta Bustamante. Afegit el CSV complet d’auditoria de 163 fitxes.
 
 - **22 de novembre de 2026:** en començar una cerca, s’activen automàticament totes les categories i totes les etapes perquè els resultats incloguin tota l’oferta.
