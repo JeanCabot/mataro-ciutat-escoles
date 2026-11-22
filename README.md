@@ -19,6 +19,9 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** les fitxes mostren sota el nom la primera data d’inauguració o inici documentat i el temps transcorregut fins a l’any actual. Quan no hi ha una data documentada, s’indica explícitament.
+
+
 - **22 de novembre de 2026:** incorporats 83 logos i 8 imatges de perfil de xarxes socials, amb les imatges raster optimitzades i els SVG conservats. S’han afegit 18 enllaços socials a les fitxes i els logos blancs ara es mostren sobre fons fosc. El manifest de fonts és a `logos/LOGOS_MANIFEST.csv`; 10 fitxes encara no tenen cap imatge descarregable. El manifest identifica els logos genèrics i les imatges socials que no són logos.
 
 - **22 de novembre de 2026:** redissenyada la capçalera en pantalles de fins a 720 px: títol i il·lustració de Mataró comparteixen la primera fila, els tres botons s’apilen i la parella queda als costats de les accions. El flux de publicació s’ha actualitzat per servir aquest CSS.
@@ -132,3 +135,4 @@ Per mantenir el repositori lleuger, es conservaran com a màxim **cinc versions 
 ## Crèdits
 
 El mapa utilitza [Leaflet](https://leafletjs.com/), [OpenStreetMap](https://www.openstreetmap.org/copyright) i dades de fonts públiques i dels centres. La procedència de les fotografies s’indica a les fitxes corresponents.
+
