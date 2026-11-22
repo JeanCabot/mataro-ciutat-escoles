@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** incorporats 83 logos i 8 imatges de perfil de xarxes socials, amb les imatges raster optimitzades i els SVG conservats. S’han afegit 18 enllaços socials a les fitxes i els logos blancs ara es mostren sobre fons fosc. El manifest de fonts és a `logos/LOGOS_MANIFEST.csv`; 10 fitxes encara no tenen cap imatge descarregable. El manifest identifica els logos genèrics i les imatges socials que no són logos.
+
 - **22 de novembre de 2026:** redissenyada la capçalera en pantalles de fins a 720 px: títol i il·lustració de Mataró comparteixen la primera fila, els tres botons s’apilen i la parella queda als costats de les accions. El flux de publicació s’ha actualitzat per servir aquest CSS.
 
 - **22 de novembre de 2026:** el flux de GitHub Pages publica directament els fitxers actuals del repositori i es dispara també amb canvis a `fotos/` i `logos/`. Retirats els 99 fragments binaris i el nom de l’antic paquet ZIP de `site_archive_parts/` (21,1 MB); el desplegament directe s’ha completat correctament.
