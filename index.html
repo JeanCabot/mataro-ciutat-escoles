@@ -1929,7 +1929,20 @@ document.addEventListener('click', event => {
   if (!insidePopup && map) map.closePopup();
   if (!panel.contains(target) && !insidePopup) clearSelectedCentre();
 }, true);
-document.getElementById('q').addEventListener('input', () => render(true));
+document.getElementById('q').addEventListener('input', event => {
+  const query = event.currentTarget.value.trim();
+  if (query && !event.currentTarget.dataset.searchStarted) {
+    for (const filter of [publicEducationToggle, privateEducationToggle, otherEducationToggle, tutoringToggle, leisureToggle]) {
+      filter.checked = true;
+    }
+    stageFilter.value = 'all';
+    event.currentTarget.dataset.searchStarted = 'true';
+    updateFilterToggleHints();
+  } else if (!query) {
+    delete event.currentTarget.dataset.searchStarted;
+  }
+  render(true);
+});
 stageFilter.addEventListener('change', () => render(true));
 publicEducationToggle.addEventListener('change', () => render(true));
 privateEducationToggle.addEventListener('change', () => render(true));
