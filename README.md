@@ -19,6 +19,8 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 ## Historial de canvis
 
+- **22 de novembre de 2026:** afegit un comptador visible de fitxes filtrades i del total del mapa; identificats visualment els punts amb diverses entitats al mateix emplaçament; contextualitzada la informació de distància; ampliades les notes sobre l’abast, l’actualització i la llicència de les dades i imatges.
+
 - **22 de novembre de 2026:** revisat el nou lot d’imatges. Actualitzades la fotografia del CEE Les Aigües i la de La Cossette, i incorporat el logotip de l’Escola Marta Mata; la imatge de La Caseta ja coincidia amb la fotografia rebuda. Cronopis, Autoescola Maresme i Live English ja tenien els recursos visuals aportats i ara consten millor documentats. La imatge de Petit Somni no s’assigna a Peques: el directori del Departament d’Educació de 2024 llista Peques al c. Rierot, Picasoques a la Ronda de la República i Petit Somni al Camí Ral; la continuïtat no queda acreditada. Les miniatures de Google i les imatges sense llicència indicada continuen identificades com a pendents de verificació.
 
 
