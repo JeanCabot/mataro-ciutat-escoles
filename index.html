@@ -2548,7 +2548,8 @@ function render(refit = false, playbackFocusYear = null) {
     const ownershipCategory = record.naturalesa === 'Públic' ? 'compulsory-public' : 'compulsory-private';
     const category = entry.compulsory ? ownershipCategory : entry.leisure ? 'leisure' : entry.tutoring ? 'tutoring' : 'other';
     const fillColor = categoryColors[category];
-    const isSelectedEntity = !selectedSite && entry.id === selectedId;
+    const isOpenedThisYear = playbackFocusYear !== null && Number(entry.leisure ? entry.firstDocumentedYear : firstDocumentedYear[entry.id]) === Number(playbackFocusYear);
+    const isSelectedEntity = (!selectedSite && entry.id === selectedId) || isOpenedThisYear;
     const markerBase = isSelectedEntity
       ? L.marker([entry.lat, entry.lon], {icon: L.divIcon({className: 'selected-star-marker', html: '<svg viewBox="0 0 42 42" aria-hidden="true"><path d="M21 2.5 26.3 14.1 38.9 15.3 29.5 23.7 32.1 36 21 29.7 9.9 36 12.5 23.7 3.1 15.3 15.7 14.1Z" fill="#ffd43b" stroke="#15394d" stroke-width="2.5" stroke-linejoin="round"/></svg>', iconSize: [42, 42], iconAnchor: [21, 21]}), zIndexOffset: 1000})
       : L.circleMarker([entry.lat, entry.lon], {
@@ -2598,19 +2599,15 @@ function render(refit = false, playbackFocusYear = null) {
   highlightedMarker?.bringToFront?.();
   highlightedMarker?.setZIndexOffset?.(1000);
   if (playbackFocusYear !== null && mapPoints.length) {
-    const focusEntries = visibleEntries.filter(entry => Number(entry.leisure ? entry.firstDocumentedYear : firstDocumentedYear[entry.id]) === Number(playbackFocusYear));
-    const focusPoints = focusEntries.filter(entry => Number.isFinite(entry.lat) && Number.isFinite(entry.lon)).map(entry => [entry.lat, entry.lon]);
-    if (focusPoints.length) {
-      const centerLat = focusPoints.reduce((sum, point) => sum + point[0], 0) / focusPoints.length;
-      const centerLon = focusPoints.reduce((sum, point) => sum + point[1], 0) / focusPoints.length;
-      const latRadius = Math.max(0.003, ...mapPoints.map(point => Math.abs(point[0] - centerLat))) * 1.12;
-      const lonRadius = Math.max(0.004, ...mapPoints.map(point => Math.abs(point[1] - centerLon))) * 1.12;
-      const centeredBounds = L.latLngBounds([centerLat - latRadius, centerLon - lonRadius], [centerLat + latRadius, centerLon + lonRadius]);
-      const zoom = Math.min(12, map.getBoundsZoom(centeredBounds, false, L.point(48, 48)));
-      const destination = [centerLat, centerLon];
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) map.setView(destination, zoom, {animate: false});
-      else map.flyTo(destination, zoom, {duration: .48, easeLinearity: .25});
-    }
+    const centerLat = mapPoints.reduce((sum, point) => sum + point[0], 0) / mapPoints.length;
+    const centerLon = mapPoints.reduce((sum, point) => sum + point[1], 0) / mapPoints.length;
+    const latRadius = Math.max(0.003, ...mapPoints.map(point => Math.abs(point[0] - centerLat))) * 1.12;
+    const lonRadius = Math.max(0.004, ...mapPoints.map(point => Math.abs(point[1] - centerLon))) * 1.12;
+    const centeredBounds = L.latLngBounds([centerLat - latRadius, centerLon - lonRadius], [centerLat + latRadius, centerLon + lonRadius]);
+    const zoom = Math.min(12, map.getBoundsZoom(centeredBounds, false, L.point(48, 48)));
+    const destination = [centerLat, centerLon];
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) map.setView(destination, zoom, {animate: false});
+    else map.flyTo(destination, zoom, {duration: .48, easeLinearity: .25});
   } else if (refit && mapPoints.length) {
     map.fitBounds(mapPoints, {padding: [25, 25], maxZoom: 15});
   }
