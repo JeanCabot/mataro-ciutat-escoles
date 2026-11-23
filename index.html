@@ -1220,6 +1220,7 @@ function centrePhoto(code) {
   const photo = centrePhotos[code];
   if (!photo) return '';
   const [file, alt, credit, source, license] = photo;
+  if (!license) return '';
   return '<figure class="centre-photo"><button type="button" aria-label="Amplia la fotografia: ' + esc(alt) + '"><img src="fotos/' + esc(file) + '.webp" alt="' + esc(alt) +
     '" data-credit="' + esc(credit) + '" data-source="' + esc(source) + '" data-license="' + esc(license || '') + '" decoding="async"></button></figure>';
 }
