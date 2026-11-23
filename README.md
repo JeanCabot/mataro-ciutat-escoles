@@ -19,7 +19,7 @@ Si detectes una dada que cal revisar o vols proposar un centre, [obre una incid�
 
 899## Historial de canvis
 
-- **23 de novembre de 2026:** contrastades amb el CSV oficial de la Generalitat les 75 fitxes del curs 2026/2027; s’aclareix que constar al directori no verifica l’activitat presencial. Les fitxes mostren ara el seu estat d’activitat i una font. Documentats el cessament de Nemomarlin (efectiu en acabar el curs 2025/2026, tot i aparèixer encara al CSV) i la continuïtat de l’Escola de Música vinculada al Liceu a Maristes Valldemia. Nemomarlin i l’antiga seu del Liceu deixen d’aparèixer a la vista d’actualitat i es conserven a la cronologia; l’oferta musical es pot trobar des de la fitxa de Maristes.
+- **23 de novembre de 2026:** contrastades amb el CSV oficial de la Generalitat les 75 fitxes del curs 2026/2027; s’aclareix que constar al directori no verifica l’activitat presencial. Les fitxes mostren ara el seu estat d’activitat i una font. Documentats el cessament de Nemomarlin (efectiu en acabar el curs 2025/2026, tot i aparèixer encara al CSV) i la continuïtat de l’Escola de Música vinculada al Liceu a Maristes Valldemia. Nemomarlin i l’antiga seu del Liceu deixen d’aparèixer a la vista d’actualitat i es conserven a la cronologia; l’oferta musical es pot trobar des de la fitxa de Maristes. Les fotografies sense llicència documentada ja no es mostren a les fitxes; continuen pendents de verificació.
 
 - **22 de novembre de 2026:** afegit un comptador visible de fitxes filtrades i del total del mapa; identificats visualment els punts amb diverses entitats al mateix emplaçament; contextualitzada la informació de distància; ampliades les notes sobre l’abast, l’actualització i la llicència de les dades i imatges.
 
