@@ -1311,11 +1311,15 @@ function centrePopup(record, site) {
   const activitySourceLink = activitySource ?
     ' · <a href="' + esc(activitySource) + '" target="_blank" rel="noopener">font</a>' : '';
   const introduction = centreIntroduction(record);
+  const currentMusicOffer = currentView() && record.codi_centre === '08021144'
+    ? '<p>Escola de Música 26–27 vinculada al Conservatori del Liceu i oberta a la ciutat. · <a href="https://www.valldemia.maristes.cat/ca/escola-de-musica-1" target="_blank" rel="noopener">font</a></p>'
+    : '';
   return '<article class="centre-popup">' + cardHeading(record) + categoryBadges(record) +
     (site ? '' : centrePhoto(record.codi_centre)) + '<p>' + esc(address) + ' · ' +
     esc(record.naturalesa === 'Públic' ? 'Centre públic' : record.naturalesa === 'Fundació' ? 'Centre universitari adscrit a la UPF' : record.naturalesa === 'Associació' ? 'Associació' : 'Centre privat') + '</p>' +
     '<p><strong>Activitat:</strong> ' + esc(status) + activitySourceLink + '</p>' +
     (introduction ? '<p class="centre-introduction">' + esc(introduction) + '</p>' : '') +
+    currentMusicOffer +
     (site ? '<p><strong>' + esc(site.name) + '</strong> · ' + esc(site.stages) + '</p>' : centreStages(record)) +
     siteButtons + centreWebsite(record) + '</article>';
 }
@@ -1783,6 +1787,7 @@ function render(refit = false, playbackFocusYear = null) {
       fields.push(stageNames[code], searchAliases[code]);
     }
     fields.push(centreIntroductions[id], ...(searchEntityAliases[id] || []), ...(searchActivityCorpus[id] || []));
+    if (currentView() && id === '08021144') fields.push('Escola de Música Liceu Conservatori Liceu');
     if (currentView()) {
       for (const site of additionalSites[id] || []) fields.push(site.name, site.address, site.stages);
     }
@@ -1792,6 +1797,7 @@ function render(refit = false, playbackFocusYear = null) {
   };
   const schools = schoolEntries.filter(entry =>
     entry.lat && entry.lon && !entry.record.control_coordenades.startsWith('FORA') &&
+    (!currentView() || !['cessament autoritzat', 'l’antiga seu del centre catòlic'].some(prefix => (entry.record.estat_activitat_verificat || '').toLocaleLowerCase().startsWith(prefix))) &&
     (currentView() || firstDocumentedYear[entry.id] <= year) &&
     (entry.compulsory ? (entry.isPublic ? publicEducationToggle.checked : privateEducationToggle.checked) : (entry.tutoring ? tutoringToggle.checked : otherEducationToggle.checked)) &&
     stageMatches(entry) && matches(entry));
