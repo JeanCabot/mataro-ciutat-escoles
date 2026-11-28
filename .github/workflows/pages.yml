@@ -1,4 +1,6 @@
 name: Publica el mapa a GitHub Pages
+# Gestió mínima d'Actions: si arriben molts pushos seguits només es publica l'últim,
+# i l'artefacte de Pages s'esborra al cap d'1 dia (no acumula emmagatzematge).
 # Republish after updating the MapTiler API key secret.
 on:
   push:
@@ -11,10 +13,11 @@ permissions:
   id-token: write
 concurrency:
   group: github-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
@@ -48,6 +51,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+          retention-days: 1
   publish:
     needs: build
     runs-on: ubuntu-latest
